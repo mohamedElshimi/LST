@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.primary-btn {
+    @apply rounded-full bg-primary hover:bg-white text-white hover:text-primary hover:border-2 hover:border-primary font-semibold py-2 px-4 transition duration-300
+};
+
+
+@font-face {
+    font-family: Mont;
+    src: url(/src/assets/fonts/Montserrat-Regular.ttf);
+};
+
+*{
+font-family: Mont;
+}
+
