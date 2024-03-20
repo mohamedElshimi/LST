@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-3xl font-bold underline">
+    <h1 class="primary-btn">
     Hello world!
     </h1>
   </div>
