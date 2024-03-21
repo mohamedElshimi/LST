@@ -1,0 +1,73 @@
+{
+    "products": {
+      "IT Solution": [
+        {
+          "id": 1,
+          "title": "Network Security",
+          "description": "Protect your business from cyber threats with our network security solutions.",
+          "image": "https://placehold.co/"
+        },
+        {
+          "id": 2,
+          "title": "Cloud Computing",
+          "description": "Scale your IT infrastructure with our reliable cloud computing services.",
+          "image": "https://placehold.co/"
+        },
+        {
+          "id": 3,
+          "title": "IT Support",
+          "description": "Get expert help for all your IT needs with our IT support services.",
+          "image": "https://placehold.co/"
+        }
+      ],
+      "Surveillance Systems": [
+        {
+          "id": 4,
+          "title": "Security Cameras",
+          "description": "Monitor your property remotely with our high-definition security cameras.",
+          "image": "https://www.shutterstock.com/search/placeholder-camera"
+        },
+        {
+          "id": 5,
+          "description": "Video Recording Systems",
+          "title": "Store and manage your security footage with our video recording systems.",
+          "image": "https://placehold.co/"
+        },
+        {
+          "id": 6,
+          "title": "Access Control Systems",
+          "description": "Control access to your property with our access control systems.",
+          "image": "https://placehold.co/"
+        }
+      ],
+      "Fingerprints": [
+        {
+          "id": 7,
+          "title": "Fingerprint Readers",
+          "description": "Secure your access control with our fingerprint readers.",
+          "image": "https://www.pinterest.com/pin/illustrations--799529740086781973/"
+        },
+        {
+          "id": 8,
+          "title": "Fingerprint Time Clocks",
+          "description": "Track employee attendance accurately with our fingerprint time clocks.",
+          "image": "https://placehold.co/"
+        }
+      ],
+      "GPS Tracking": [
+        {
+          "id": 9,
+          "title": "Vehicle Tracking Devices",
+          "description": "Track your vehicles in real-time with our GPS tracking devices.",
+          "image": "https://www.freepik.com/free-photos-vectors/gps-tracking"
+        },
+        {
+          "id": 10,
+          "title": "Personal GPS Trackers",
+          "description": "Ensure the safety of your loved ones with our personal GPS trackers.",
+          "image": "https://placehold.co/"
+        }
+      ]
+    }
+  }
+  
