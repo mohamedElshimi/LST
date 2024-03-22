@@ -1,0 +1,72 @@
+<template>
+  <div class="container">
+    <div class="text-4xl font-bold text-primary">Products</div>
+    <div class="bg-secondry w-2/12 h-2 rounded-md mb-10"></div>
+    <div class="flex">
+      <input
+        v-model="searchQuery"
+        type="search"
+        class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-primary focus:border-primary outline-primary"
+        placeholder="Search by products name ..."
+      />
+      <button
+        class="bg-primary w-1/12 flex justify-center items-center text-white rounded-lg hover:bg-white hover:text-primary transition duration-300 border-2 border-primary"
+      >
+        <Icon icon="ic:round-search" class="text-xl" />
+        <p class="font-medium">Search</p>
+      </button>
+    </div>
+    <div class="flex flex-wrap gap-0">
+      <div
+        v-for="(prod, index) in products"
+        :key="index"
+        class="flex flex-col rounded-2xl items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer w-3/12"
+      >
+        <div class="">
+          <div class="flex justify-center relative overflow-hidden">
+            <img
+              :src="prod.image"
+              class="w-8/12 h-full object-cover hover:scale-110 transition duration-300 ease-in-out"
+              alt=""
+            />
+          </div>
+          <div class="font-bold text-sm text-primary">{{ prod.title }}</div>
+          <div class="text-sm line-clamp-3">
+            {{ prod.description }}
+          </div>
+          <div class="flex justify-end">
+            <div class="primary-btn w-4/12 justify-center flex">See More</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { Icon } from "@iconify/vue";
+import axios from "axios";
+
+export default {
+  name: "Products",
+  components: {
+    Icon,
+  },
+  data() {
+    return {
+      products: [],
+    };
+  },
+  created() {
+    axios
+      .get("http://localhost:3000/products")
+      .then((res) => {
+        this.products = res.data["Surveillance Systems"];
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+  },
+};
+</script>
+
+<style scoped></style>
