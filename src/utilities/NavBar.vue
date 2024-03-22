@@ -12,7 +12,7 @@
 
       <!-- Navigation Items (Desktop) -->
       <div class="hidden md:flex items-center space-x-8">
-        <router-link to="/about">
+        <router-link to="/">
           <div class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry transition-all">
             Home
           </div>
@@ -40,7 +40,7 @@
         </div>
         <!-- End of Services with Dropdown -->
 
-        <router-link to="trainingacademy">
+        <router-link to="/about">
           <div class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry transition-all">
             About
           </div>
@@ -72,7 +72,7 @@
           </button>
         </div>
         <div class="flex flex-col items-center py-2 space-y-2">
-          <router-link to="/about">
+          <router-link to="/">
             <div class="hover:text-primary transition duration-200 font-semibold">
               Home
             </div>
@@ -98,7 +98,7 @@
             </div>
           </div>
           <!-- End of Services with Dropdown in Mobile -->
-          <router-link to="trainingacademy">
+          <router-link to="/about">
             <div class="hover:text-primary transition duration-200 font-semibold">
               About Us
             </div>
