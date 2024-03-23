@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-white text-primary fixed w-full z-50">
+  <div
+    class="bg-white text-primary fixed w-full z-50 border-b-2 border-primary"
+  >
     <div class="container mx-auto flex justify-between items-center py-4">
       <!-- Brand Section -->
       <div class="flex items-center">

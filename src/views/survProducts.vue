@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="text-4xl font-bold text-primary">Products</div>
+    <div class="container">
+        <div class="text-4xl font-bold text-primary">Products</div>
     <div class="bg-secondry w-2/12 h-2 rounded-md mb-10"></div>
     <ProductsNav></ProductsNav>
     <div class="flex">
@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -49,7 +49,7 @@ import { Icon } from "@iconify/vue";
 import axios from "axios";
 import ProductsNav from "../utilities/ProductsNav.vue"
 export default {
-  name: "Products",
+  name: "surv",
   components: {
     Icon,
     ProductsNav
@@ -65,7 +65,7 @@ export default {
     axios
       .get("http://localhost:3000/products")
       .then((res) => {
-        this.products = res.data["Fingerprints"];
+        this.products = res.data["Surveillance Systems"];
         console.log(res.data);
       })
       .catch((err) => console.log(err));

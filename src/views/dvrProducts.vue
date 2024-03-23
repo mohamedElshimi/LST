@@ -47,12 +47,12 @@
 <script>
 import { Icon } from "@iconify/vue";
 import axios from "axios";
-import ProductsNav from "../utilities/ProductsNav.vue"
+import ProductsNav from "../utilities/ProductsNav.vue";
 export default {
-  name: "Products",
+  name: "dvr",
   components: {
     Icon,
-    ProductsNav
+    ProductsNav,
   },
   data() {
     return {
@@ -65,7 +65,7 @@ export default {
     axios
       .get("http://localhost:3000/products")
       .then((res) => {
-        this.products = res.data["Fingerprints"];
+        this.products = res.data["IT Solution"];
         console.log(res.data);
       })
       .catch((err) => console.log(err));

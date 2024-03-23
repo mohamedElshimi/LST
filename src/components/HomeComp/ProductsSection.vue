@@ -53,7 +53,7 @@ export default {
     axios
       .get("http://localhost:3000/products")
       .then((res) => {
-        this.products = res.data["IT Solution"];
+        this.products = res.data["Surveillance Systems"];
         console.log(res.data);
       })
       .catch((err) => console.log(err));
