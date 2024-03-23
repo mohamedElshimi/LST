@@ -12,15 +12,15 @@
       <button
         class="bg-primary w-1/12 flex justify-center items-center text-white rounded-lg hover:bg-white hover:text-primary transition duration-300 border-2 border-primary"
       >
-        <Icon icon="ic:round-search" class="text-xl" />
+        <Icon icon="ic:round-search" class="text-xl w-8" />
         <p class="font-medium">Search</p>
       </button>
     </div>
     <div class="flex flex-wrap gap-0">
       <div
-        v-for="(prod, index) in products"
+        v-for="(prod, index) in items"
         :key="index"
-        class="flex flex-col rounded-2xl items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer w-3/12"
+        class="flex flex-col rounded-2xl items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer lg:w-3/12 md:w-6/12 w-12/12"
       >
         <div class="">
           <div class="flex justify-center relative overflow-hidden">
@@ -55,16 +55,30 @@ export default {
   data() {
     return {
       products: [],
+      currentIndex: 0,
+      searchQuery: "",
     };
   },
   created() {
     axios
       .get("http://localhost:3000/products")
       .then((res) => {
-        this.products = res.data["Surveillance Systems"];
+        this.products = res.data["Fingerprints"];
         console.log(res.data);
       })
       .catch((err) => console.log(err));
+  },
+  computed: {
+    items() {
+      return (
+        this.products
+          // .filter((item) => item.title.toLowerCase().includes(this.searchQuery.toLowerCase()))
+          .filter((item) =>
+            item.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+          )
+          .slice(0, this.currentIndex + 12)
+      );
+    },
   },
 };
 </script>
