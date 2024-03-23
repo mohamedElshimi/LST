@@ -41,6 +41,14 @@
         </div>
       </div>
     </div>
+    <div class="text-center">
+      <button
+        @click="loadMore"
+        class="primary-btn w-40 h-12 justify-center m-5"
+      >
+        More To Explore
+      </button>
+    </div>
     </div>
 </template>
 
@@ -69,6 +77,11 @@ export default {
         console.log(res.data);
       })
       .catch((err) => console.log(err));
+  },
+  methods:{
+    loadMore() {
+      this.currentIndex += 12;
+    },
   },
   computed: {
     items() {

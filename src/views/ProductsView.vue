@@ -70,6 +70,11 @@ export default {
       })
       .catch((err) => console.log(err));
   },
+  methods:{
+    loadMore() {
+      this.currentIndex += 12;
+    },
+  },
   computed: {
     items() {
       return (

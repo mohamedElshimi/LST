@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-        <div class="text-4xl font-bold text-primary">Products</div>
+  <div class="container">
+    <div class="text-4xl font-bold text-primary">Products</div>
     <div class="bg-secondry w-2/12 h-2 rounded-md mb-10"></div>
     <ProductsNav></ProductsNav>
     <div class="flex">
@@ -41,18 +41,26 @@
         </div>
       </div>
     </div>
+    <div class="text-center">
+      <button
+        @click="loadMore"
+        class="primary-btn w-40 h-12 justify-center m-5"
+      >
+        More To Explore
+      </button>
     </div>
+  </div>
 </template>
 
 <script>
 import { Icon } from "@iconify/vue";
 import axios from "axios";
-import ProductsNav from "../utilities/ProductsNav.vue"
+import ProductsNav from "../utilities/ProductsNav.vue";
 export default {
   name: "surv",
   components: {
     Icon,
-    ProductsNav
+    ProductsNav,
   },
   data() {
     return {
@@ -69,6 +77,11 @@ export default {
         console.log(res.data);
       })
       .catch((err) => console.log(err));
+  },
+  methods:{
+    loadMore() {
+      this.currentIndex += 12;
+    },
   },
   computed: {
     items() {
