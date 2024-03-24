@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white bg-opacity-75 text-primary fixed w-full z-50 border-b-2 border-secondry"
+    class="bg-white bg-opacity-75 text-primary fixed top-0 w-full z-50 border-b-2 border-secondry"
   >
     <div class="container mx-auto flex justify-between items-center py-4">
       <!-- Brand Section -->
@@ -29,20 +29,22 @@
           @mouseleave="hideServicesDropdown"
         >
           <div class="flex items-center cursor-pointer">
-            <div
-              class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry transition-all"
-            >
-              Services
-            </div>
-            <span class="ml-1" v-if="!isServicesDropdownOpen">
+            <router-link to="/Services">
+              <div
+                class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry transition-all"
+              >
+                Services
+              </div>
+            </router-link>
+            <!-- <span class="ml-1" v-if="!isServicesDropdownOpen">
               <Icon icon="bi:chevron-down" />
             </span>
             <span class="ml-1" v-else>
               <Icon icon="bi:chevron-up" />
-            </span>
+            </span> -->
           </div>
           <!-- Dropdown Content -->
-          <div
+          <!-- <div
             v-show="isServicesDropdownOpen"
             class="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 mt-1"
           >
@@ -66,7 +68,7 @@
               class="block px-4 py-2 hover:bg-gray-100"
               >GPS Tracking</router-link
             >
-          </div>
+          </div> -->
         </div>
         <!-- End of Services with Dropdown -->
 
@@ -86,7 +88,7 @@
             About
           </div>
         </router-link>
-        <router-link to="/contact-us">
+        <router-link to="/ContactUs">
           <div
             class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry"
             :class="{ active: isActive('/contact-us') }"
@@ -142,43 +144,21 @@
           <!-- Services with Dropdown in Mobile -->
           <div class="relative" @click="toggleServicesDropdownMobile">
             <div class="flex items-center cursor-pointer">
-              <div
-                class="hover:text-primary transition duration-200 font-semibold"
-              >
-                Services
-              </div>
-              <span class="ml-1" v-if="!isServicesDropdownOpenMobile">
+              <router-link to="/Services">
+                <div
+                  class="hover:text-primary transition duration-200 font-semibold"
+                >
+                  Services
+                </div>
+              </router-link>
+              <!-- <span class="ml-1" v-if="!isServicesDropdownOpenMobile">
                 <Icon icon="bi:chevron-down" />
               </span>
               <span class="ml-1" v-else>
                 <Icon icon="bi:chevron-up" />
-              </span>
+              </span> -->
             </div>
-            <div
-              v-show="isServicesDropdownOpenMobile"
-              class="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 mt-1"
-            >
-              <router-link
-                to="/services/it-solution"
-                class="block px-4 py-2 hover:bg-gray-100"
-                >IT Solution</router-link
-              >
-              <router-link
-                to="/services/surveillance-systems"
-                class="block px-4 py-2 hover:bg-gray-100"
-                >Surveillance Systems</router-link
-              >
-              <router-link
-                to="/services/fingerprints"
-                class="block px-4 py-2 hover:bg-gray-100"
-                >Fingerprints</router-link
-              >
-              <router-link
-                to="/services/gps-tracking"
-                class="block px-4 py-2 hover:bg-gray-100"
-                >GPS Tracking</router-link
-              >
-            </div>
+            <!-- s -->
           </div>
           <!-- End of Services with Dropdown in Mobile -->
           <router-link to="/products">

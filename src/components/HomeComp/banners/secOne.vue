@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex flex-col lg:flex-row bg-mid-bannner text-xl h-[580px] md:bg-contain bg-cover bg-center bg-no-repeat "
+    class="relative flex flex-col lg:flex-row bg-mid-bannner text-xl md:bg-contain bg-cover bg-center bg-no-repeat"
   >
     <!-- Background div -->
     <div
@@ -16,20 +16,23 @@
           <h1
             class="font-extrabold text-4xl leading-normal text-white mx-auto lg:mx-0"
           >
-          Surveillance Systems & Security
+            Surveillance Systems & Security
           </h1>
-          <p class=" text-white text-sm">
-            Protect your premises with our state-of-the-art surveillance systems,  offering comprehensive coverage and real-time monitoring. Our advanced  security solutions provide peace of mind, combining advanced analytics  with robust hardware for optimal safety. Safeguard your assets and  ensure round-the-clock security with our tailored surveillance.
+          <p class="text-white text-sm">
+            Protect your premises with our state-of-the-art surveillance
+            systems, offering comprehensive coverage and real-time monitoring.
+            Our advanced security solutions provide peace of mind, combining
+            advanced analytics with robust hardware for optimal safety.
+            Safeguard your assets and ensure round-the-clock security with our
+            tailored surveillance.
           </p>
         </div>
         <div class="text-center lg:text-left">
-          <router-link to="/services">
-            <button
-            class="primary-btn"
-            >
-              Explore More
-            </button>
-          </router-link>
+          <router-link to="/products/surveillance-systems"
+            ><button class="primary-btn block">
+              Explore Products
+            </button></router-link
+          >
         </div>
       </div>
     </div>
@@ -55,11 +58,11 @@ export default {};
 .animate-slide-in {
   animation: slideIn 1s ease-in forwards;
 }
-.shade{
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0)
-  );
+.shade {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+.bg-mid-bannner {
+  background: url("./src/assets/Banner/Camera.png") no-repeat 100%/100%;
+  background-size: cover;
 }
 </style>

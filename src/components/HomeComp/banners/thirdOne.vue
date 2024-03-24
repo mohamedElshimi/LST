@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex flex-col lg:flex-row bg-last-bannner text-xl h-[580px] md:bg-contain bg-cover bg-center bg-no-repeat"
+    class="relative flex flex-col lg:flex-row bg-last-bannner min-h-[410px] text-xl md:bg-contain bg-cover bg-center bg-no-repeat"
   >
     <!-- Background div -->
     <div
@@ -56,5 +56,9 @@ export default {};
 }
 .shade {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+.bg-last-bannner {
+  background: url("./src/assets/Banner/GPS.png") no-repeat 100%/100%;
+  background-size: cover;
 }
 </style>

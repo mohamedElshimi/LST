@@ -1,6 +1,27 @@
 <template>
   <div>
-    {{ product }}
+    <div class="mt-20 flex w-11/12">
+      <!-- {{ prod2 }} -->
+      <div class="w-6/12 flex justify-center overflow-hidden">
+        <img
+          :src="prod2.image"
+          class="w-6/12 object-cover hover:w-7/12 transition-width duration-300"
+          alt="Brand Image"
+        />
+      </div>
+      <div class="w-6/12 px-4 flex flex-col justify-center">
+        <h2 class="text-primary text-3xl font-semibold">
+          {{ prod2.title }}
+        </h2>
+        <p class="my-5 text-lg">Brand : {{ prod2.brand }}</p>
+        <p class="text-slate-700">{{ prod2.description }}</p>
+      </div>
+    </div>
+    <div class="flex w-11/12 mx-auto">
+      <router-link to="/products" class="primary-btn block ms-auto"
+        >Back To Products</router-link
+      >
+    </div>
   </div>
 </template>
 
@@ -10,19 +31,25 @@ export default {
   data() {
     return {
       product: {},
-      id:""
+      prod2: {},
+      id: "",
+      type: "",
     };
   },
-  created(){
+  created() {
     this.id = this.$route.params.id;
-      axios
-        .get(`http://localhost:3000/products/surveillance-systems/${this.id}`)
-        .then((res) => {
-          this.product = res.data;
-          console.log(res.data);
-        })
-        .catch((err) => console.log(err));
-        
+    this.type = this.$route.params.type;
+    axios
+      .get(`http://localhost:3000/products`)
+      .then((res) => {
+        this.product = res.data[this.type];
+        console.log(this.id);
+        this.prod2 = this.product.find((obj) => {
+          return obj.id == this.id;
+        });
+        console.log(this.prod2);
+      })
+      .catch((err) => console.log(err));
   },
 };
 </script>

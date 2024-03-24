@@ -1,5 +1,30 @@
 <template>
-  <div class="container mt-40 p-10">
+  <div class="container mt-20 p-10">
+    <div
+      class="border-4 border-secondry border-dashed rounded-3xl mb-5 relative"
+    >
+      <div
+        class="w-[200px] h-[100px] bg-white absolute bottom-5 right-10 rotate-45 border-4 border-secondry border-dashed z-10"
+      ></div>
+      <p class="relative p-5 rounded-3xl z-20 bg-white">
+        At our core, we are driven by a mission to deliver unparalleled IT
+        solutions of the highest quality, fostering the growth and expansion of
+        businesses within their respective markets. We are committed to our
+        customers' success, ensuring that their triumphs resonate as our own.
+        Through our expertise in end-to-end IT, development, and outsourcing
+        solutions, we deliver cost-effective value propositions tailored to meet
+        their unique needs. Our dedication to innovation and quality guides our
+        strategies across Technology, Business Development, Consulting, and
+        Customer Service, all aimed at providing unmatched service at
+        competitive market prices. We envision a future where our company and
+        its people thrive, empowered to achieve their goals while contributing
+        to a better business environment through our passion for IT and emerging
+        technologies. As we strive to be recognized as a premier solution and IT
+        services provider, we foster a culture where every team member is a
+        valued partner in our collective growth and takes pride in their
+        association with our company.
+      </p>
+    </div>
     <div
       class="p-14 shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 cursor-pointer mb-10"
     >
@@ -59,12 +84,15 @@
       </div>
     </div>
   </div>
+  <WorkedWith class="mt-10"></WorkedWith>
 </template>
 <script>
 import { Icon } from "@iconify/vue";
+import WorkedWith from "@/components/WorkedWith.vue";
 export default {
   components: {
     Icon,
+    WorkedWith,
   },
 };
 </script>

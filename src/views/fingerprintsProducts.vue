@@ -23,22 +23,24 @@
         :key="index"
         class="flex flex-col rounded-2xl items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer lg:w-3/12 md:w-6/12 w-12/12"
       >
-        <div class="">
-          <div class="flex justify-center relative overflow-hidden">
-            <img
-              :src="prod.image"
-              class="w-8/12 h-full object-cover hover:scale-110 transition duration-300 ease-in-out"
-              alt=""
-            />
+        <router-link :to="`/products/Fingerprints/${prod.id}`">
+          <div class="">
+            <div class="flex justify-center relative overflow-hidden">
+              <img
+                :src="prod.image"
+                class="w-8/12 h-full object-cover hover:scale-110 transition duration-300 ease-in-out"
+                alt=""
+              />
+            </div>
+            <div class="font-bold text-sm text-primary">{{ prod.title }}</div>
+            <div class="text-sm line-clamp-3">
+              {{ prod.description }}
+            </div>
+            <div class="flex justify-end">
+              <div class="primary-btn mt-3 justify-center flex">See More</div>
+            </div>
           </div>
-          <div class="font-bold text-sm text-primary">{{ prod.title }}</div>
-          <div class="text-sm line-clamp-3">
-            {{ prod.description }}
-          </div>
-          <div class="flex justify-end">
-            <div class="primary-btn w-4/12 justify-center flex">See More</div>
-          </div>
-        </div>
+        </router-link>
       </div>
     </div>
     <div class="text-center">

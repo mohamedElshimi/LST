@@ -18,28 +18,34 @@
       </button>
     </div>
     <div class="flex flex-wrap gap-0">
-      <div
-        v-for="(prod, index) in items"
-        :key="index"
-        class="flex flex-col rounded-2xl items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer lg:w-3/12 md:w-6/12 w-12/12"
-      >
-        <div class="">
-          <div class="flex justify-center relative overflow-hidden">
-            <img
-              :src="prod.image"
-              class="w-8/12 h-full object-cover hover:scale-110 transition duration-300 ease-in-out"
-              alt=""
-            />
-          </div>
-          <div class="font-bold text-sm text-primary">{{ prod.title }}</div>
-          <div class="text-sm line-clamp-3">
-            {{ prod.description }}
-          </div>
-          <div class="flex justify-end">
-            <div class="primary-btn w-4/12 justify-center flex">See More</div>
-          </div>
+      <template v-for="(prod, index1) in products" :key="index1">
+        <div
+          v-for="(prod2, index) in prod"
+          :key="index"
+          class="flex flex-col rounded-2xl items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer lg:w-3/12 md:w-6/12 w-12/12"
+        >
+          <router-link :to="`/products/${index1}/${prod2.id}`">
+            <div class="">
+              <div class="flex justify-center relative overflow-hidden">
+                <img
+                  :src="prod2.image"
+                  class="w-8/12 h-full object-cover hover:scale-110 transition duration-300 ease-in-out"
+                  alt=""
+                />
+              </div>
+              <div class="font-bold text-sm text-primary">
+                {{ prod2.title }}
+              </div>
+              <div class="text-sm line-clamp-3">
+                {{ prod2.description }}
+              </div>
+              <div class="flex justify-end">
+                <div class="primary-btn mt-3 justify-center flex">See More</div>
+              </div>
+            </div>
+          </router-link>
         </div>
-      </div>
+      </template>
     </div>
   </div>
 </template>
@@ -47,12 +53,12 @@
 <script>
 import { Icon } from "@iconify/vue";
 import axios from "axios";
-import ProductsNav from "../utilities/ProductsNav.vue"
+import ProductsNav from "../utilities/ProductsNav.vue";
 export default {
   name: "Products",
   components: {
     Icon,
-    ProductsNav
+    ProductsNav,
   },
   data() {
     return {
@@ -65,12 +71,12 @@ export default {
     axios
       .get("http://localhost:3000/products")
       .then((res) => {
-        this.products = res.data["Fingerprints"];
+        this.products = res.data;
         console.log(res.data);
       })
       .catch((err) => console.log(err));
   },
-  methods:{
+  methods: {
     loadMore() {
       this.currentIndex += 12;
     },

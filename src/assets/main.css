@@ -1,16 +1,40 @@
-
 .primary-btn {
     @apply text-sm rounded-full bg-primary hover:bg-white text-white hover:text-primary border-2 border-primary hover:border-2 hover:border-primary font-semibold py-2 px-4 transition duration-300
 };
 
 
 @font-face {
-    font-family: Mont;
-    src: url(/src/assets/fonts/Montserrat-Regular.ttf);
-};
+  font-family: Mont;
+  src: url(/src/assets/fonts/Montserrat-Regular.ttf);
+}
 
-*{
-font-family: Mont;
+* {
+  font-family: Mont;
+}
+
+.workwith-card {
+  @apply flex justify-center items-center shadow-md hover:shadow-xl transition duration-150 rounded-3xl h-full;
+}
+
+.contact-card {
+  @apply flex flex-col justify-center items-center border-2 border-primary py-3 text-primary rounded-3xl hover:border-none hover:shadow-xl hover:cursor-default;
+}
+
+.contact-card:hover > :first-child,
+.contact-card:hover h3 {
+  @apply text-secondry;
+}
+
+.service-card {
+  @apply p-10 mt-5 rounded-3xl hover:shadow-2xl transition-all duration-300 cursor-pointer mb-10;
+}
+
+.service-card:hover .service-child {
+  @apply w-14;
+}
+
+.input {
+  @apply border-2 border-primary rounded-md px-4 py-2 focus:outline-none focus:shadow-xl shadow-primary;
 }
 
 @tailwind base;

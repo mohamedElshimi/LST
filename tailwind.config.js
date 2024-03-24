@@ -15,11 +15,11 @@ export default {
         },
         center: true,
       },
-      backgroundImage: {
-        "first-bannner": "url('./src/assets/Banner/IT-Solution.png')",
-        "mid-bannner": "url('./src/assets/Banner/Camera.png')",
-        "last-bannner": "url('./src/assets/Banner/GPS.png')",
-      },
+      // backgroundImage: {
+      //   "first-bannner": "url('./src/assets/Banner/IT-Solution.png')",
+      //   "mid-bannner": "url('./src/assets/Banner/Camera.png')",
+      //   "last-bannner": "url('./src/assets/Banner/GPS.png')",
+      // },
       transitionProperty: {
         width: "width",
       },

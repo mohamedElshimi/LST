@@ -1,6 +1,6 @@
 <template>
   <NavBar></NavBar>
-  <RouterView />
+  <RouterView class="mt-20" />
 </template>
 <script>
 import NavBar from "../src/utilities/NavBar.vue";
