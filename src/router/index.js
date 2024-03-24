@@ -4,6 +4,7 @@ import dvr from "../views/dvrProducts.vue";
 import fingerprints from "../views/fingerprintsProducts.vue";
 import surv from "../views/survProducts.vue";
 import ProductsView from '@/views/ProductsView.vue';
+import survProduct from "../views/OneProduct.vue";
 
 
 const router = createRouter({
@@ -28,6 +29,11 @@ const router = createRouter({
       path: '/products/surveillance-systems',
       name: 'surv',
       component: surv
+    },
+    {
+      path: '/products/surveillance-systems/:title',
+      name: 'survProduct',
+      component: survProduct
     },
     {
       path: '/products/fingerprints',

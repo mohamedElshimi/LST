@@ -23,7 +23,7 @@
         :key="index"
         class="flex flex-col rounded-2xl items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer lg:w-3/12 md:w-6/12 w-12/12"
       >
-        <div class="">
+        <router-link :to="`/products/surveillance-systems/${prod.title}`"><div class="">
           <div class="flex justify-center relative overflow-hidden">
             <img
               :src="prod.image"
@@ -38,7 +38,7 @@
           <div class="flex justify-end">
             <div class="primary-btn w-4/12 justify-center flex">See More</div>
           </div>
-        </div>
+        </div></router-link>
       </div>
     </div>
     <div class="text-center">

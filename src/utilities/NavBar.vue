@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white text-primary fixed w-full z-50 border-b-2 border-primary"
+    class="bg-white bg-opacity-75 text-primary fixed w-full z-50 border-b-2 border-secondry"
   >
     <div class="container mx-auto flex justify-between items-center py-4">
       <!-- Brand Section -->
@@ -17,6 +17,7 @@
         <router-link to="/">
           <div
             class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry transition-all"
+            :class="{ active: isActive('/') }"
           >
             Home
           </div>
@@ -72,6 +73,7 @@
         <router-link to="/products">
           <div
             class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry"
+            :class="{ active: isActive('/products') }"
           >
             Products
           </div>
@@ -79,6 +81,7 @@
         <router-link to="/about">
           <div
             class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry"
+            :class="{ active: isActive('/about') }"
           >
             About
           </div>
@@ -86,6 +89,7 @@
         <router-link to="/contact-us">
           <div
             class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry"
+            :class="{ active: isActive('/contact-us') }"
           >
             Contact Us
           </div>
@@ -216,7 +220,6 @@ export default {
       isServicesDropdownOpenMobile: false,
     };
   },
-
   components: {
     Icon,
   },
@@ -234,8 +237,18 @@ export default {
     toggleServicesDropdownMobile() {
       this.isServicesDropdownOpenMobile = !this.isServicesDropdownOpenMobile;
     },
+    isActive(route) {
+      return this.$route.path === route;
+    },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.active {
+  border-style: solid;
+  border-bottom-width: medium;
+  border-color: #f9c02c;
+  border-radius: 0.125rem;
+}
+</style>
