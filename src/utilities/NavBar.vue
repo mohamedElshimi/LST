@@ -16,7 +16,7 @@
       <div class="hidden md:flex items-center space-x-8">
         <router-link to="/">
           <div
-            class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry transition-all"
+            class="text-primary transition duration-200 font-semibold hover:border-b-2 hover:border-secondry"
             :class="{ active: isActive('/') }"
           >
             Home
@@ -31,7 +31,8 @@
           <div class="flex items-center cursor-pointer">
             <router-link to="/Services">
               <div
-                class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry transition-all"
+                class="text-primary transition duration-200 font-semibold hover:border-b-2 hover:border-secondry"
+                :class="{ active: isActive('/Services') }"
               >
                 Services
               </div>
@@ -74,7 +75,7 @@
 
         <router-link to="/products">
           <div
-            class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry"
+            class="text-primary transition duration-200 font-semibold hover:border-b-2 hover:border-secondry"
             :class="{ active: isActive('/products') }"
           >
             Products
@@ -82,7 +83,7 @@
         </router-link>
         <router-link to="/about">
           <div
-            class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry"
+            class="text-primary transition duration-200 font-semibold hover:border-b-2 hover:border-secondry"
             :class="{ active: isActive('/about') }"
           >
             About
@@ -90,8 +91,8 @@
         </router-link>
         <router-link to="/ContactUs">
           <div
-            class="text-primary transition duration-200 font-semibold hover:border-b-4 hover:border-secondry"
-            :class="{ active: isActive('/contact-us') }"
+            class="text-primary transition duration-200 font-semibold hover:border-b-2 hover:border-secondry"
+            :class="{ active: isActive('/ContactUs') }"
           >
             Contact Us
           </div>
@@ -110,7 +111,7 @@
       <!-- Responsive Menu Items (Mobile) -->
       <div
         v-show="isMenuOpen"
-        class="md:hidden absolute top-0 left-0 right-0 bg-white text-primary z-50"
+        class="md:hidden absolute top-0 border-b-2 border-secondry left-0 right-0 bg-white text-primary z-50"
       >
         <div class="flex justify-between">
           <div class="items-center mt-3 mx-6 self-center">
@@ -136,7 +137,7 @@
         <div class="flex flex-col items-center py-2 space-y-2">
           <router-link to="/">
             <div
-              class="hover:text-primary transition duration-200 font-semibold"
+              class="hover:text-primary transition duration-200 font-semibold" :class="{ active2: isActive('/') }"
             >
               Home
             </div>
@@ -146,7 +147,7 @@
             <div class="flex items-center cursor-pointer">
               <router-link to="/Services">
                 <div
-                  class="hover:text-primary transition duration-200 font-semibold"
+                  class="hover:text-primary transition duration-200 font-semibold" :class="{ active2: isActive('/Services') }"
                 >
                   Services
                 </div>
@@ -163,21 +164,22 @@
           <!-- End of Services with Dropdown in Mobile -->
           <router-link to="/products">
             <div
-              class="hover:text-primary transition duration-200 font-semibold"
+              class="hover:text-primary transition duration-200 font-semibold" :class="{ active2: isActive('/products') }"
             >
               Products
             </div>
           </router-link>
           <router-link to="/about">
             <div
-              class="hover:text-primary transition duration-200 font-semibold"
+              class="hover:text-primary transition duration-200 font-semibold" :class="{ active2: isActive('/about') }"
             >
               About Us
             </div>
           </router-link>
-          <router-link to="/contact-us">
+          <router-link to="/ContactUs">
             <div
               class="hover:text-primary transition duration-200 font-semibold"
+              :class="{ active2: isActive('/ContactUs') }"
             >
               Contact Us
             </div>
@@ -230,5 +232,8 @@ export default {
   border-bottom-width: medium;
   border-color: #f9c02c;
   border-radius: 0.125rem;
+}
+.active2 {
+  color: #f9c02c;
 }
 </style>
