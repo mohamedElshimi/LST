@@ -1,10 +1,15 @@
 <template>
-    <div class="container">
-      <router-link to="/DashboardView"><div class="flex items-center gap-3"><i class="fa-solid fa-arrow-left cursor-pointer"></i><div class="text-xl font-semibold">Edit Trainer</div></div></router-link>
-<div class="">
-
-<form @submit.prevent="EditProduct">
-    <div class="mt-8 relative z-0 w-full mb-6 group"><input
+  <div class="container">
+    <router-link to="/DashboardView"
+      ><div class="flex items-center gap-3">
+        <i class="fa-solid fa-arrow-left cursor-pointer"></i>
+        <div class="text-xl font-semibold">Edit Trainer</div>
+      </div></router-link
+    >
+    <div class="">
+      <form @submit.prevent="EditProduct">
+        <div class="mt-8 relative z-0 w-full mb-6 group">
+          <input
             v-model="OneProduct.image"
             type="text"
             name="floating_rate"
@@ -18,7 +23,8 @@
             >Image URL</label
           >
         </div>
-    <div class="mt-8 relative z-0 w-full mb-6 group"><input
+        <div class="mt-8 relative z-0 w-full mb-6 group">
+          <input
             v-model="OneProduct.title"
             type="text"
             name="floating_first_name"
@@ -32,7 +38,8 @@
             >Title</label
           >
         </div>
-    <div class="mt-8 relative z-0 w-full mb-6 group"><input
+        <div class="mt-8 relative z-0 w-full mb-6 group">
+          <input
             v-model="OneProduct.desc"
             type="text"
             name="floating_desc"
@@ -46,8 +53,9 @@
             >Description</label
           >
         </div>
-    <div class="mt-8 relative z-0 w-full mb-6 group"><input
-            v-model="OneProduct.price"
+        <div class="mt-8 relative z-0 w-full mb-6 group">
+          <input
+            v-model="OneProduct.brand"
             type="text"
             name="floating_fees"
             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-dark appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
@@ -60,53 +68,70 @@
             >Price</label
           >
         </div>
-        <button class="btn-primary-hover  bg-gray-800 hover:bg-[#e60000df] text-white font-bold  p-2 w-full">Submit Edits</button>
-</form>
-</div>
+        <button
+          class="primary-btn bg-gray-800 hover:bg-secondry text-white font-bold p-2 w-full"
+        >
+          Submit Edits
+        </button>
+      </form>
     </div>
+  </div>
 </template>
 
 <script>
-import axios from 'axios'
-    export default {
-        name:'EditProduct',
-        provide() {
+import axios from "axios";
+export default {
+  name: "EditProduct",
+  provide() {
     return {
-        changeView : (togg)=> {
-  this.toggle = togg
-   }
+      changeView: (togg) => {
+        this.toggle = togg;
+      },
     };
-},
-        data(){
-            return {
-                OneProduct : {
-                    desc:"",
-                    title:"",
-                    price:"",
-                    image:"",
-                },
-                id:''
-            }
-        },
-        created() {
-            this.id = this.$route.params.id
-            axios.get(`http://localhost:3000/supplements/${this.id}`).then((res)=>{
-                        console.log(res.data)
-                        this.OneProduct = res.data
-                    }).catch((err)=>console.log(err))
-        },
-        methods:{
-            EditProduct(){
-                axios.put(`http://localhost:3000/supplements/${this.id}`,this.OneProduct).then((res)=>{
-                    console.log(res.data)
-                    alert("your product has been updated successfully :)")
-                    
-                 }).catch((err)=>console.log(err));
-            }
-        }
-    }
+  },
+  data() {
+    return {
+      OneProduct: {
+        desc: "",
+        title: "",
+        brand: "",
+        image: "",
+      },
+      product: {},
+      prod2: {},
+      id: "",
+      type: "",
+    };
+  },
+  created() {
+    this.id = this.$route.params.id;
+    this.type = this.$route.params.type;
+    axios
+      .get(`http://localhost:3000/products`)
+      .then((res) => {
+        this.product = res.data[this.type];
+        console.log(this.id);
+        this.prod2 = this.product.find((obj) => {
+          return obj.id == this.id;
+        });
+        console.log(this.prod2);
+      })
+      .catch((err) => console.log(err));
+  },
+  methods: {
+    EditProduct() {
+      
+      this.product.push(this.OneProduct);
+      axios
+        .put(`http://localhost:3000/products`, this.OneProduct)
+        .then((res) => {
+          console.log(res.data);
+          alert("your product has been updated successfully :)");
+        })
+        .catch((err) => console.log(err));
+    },
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

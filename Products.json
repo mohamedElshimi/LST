@@ -338,6 +338,13 @@
         "brand": "Hikvision",
         "description": "2MP,1/2.8\" Progressive CMOS, ICR, 1920x1080:25fps(P)/30fps(N),\nH.265+/H.264+&H.264, IP67,DWDR, 3D DNR, BLC, IR range: up to 30m, DC12V &\nPoE,Support mobile monitoring via Hik-Connect *power supply no included",
         "image": "/src/assets/products/Surv/DS-2CD1123G0E-I(2.8mm)(C)(O-STD).png"
+      },
+      {
+        "id": 458003,
+        "title": "Honorable",
+        "brand": "Zooveo",
+        "description": "\"Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.  Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\"",
+        "image": "https://gofit-eg.com/wp-content/uploads/2023/03/WhatsApp-Image-2023-10-04-at-4.37.23-PM-1.jpeg"
       }
     ],
     "Fingerprints": [

@@ -5,10 +5,11 @@ import fingerprints from "../views/fingerprintsProducts.vue";
 import surv from "../views/survProducts.vue";
 import ProductsView from "@/views/ProductsView.vue";
 import survProduct from "../views/OneProduct.vue";
+import editsurvProduct from "../dashboard/ProductsDashboardEdit.vue";
 
 import ContactUs from "../views/ContactUs.vue";
 import ServicesPage from "../views/ServicesPage.vue";
-
+import dashboard from "../dashboard/ProductsDashboard.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -61,6 +62,26 @@ const router = createRouter({
       name: "ServicesPage",
       component: ServicesPage,
     },
+    {
+      path: "/dashboard/surveillance-systems",
+      name: "dashboard",
+      component: dashboard,
+    },
+    {
+      path: "/dashboard/surveillance-systems/edit/:id",
+      name: "editsurvProduct",
+      component: editsurvProduct,
+    },
+    // {
+    //   path: "/dashboard/fingerprints",
+    //   name: "dashboardfing",
+    //   component: dashboardfing,
+    // },
+    // {
+    //   path: "/dashboard/dvr",
+    //   name: "dashboarddvr",
+    //   component: dashboarddvr,
+    // },
   ],
 });
 
