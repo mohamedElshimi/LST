@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <ProductsNavDashVue></ProductsNavDashVue>
     <div class="flex justify-end mt-10">
       <div
         v-if="showadd === ''"
@@ -58,16 +59,22 @@
               {{ prod.brand }}
             </td>
             <td class="px-6 py-4">
-              <router-link :to="`/productsdata/${prod.id}/edit`"
-                ><router-link :to="`/dashboard/surveillance-systems/edit/${prod.id}`" class="flex justify-center my-4">
+              <div>
+                <router-link
+                  :to="`/dashboard/surveillance-systems/edit/${prod.id}`"
+                  class="flex justify-center my-4"
+                >
                   <Icon
                     icon="material-symbols:edit-outline"
                     width="24"
                     height="24"
                     style="color: #004a54"
-                  /></router-link
-              ></router-link>
-              <div class="flex justify-center my-4" @click="deleteRow">
+                /></router-link>
+              </div>
+              <div
+                class="flex justify-center my-4 cursor-pointer"
+                @click="deleteRow(prod.id)"
+              >
                 <Icon
                   icon="uiw:delete"
                   width="24"
@@ -86,12 +93,13 @@
 <script>
 import axios from "axios";
 import AddProduct from "../dashboard/ProductsDashboardAdd.vue";
+import ProductsNavDashVue from '@/utilities/ProductsNavDash.vue'
 import { Icon } from "@iconify/vue";
 export default {
   name: "ProductsDashboard",
   components: {
     AddProduct,
-    Icon,
+    Icon,ProductsNavDashVue
   },
   data() {
     return {
@@ -104,9 +112,9 @@ export default {
   },
   created() {
     axios
-      .get("http://localhost:3000/products")
+      .get("http://localhost:3000/Surveillance-systems")
       .then((res) => {
-        this.products = res.data["Surveillance-systems"];
+        this.products = res.data;
       })
       .catch((err) => console.log(err));
   },
@@ -115,14 +123,13 @@ export default {
       let conf = confirm("Are you sure you want to delete this item ?");
       if (conf == true) {
         axios
-          .delete(`/products/Surveillance-systems/${id}`)
+          .delete(`http://localhost:3000/Surveillance-systems/${id}`)
           .then((res) => {
             console.log(res);
           })
           .catch((err) => {
             console.log(err);
           });
-        this.getData();
       }
     },
   },

@@ -79,29 +79,28 @@ export default {
   data() {
     return {
       AddedProduct: {
-        id:this.generateUniqueId(),
+        id: this.generateUniqueId(),
         title: "",
         brand: "",
         description: "",
         image: "",
       },
-      survproducts:[]
+      survproducts: [],
     };
   },
   created() {
     axios
-      .get("http://localhost:3000/products")
+      .get("http://localhost:3000/Surveillance-systems")
       .then((res) => {
         this.survproducts = res.data;
-        console.log(res.data["Surveillance-systems"]);
       })
       .catch((err) => console.log(err));
   },
   methods: {
     AddProduct() {
-      this.survproducts["Surveillance-systems"].push(this.AddedProduct);
+      // this.survproducts.push(this.AddedProduct);
       axios
-        .post("http://localhost:3000/products", this.survproducts)
+        .post("http://localhost:3000/Surveillance-systems", this.AddedProduct)
         .then((res) => {
           console.log(res.data);
           alert("your product has been added successfully :)");

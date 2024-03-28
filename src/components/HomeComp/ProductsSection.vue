@@ -79,10 +79,30 @@ export default {
   },
   created() {
     axios
-      .get("http://localhost:3000/products")
+      .get("http://localhost:3000/IT-solution")
       .then((res) => {
-        this.products = res.data;
+        this.dvrproducts = res.data;
         console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+    axios
+      .get("http://localhost:3000/Surveillance-systems")
+      .then((res) => {
+        this.survproducts = res.data;
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+    axios
+      .get("http://localhost:3000/Fingerprints")
+      .then((res) => {
+        this.fingproducts = res.data;
+        console.log(res.data);
+        this.products.push(
+          this.dvrproducts,
+          this.survproducts,
+          this.fingproducts
+        );
+        console.log(this.products);
       })
       .catch((err) => console.log(err));
   },

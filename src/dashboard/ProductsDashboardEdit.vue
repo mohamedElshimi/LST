@@ -107,23 +107,18 @@ export default {
     this.id = this.$route.params.id;
     this.type = this.$route.params.type;
     axios
-      .get(`http://localhost:3000/products`)
+      .get(`http://localhost:3000/Surveillance-systems/${this.id}`)
       .then((res) => {
-        this.product = res.data[this.type];
-        console.log(this.id);
-        this.prod2 = this.product.find((obj) => {
-          return obj.id == this.id;
-        });
-        console.log(this.prod2);
+        this.product = res.data;
+
       })
       .catch((err) => console.log(err));
   },
   methods: {
     EditProduct() {
       
-      this.product.push(this.OneProduct);
       axios
-        .put(`http://localhost:3000/products`, this.OneProduct)
+        .put(`http://localhost:3000/Surveillance-systems/${this.id}`, this.OneProduct)
         .then((res) => {
           console.log(res.data);
           alert("your product has been updated successfully :)");

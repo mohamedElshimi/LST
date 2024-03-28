@@ -1,389 +1,380 @@
 {
-  "products": {
-    "IT-solution": [
-      {
-        "id": 1,
-        "title": "Zero Tech ZTDX-EG4CH",
-        "brand": "Zero Tech",
-        "description": "• 4 CH 1080P lite Standard H.265 high profile\n          compression\n          • 4 CH simultaneously playback\n          • The resolution of CH 1 and CH 2 must be the same.\n          So do CH 3 and CH 4\n          • HDMI × 1 : 1920 × 1080 VGA × 1 : 1920 × 1080\n          • 1080P lite : 25 fps\n          • 1ch audio in - 1 ch audio out\n          • SATA × 1, max 6T\n          • Search: time slice, time, event, tag search, smart\n          search\n          • Smart Search Highlighted color to display the\n          camera record in a certain period of time, different\n          colors refers to different record events\n          • Support NAT function and QRCode scanning by\n          mobile phone and IPAD",
-        "image": "/src/assets/products/IT Solution/ZTDX-EG4CH.png"
-      },
-      {
-        "id": 2,
-        "title": "Zero Tech ZTDX-EG4CH5M",
-        "brand": "Zero Tech",
-        "description": "• 4 CH DVR supports TVI / AHD/CVI\n          5MP/4MP/1080P/720P/WD1 video input\n          • 4 CH DVR supports 2 CH 5MP / 4MP / 3MP /1080P\n          / 960P /720P IP\n          • video input by default\n          • 4CH DVR: 4CH analog video input can be switched\n          to 4CH IP video input\n          • Adopt standard H.265 high profile compression\n          format to get high-quality\n          • video at much lower bit rate\n          • Intuitive and user-friendly Graphics User Interface (\n          GUI ) window style\n          • operation by mouse\n          • Multi-mode recording: manual / timed / sensor /\n          motion / AI recording\n          • Playback : 4 CH simultaneously playback\n          • Search: time slice time event tag search\n          • Express and flexible backup via USB network and\n          so on\n          • Pentaplex: preview, record playback backup and\n          remote access\n          • DHCP DDNS PoE network protocol\n          • Remote control via Web or CMS : preview,\n          playback backup PTZ and\n          • configuration\n          • Authorization management log review and device\n          status review\n          • Support 1080P output true high resolution display\n          • Support PTZ preset and auto cruise, up to 255\n          presets and 8 cruises\n          • Support NAT function and QRCode scanning by\n          mobile phones\n          • Powerful mobile surveillance by smart phones with\n          iOS and Andriod OS",
-        "image": "/src/assets/products/IT Solution/ZTDX-EG4CH5M.png"
-      },
-      {
-        "id": 3,
-        "title": "Zero Tech ZTDX-EG16CH5M",
-        "brand": "Zero Tech",
-        "description": "• Supports 16 CH TVI / AHD /CVI 5MP / 4MP / 1080P\n          / 720P / WD1 video input\n          • Supports 8 CH 5MP / 4MP / 3MP / 1080P / 960P /\n          720P IP video input\n          • 8CH analog video input can be switched to 8CH IP\n          video input\n          • Adopt standard H.265 high profile compression\n          format to get high-quality\n          • Intuitive and user-friendly Graphics User Interface\n          ( GUI ), window style\n          • operation by mouse\n          • Multi-mode recording: manual / timed / sensor\n          /motion / AI recording\n          • Playback : 16 CH simultaneously playback\n          • Search: time slice, time, event, tag search\n          • Express and flexible backup via USB, network and\n          so on\n          • Pentaplex: preview, record, playback, backup and\n          remote access\n          • DHCP, DDNS, PPPoE network protocol\n          • Remote control via Web or CMS : preview,\n          playback, backup, PTZ and\n          • configuration\n          • Authorization management, log review and device\n          status review\n          • Support 1080P output, true high resolution display\n          • Support PTZ preset and auto cruise, up to 255\n          presets and 8 cruises\n          • Support NAT function and QRCode scanning by\n          mobile phones\n          • Powerful mobile surveillance by smart phones\n          with iOS and Andriod OS",
-        "image": "/src/assets/products/IT Solution/ZTDX-16CH5M.png"
-      },
-      {
-        "id": 4,
-        "title": "Zero Tech ZTNX-EG4CH5M",
-        "brand": "Zero Tech",
-        "description": "Villa18 EL-Khalifa Al wasek St. IN Front Of EL Hadiqah Aldawlya From Abbas ELakkad Nasr-City, Cairo, Egypt.\n          Hotline: 16105\n          Mobile: 002-01025001940 – 002-01025001941 -002-01025001942\n          X NVR\n          ZTNX-EG4CH5M\n          • Support 4CH 8MP/6MP/5MP/4MP/3MP/1080P/\n          960P/720P/ 960H/DI/CIF IP video input\n          • Adopt standard H.265 and H.264 high profile\n          compression format to get high-quality video at\n          much lower bit rate\n          • Multi-mode recording: manual / timed / motion\n          / sensor / POS / AI recording\n          • Playback : 4 CH simultaneous playback\n          • Search : time slice, time, event, tag, smart search\n          • Support multiple VCA (Video Content Analytics)\n          events, such as object abandoned/missing,\n          region intrusion, tripwire, video exception, etc.\n          • Support POS information overlay on live view\n          and playback\n          • DHCP, DDNS, PPPoE network protocol\n          • Remote control via Web or CMS : preview,\n          playback, backup, PTZ and configuration\n          • 4/8 PoE network ports; IPC can be directly\n          connected to NVR; PoE power supply supported\n          • 4K output, true high resolution display",
-        "image": "/src/assets/products/IT Solution/ZTNX-EG8CH5M.png"
-      },
-      {
-        "id": 5,
-        "title": "Zero Tech ZTNX-EG8CH5M",
-        "brand": "Zero Tech",
-        "description": "• 8 CH IPC input\n          • Adopt standard H.265 and H.264 high profile\n          compression format to get high-quality video at\n          much lower bit rate\n          • Playback : 8 CH simultaneous playback\n          • Search : time slice, time, event ( manual, sensor,\n          motion ), tag search\n          • 1080P HD output, true high resolution display\n          • SATA × 1, up to 8TB per HDD\n          • Support PTZ preset and auto cruise, up to 255\n          presets and 8 cruises\n          • Authorization management, log view and device\n          status vie",
-        "image": "/src/assets/products/IT Solution/ZTNX-EG8CH5M.png"
-      },
-      {
-        "id": 6,
-        "title": "Hikvision DS-7104HGHI-K1(STD)(C)(S",
-        "brand": "Hikvision",
-        "description": "4 Turbo HD/AHD/Analog interface input, 4-ch video&1-ch audio input, 1-ch IP video\n          input, 1 SATA interface, H.265, HD1080P Lite: 25(P)/30(N) fps/ch, mini 1U case\n          ,Plastic",
-        "image": "/src/assets/products/IT Solution/Hikvision-DS-7104HGHI-K1(S)-FHD-DVR-4CH.png"
-      },
-      {
-        "id": 7,
-        "title": "Hikvision DS-7108HGHI-K1(STD)(C)(S",
-        "brand": "Hikvision",
-        "description": "8 Turbo HD/AHD/Analog interface input, 8-ch video&1-ch audio input, 2-ch IP video\n          input, HDMI & VGA Output, 1 SATA interface, H.264, HD1080P Lite: : 25(P)/30(N)\n          fps/ch, mini 1U case ,Plastic",
-        "image": "/src/assets/products/IT Solution/Hikvision-DS-7104HGHI-K1(S)-FHD-DVR-4CH.png"
-      },
-      {
-        "id": 8,
-        "title": "Hikvision DS-7604NI-Q1",
-        "brand": "Hikvision",
-        "description": "4-ch 1080P, or 1-ch 4K,40Mbps Bit Rate Input Max (up to 4-ch IP video), 1 SATA\n          interface, standalone 1U case",
-        "image": "/src/assets/products/IT Solution/Hikvision-DS-7604NI-Q1-4K-NVR-4CH.png"
-      }
-    ],
-    "Surveillance-systems": [
-      {
-        "id": 9,
-        "title": "Zero Tech ZTX-EG105-V2",
-        "brand": "Zero Tech",
-        "description": "1080P real-time image, high resolution, true color, Support COC AHD / TVI / CVI /CVBS standard and lossless video output CMOS progressive scan, perfectly capture the moving object Support OSD menu High speed, long distance and real-time transmission digital WDR Auto color to B / W at low illumination Support ICR switch, true day / night Support noise reduction function 20m IR night view distance",
-        "image": "/src/assets/products/Surv/ZTX-EG105-V2.png"
-      },
-      {
-        "id": 10,
-        "title": "Zero Tech ZTX-EG2002-V2",
-        "brand": "Zero Tech",
-        "description": "1080P real-time image, high resolution, true color AHD / TVI / CVI /CVBS standard and lossless video output CMOS progressive scan, perfectly capture the moving object Support OSD menu, digital WDR High speed, long distance and real-time transmission Auto color to B / W at low illumination Support ICR switch, true day / night Support noise reduction function 20m IR night view distance IP66 ingress protection Support COC",
-        "image": "/src/assets/products/Surv/ZTX-EG2002-V2.png"
-      },
-      {
-        "id": 11,
-        "title": "Zero Tech ZTD-EG2MFC",
-        "brand": "Zero Tech",
-        "description": "1080P real-time image, high resolution, true color , IP67 , Lens 2.8mm AHD / TVI / CVI lossless HD video output Support 960H CVBS output Up to 1000 TVL resolution CMOS progressive scan, perfectly capturing the moving object Support OSD menu High speed, long distance and real-time transmission , Support COC 24/7 full color imaging LED can be turned on or off automatically Support noise reduction function 10 ~ 20m LED distance",
-        "image": "/src/assets/products/Surv/ZTD-EG2MFC.png"
-      },
-      {
-        "id": 12,
-        "title": "Zero Tech ZTB-EG2MFC",
-        "brand": "Zero Tech",
-        "description": "1080P real-time image, high resolution, true color , IP67 , Lens 2.8mm AHD / TVI / CVI lossless HD video output Support 960H CVBS output Up to 1000 TVL resolution CMOS progressive scan, perfectly capturing the moving object Support OSD menu High speed, long distance and real-time transmission , Support COC 24/7 full color imaging LED can be turned on or off automatically Support noise reduction function 10 ~ 20m LED distance",
-        "image": "/src/assets/products/Surv/ZTB-EG2MFC.png"
-      },
-      {
-        "id": 13,
-        "title": "Zero Tech ZTD-Z2MFC",
-        "brand": "Zero Tech",
-        "description": "2.0M 1/2.9 cmos 0.01Lux@(F1.2,AGC ON)，0LUX with IR 3D-DNR，2D-DNR , 24/7 COLOR DWDR , DC12V , BLC 1080P@25fps / 1080P@30fps lens 2.8mm , Fixed-focal AHD/TVI/CVI/CVBS warm light distance up to 30M",
-        "image": "/src/assets/products/Surv/ZTD-Z2MFC.png"
-      },
-      {
-        "id": 14,
-        "title": "Zero Tech ZTB-Z2MFC",
-        "brand": "Zero Tech",
-        "description": "2.0M 1/2.9 cmos 0.01Lux@(F1.2,AGC ON)，0LUX with IR 3D-DNR，2D-DNR DWDR , DC12V , BLC AHD/TVI/CVI/CVBS lens 3.6mm , Fixed-focal 24/7 COLOR warm light distance up to 30M 1080P@25fps / 1080P@30fps",
-        "image": "/src/assets/products/Surv/ZTB-Z2MFC.png"
-      },
-      {
-        "id": 15,
-        "title": "Zero Tech ZTD-EG2M-AU",
-        "brand": "Zero Tech",
-        "description": "1080P real-time image, high resolution, true color AHD / TVI / CVI lossless HD video output Support 960H CVBS output Up to 1000 TVL resolution CMOS progressive scan, perfectly capturing the moving object Support OSD menu High speed, long distance and real-time transmission Auto color to B / W at low illumination Support ICR switch, true day / night Support noise reduction function 10 ~20m IR night view distance IP67 Support coaxial audio transmission Support COC",
-        "image": "/src/assets/products/Surv/ZTD-EG2M-AU.png"
-      },
-      {
-        "id": 16,
-        "title": "Zero Tech ZTD-EG2MFC-AU",
-        "brand": "Zero Tech",
-        "description": "1080P real-time image, high resolution, true color , IP67 AHD / TVI / CVI lossless HD video output Support 960H CVBS output Up to 1000 TVL resolution CMOS progressive scan, perfectly capturing the moving object Support OSD menu High speed, long distance and real-time transmission 24/",
-        "image": "/src/assets/products/Surv/ZTD-EG2MFC-AU.png"
-      },
-      {
-        "id": 17,
-        "title": "Zero Tech ZTEG-D5M",
-        "brand": "Zero Tech",
-        "description": "1/2.7 inch CMOS sensor 5MP 2.8mm f@1.2 Long transmission distance, coaxial transmission up to 500 meters; support OSD menu ICR filter with auto switch IR night view distance up to 30 m 18 pcs IP66 ingress protection NTSC & PAL 2 in 1, easy to switch through back-end; High-definition quality products with competitive price",
-        "image": "/src/assets/products/Surv/ZTEG-D5M.png"
-      },
-      {
-        "id": 18,
-        "title": "Zero Tech ZTEG-B5M",
-        "brand": "Zero Tech",
-        "description": "1/2.7 inch CMOS sensor 5MP 3.6mm f@1.2 Long transmission distance, coaxial transmission up to 500 meters; support OSD menu ICR filter with auto switch IR night view distance up to 30 m 18 pcs IP66 ingress protection NTSC & PAL 2 in 1, easy to switch through back-end; High-definition quality products with competitive price",
-        "image": "/src/assets/products/Surv/ZTEG-B5M.png"
-      },
-      {
-        "id": 19,
-        "title": "Zero Tech ZTB-L5ML",
-        "brand": "Zero Tech",
-        "description": "Video Output Mode AHD/TVI: 5M@20fps/12.5fps, 4M@30fps/25fps/15fps, 2M@30fps/25fps; CVI: 4M@30fps/25fps, 2M@30fps/25fps Image Sensor 1/3\" CMOS Sensor Image Resolution 5M:2592*1944 4M:2560*1440 2M:1920*1080 Minimun Illumination Color : 0.03 lux@F2.0, AGC ON; B/W : 0 lux with IR Focus Length Fixed 3.6mm OSD , DWDR Infrared LED 42μ x 2PCS Light Distance up to 25m Housing Plastic, IP66 Operation Temperature -10℃ ~ +60℃ RH95% Max Storage Temperature -20℃ ~ +60℃ RH95% Max Power Source DC12V±10%, 450mA",
-        "image": "/src/assets/products/Surv/ZTB-L5ML.png"
-      },
-      {
-        "id": 20,
-        "title": "Zero Tech ZTD-L5ML",
-        "brand": "Zero Tech",
-        "description": "Video Output Mode AHD/TVI: 5M@20fps/12.5fps, 4M@30fps/25fps/15fps, 2M@30fps/25fps; CVI: 4M@30fps/25fps, 2M@30fps/25fps Image Sensor 1/3\" CMOS Sensor Image Resolution 5M:2592*1944 4M:2560*1440 2M:1920*1080 Minimun Illumination Color : 0.03 lux@F2.0, AGC ON; B/W : 0 lux with IR Focus Length Fixed 2.8mm Infrared LED 42μ x 1PCS Infrared Distance 20M OSD , DWDR , UTC , DNR Operation Temperature -10℃~ +60℃ RH95% Max Storage Temperature -20℃ ~ +60℃ RH95% Max Power Source DC12V±10%, 500mA",
-        "image": "/src/assets/products/Surv/ZTD-L5ML.png"
-      },
-      {
-        "id": 21,
-        "title": "Zero Tech ZTD-EG5MFC",
-        "brand": "Zero Tech",
-        "description": "5MP @20fps/4MP real-time image, high resolution, true color AHD / TVI / CVI lossless high-defintion video output, Up to 1500 TVL resolution, IP67 CMOS progressive scan, perfectly capture the moving object , Lens 2.8mm Support OSD menu , Support COC High speed, long distance and real time transmission Auto color to B / W at low illumination Support ICR switch, true day / night 20 ~ 30m view distance 24/7 full color imaging",
-        "image": "/src/assets/products/Surv/ZTD-EG5MFC.png"
-      },
-      {
-        "id": 22,
-        "title": "Zero Tech ZTD-EG5MFC",
-        "brand": "Zero Tech",
-        "description": "5MP @20fps/4MP real-time image, high resolution, true color AHD / TVI / CVI lossless high-defintion video output, Up to 1500 TVL resolution, IP67 CMOS progressive scan, perfectly capture the moving object , Lens 2.8mm Support OSD menu , Support COC High speed, long distance and real time transmission Auto color to B / W at low illumination Support ICR switch, true day / night 20 ~ 30m view distance 24/7 full color imaging",
-        "image": "/src/assets/products/Surv/ZTD-EG5MFC.png"
-      },
-      {
-        "id": 23,
-        "title": "Zero Tech ZTB-EG5MFC",
-        "brand": "Zero Tech",
-        "description": "5MP@20fps/4MP real time image, high resolution, true color AHD / TVI / CVI standard and lossless video output , Up to 1500 TVL resolution CMOS progressive scan, perfectly capture the moving object , Lens 3.6mm Support OSD menu , Support COC High speed, long distance and real time transmission Auto color to B / W at low illumination Support ICR switch, true day / night 20 ~ 30m view distance IP67 ingress protection 24/7 full color imaging Support coaxial audio transmission",
-        "image": "/src/assets/products/Surv/ZTB-EG5MFC.png"
-      },
-      {
-        "id": 24,
-        "title": "Zero Tech ZTD-Z8M",
-        "brand": "Zero Tech",
-        "description": "4K 1/2.8 sony 0.01Lux@(F1.2,AGC ON 2DNR 3DNR , BLC , WDR fixed lens 2.8mm AHD/TVI/CVI/CVBS DC12V , IR led UP To 30M 5MP@20fps/ 4K @12.5fps",
-        "image": "/src/assets/products/Surv/ZTD-Z8M.png"
-      },
-      {
-        "id": 25,
-        "title": "Zero Tech ZTB-Z8M",
-        "brand": "Zero Tech",
-        "description": "4K 1/2.8 sony 0.01Lux@(F1.2,AGC ON 2DNR 3DNR, WDR , BLC fixed lens 3.6mm AHD/TVI/CVI/CVBS 5MP@20fps/ 4K @12.5fps DC12V , IR led UP To 30M",
-        "image": "/src/assets/products/Surv/ZTB-Z8M.png"
-      },
-      {
-        "id": 26,
-        "title": "Zero Tech ZTD-Z8MFC",
-        "brand": "Zero Tech",
-        "description": "4K 1/2.8 sony 0.01Lux@(F1.2,AGC ON) 2DNR , DWDR , fixed lens 2.8mm AHD/TVI/CVI/CVBS 8MP PAL:12.5fps / NTSC:15fps DC12V , BLC , 12V DC warm light distance UP To 30M 24/7 COLOR",
-        "image": "/src/assets/products/Surv/ZTD-Z8M.png"
-      },
-      {
-        "id": 28,
-        "title": "Zero Tech ZTIPD-L2M",
-        "brand": "Zero Tech",
-        "description": "Image Sensor 1/2.9\" Progressive Scan CMOS Sensor\nResolution 2MP 1080P\nEffective Pixels 1920(H)*1080(V)\nCompression H.264/H.264+/H.265/H.265+/JPEG/AVI\nMinimum Illumination 0.01Lux\nS/N Ratio 60dB\nFixed focal lens 2.8\nInfrared LED 14µ x 18PCS\nInfrared Distance 20M\nDWDR: 50dB, Defog, ROI, BLC\nOperation Temperature -20°C ~ +60°C\nRH95% Max",
-        "image": "/src/assets/products/Surv/ZTIPD-L2M.png"
-      },
-      {
-        "id": 29,
-        "title": "Zero Tech ZTIPB-L2M",
-        "brand": "Zero Tech",
-        "description": "Image Sensor 1/2.9\" Progressive Scan CMOS Sensor\nResolution 2MP 1080P\nEffective Pixels 1920(H)*1080(V)\nCompression H.264/H.265/JPEG/AVI/MJPEG\nMinimum Illumination Color: 0.008 Lux @ (F1.6, AGC ON), B/W: 0 Lux with IR\nS/N Ratio 60dB\nFixed focal lens 3.6\nInfrared LED 42μ x 2PCS\nInfrared Distance 25M\nWDR 120dB, Defog Mode, ROI N/A, BLC, IP66\nDC12V±10%, 700mA",
-        "image": "/src/assets/products/Surv/ZTIPB-L2M.png"
-      },
-      {
-        "id": 30,
-        "title": "Zero Tech ZTIPB-L2MFC",
-        "brand": "Zero Tech",
-        "description": "Image Sensor 1/2.9\" Progressive Scan CMOS Sensor\nResolution 2MP 1080P\nEffective Pixels 1920(H)*1080(V)\nCompression H.264/H.264+/H.265/H.265+/JPEG/AVI/MJPEG\nMinimum Illumination Color: 0.008 Lux @ (F1.6, AGC ON), B/W: 0 Lux with IR\nS/N Ratio 60dB\nFixed focal lens 3.6\nSupport Warm light LED 4000K, up to 25m\nSupport ONVIF 19.12(Profile S/T/G)\nDWDR, BLC, defog, IP66, DC12V±10%, 700Ma",
-        "image": "/src/assets/products/Surv/ZTIPB-L2MFC.png"
-      },
-      {
-        "id": 31,
-        "title": "Zero Tech ZTIPB-L2M-AF",
-        "brand": "Zero Tech",
-        "description": "1/2.9\" Progressive Scan CMOS Sensor\nResolution 2MP 1080P\nEffective Pixels 1920(H)*1080(V)\nCompression H.264/H.264+/H.265/H.265+/JPEG/AVI/MJPEG\nMinimum Illumination Color: 0.008 Lux @ (F1.6, AGC ON), B/W: 0 Lux with IR\nS/N Ratio 60dB\nFocal Length & FOV 2.7-13.5mm Motor Zoom, horizontal FOV 103°—29°, vertical FOV 54°—17°, diagonal FOV 124°—34°\nInfrared LED 42μ x 4PCS\nInfrared Distance 40M\nRJ-45 (10/100Base-T)\nPOE Internal, Support IEEE 802.3af\nSupport ONVIF 19.12(Profile S/T/G)\nDWDR, BLC, defog, ROI, DC12V±10%, 950mA\nSD Card Slot Optional Internal, Support Max 512GB",
-        "image": "/src/assets/products/Surv/ZTIPB-L2M-AF.png"
-      },
-      {
-        "id": 32,
-        "title": "Zero Tech ZTIPD-L4M",
-        "brand": "Zero Tech",
-        "description": "Image Sensor 1/3\" Progressive Scan CMOS Sensor\nResolution 4MP\nEffective Pixels 2560(H)*1440(V)\nCompression H.264/H.264+/H.265/H.265+/JPEG/AVI/MJPEG\nS/N Ratio 60dB\nMinimum Illumination Color: 0.03 Lux @ (F1.6, AGC ON), B/W: 0 Lux with IR\nFixed focal lens 2.8\nInfrared LED 14μ x 18PCS\nInfrared Distance 20M\nEthernet RJ-45 (10/100Base-T)\nPOE Optional External, Support IEEE 802.3af\nDWDR, BLC, defog, ROI",
-        "image": "/src/assets/products/Surv/ZTIPD-L2M.png"
-      },
-      {
-        "id": 33,
-        "title": "Zero Tech ZTIPB-L4M",
-        "brand": "Zero Tech",
-        "description": "Image Sensor 1/3\" Progressive Scan CMOS Sensor\nResolution 4MP\nEffective Pixels 2560(H)*1440(V)\nCompression H.264/H.264+/H.265/H.265+/JPEG/AVI/MJPEG\nMinimum Illumination Color: 0.03 Lux @ (F1.6, AGC ON), B/W: 0 Lux with IR\nS/N Ratio 60dB\nFixed focal lens 3.6\nInfrared LED 42μ x 2PCS\nInfrared Distance 25M\nEthernet RJ-45 (10/100Base-T)\nSupport ONVIF 19.12(Profile S/T/G)\nDWDR, BLC, defog, ROI, IP66\nDC12V±10%, 700mA",
-        "image": "/src/assets/products/Surv/ZTIPB-L2M.png"
-      },
-      {
-        "id": 34,
-        "title": "Zero Tech ZTIPD-Z5M",
-        "brand": "Zero Tech",
-        "description": "5.0 MP 1/3 cmos sensor\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\nFixed-focal 2.8mm\nH.265/H.264\nMain Steam: 2592*1944, 5-20FPS/S 2560*1440、2304*1296、1920*1080、1280*720，5-25 FPS/S\nsub stream: 704*576、640*480、640*360、352*288，5-25FPS/S\nVideo Coding Compression 128Kbps-8192bps continuous adjustable\nDC12V /POE , 12V DC\nIR led UP To 30M",
-        "image": "/src/assets/products/Surv/ZTD-Z8M.png"
-      },
-      {
-        "id": 35,
-        "title": "Zero Tech ZTIPB-Z5M",
-        "brand": "Zero Tech",
-        "description": "5.0 MP 1/3 cmos sensor\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\n128Kbps-8192bps continuous adjustable\nFixed-focal 3.6mm\nH.265/H.264\nDC12V /POE , 12V DC\nIR led UP To 30M\nMain Steam: 2592*1944, 5-20FPS/S 2560*1440、2304*1296、1920*1080、1280*720，5-25 FPS/S\nsub stream: 704*576、640*480、640*360、352*288，5-25FPS/S",
-        "image": "/src/assets/products/Surv/ZTB-Z8M.png"
-      },
-      {
-        "id": 36,
-        "title": "Zero Tech ZTIPD-Z5MFC",
-        "brand": "Zero Tech",
-        "description": "5.0 MP 1/3 cmos sensor\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\nFixed-focal 2.8mm\nH.265/H.264\nMain Steam: 2592*1944, 5-20FPS/S 2560*1440、2304*1296、1920*1080、1280*720，5-25 FPS/S\nsub stream: 704*576、640*480、640*360、352*288，5-25FPS/S\n128Kbps-8192bps continuous adjustable\nDC12V /POE , 12V DC\nwarm light distance UP To 30M\n24/7 COLOR",
-        "image": "/src/assets/products/Surv/ZTD-Z8M.png"
-      },
-      {
-        "id": 37,
-        "title": "Zero Tech ZTIPB-Z5MFC",
-        "brand": "Zero Tech",
-        "description": "5.0 MP 1/3 cmos sensor\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db , Fixed-focal 3.6mm\nH.265/H.264\nMain Steam: 2592*1944, 5-20FPS/S 2560*1440、2304*1296、1920*1080、1280*720，5-25 FPS/S\nsub stream: 704*576、640*480、640*360、352*288，5-25FPS/S\n128Kbps-8192bps continuous adjustable\nDC12V /POE , BLC , 12V DC\nwarm light distance UP To 30M\n24/7 COLOR",
-        "image": "/src/assets/products/Surv/ZTB-Z8M.png"
-      },
-      {
-        "id": 38,
-        "title": "Zero Tech ZTIPB-L5MS",
-        "brand": "Zero Tech",
-        "description": "Image Sensor 1/2.8\" SONY Starvis Back-illuminated CMOS sensor\nResolution 5MP\nEffective Pixels 2616 (H)*1964 (V)\nCompression H.264/H.265/JPEG/AVI\nMinimum Illumination Color: 0.006 Lux @ (F1.6, AGC ON),B/W: 0 Lux with IR\nS/N Ratio ≥52dB\nFocus Length Fixed 3.6mm\nInfrared LED 42μ x 4PCS\nInfrared Distance 40M\nEthernet RJ-45 (10/100Base-T)\nONVIF Support ONVIF 19.12(Profile S/T/G)\nPOE External, Support IEEE 802.3af\nWDR 120dB , BLC , ROI",
-        "image": "/src/assets/products/Surv/ZTIPB-L5MS.png"
-      },
-      {
-        "id": 39,
-        "title": "Zero Tech ZTIPB-L5M-AF",
-        "brand": "Zero Tech",
-        "description": "1/2.8\" SONY Starvis Back-illuminated CMOS sensor\nResolution 5MP\nEffective Pixels 2616 (H)*1964 (V)\nCompression H.264/H.265/JPEG/AVI\nColor: 0.006 Lux @ (F1.6, AGC ON),B/W: 0 Lux with IR\nS/N Ratio 60dB\n2.7-13.5mm Motor Zoom, horizontal FOV 103°—29°, vertical FOV 54°—16°, diagonal FOV 124°—33°\nInfrared LED 42μ x 4PCS\nInfrared Distance 40M\nEthernet RJ-45 (10/100Base-T)\nSupport ONVIF 19.12(Profile S/T/G)\nPOE Internal Support IEEE 802.3af\nWDR , BLC , ROI , Power Source DC12V±10%, 950mA",
-        "image": "/src/assets/products/Surv/ZTIPB-L5M-AF.png"
-      },
-      {
-        "id": 40,
-        "title": "Zero Tech ZTIPD-Z8M",
-        "brand": "Zero Tech",
-        "description": "4K 1/2.8\" sony\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\nFixed-focal 2.8mm\nDC12V /POE , 12V DC\nIR led UP To 30M\nH.265/H.264\nmain :3840*2160 , 1-15FPS/S 2880*1664、2560*1440、2304*1296、1920*1080、1280*720，1-15FPS/S\nsub : 704*576、800*448、640*480、640*360、352*288，1-15FPS/S",
-        "image": "/src/assets/products/Surv/ZTD-Z8M.png"
-      },
-      {
-        "id": 41,
-        "title": "Zero Tech ZTIPB-Z8M",
-        "brand": "Zero Tech",
-        "description": "4K 1/2.8\" sony\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\nFixed-focal 3.6mm\nH.265/H.264\nmain :3840*2160 , 1-15FPS/S 2880*1664、2560*1440、2304*1296、1920*1080、1280*720，1-15FPS/S\nsub : 704*576、800*448、640*480、640*360、352*288，1-15FPS/S\n128Kbps-8192bps continuous adjustable\nDC12V /POE , 12V DC\nIR led UP To 30M",
-        "image": "/src/assets/products/Surv/ZTB-Z8M.png"
-      },
-      {
-        "id": 42,
-        "title": "Zero Tech ZTIPD-Z8MFC",
-        "brand": "Zero Tech",
-        "description": "4K 1/2.8\" sony\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\nFixed-focal 2.8mm\nH.265/H.264\nmain :3840*2160 , 1-15FPS/S 2880*1664、2560*1440、2304*1296、1920*1080、1280*720，1-15FPS/S\nsub : 704*576、800*448、640*480、640*360、352*288，1-15FPS/S\n128Kbps-8192bps continuous adjustable\nDC12V /POE, 12V DC\nwarm light distance UP To 30M\n24/7 COLOR",
-        "image": "/src/assets/products/Surv/ZTD-Z8M.png"
-      },
-      {
-        "id": 43,
-        "title": "Zero Tech ZTIPB-Z8MFC",
-        "brand": "Zero Tech",
-        "description": "4K 1/2.8\" sony\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\nFixed-focal 3.6mm\nH.265/H.264\nmain :3840*2160 , 1-15FPS/S 2880*1664、2560*1440、2304*1296、1920*1080、1280*720，1-15FPS/S\nsub : 704*576、800*448、640*480、640*360、352*288，1-15FPS/S\n128Kbps-8192bps continuous adjustable\nDC12V /POE , 12V DC\nwarm light distance UP To 30M\n24/7 COLOR",
-        "image": "/src/assets/products/Surv/ZTB-Z8M.png"
-      },
-      {
-        "id": 44,
-        "title": "Hikvision DS-2CE76D0T-EXIPF(2.8mm)(O-STD)",
-        "brand": "Hikvision",
-        "description": "2MP CMOS Sensor, EXIR 20m IR, Outdoor EXIR Turret, ICR, 0.02 Lux/F1.2, 12 VDC,\nLens\nSmart IR, DNR, OSD Menu(Up the Coax), 2.8/3.6mm\nSupport\nTVI/AHD/CVI/CVBS video signal output, Plastic",
-        "image": "/src/assets/products/Surv/DS-2CE76D0T-EXIPF(2.8mm)(O-STD).png"
-      },
-      {
-        "id": 45,
-        "title": "Hikvision DS-2CE16D0T-EXIPF(3.6mm)(O-STD)",
-        "brand": "Hikvision",
-        "description": "2MP CMOS Sensor, EXIR 25m IR, Outdoor EXIR Bullet, ICR, 0.02 Lux/F1.2, 12VDC,\nLens,\nSmart IR,OSD Menu(Up the Coax), IP67,2.8/3.6/6mm\nSupport\nTVI/AHD/CVI/CVBS video signal output, Plastic",
-        "image": "/src/assets/products/Surv/DS-2CE16D0T-EXIPF(3.6mm)(O-STD).png"
-      },
-      {
-        "id": 46,
-        "title": "Hikvision DS-2CE16H0T-ITFS(2.8mm)(O-STD)",
-        "brand": "Hikvision",
-        "description": "5MP@20fps, 4MP@25fps(P)/30fps(N)(Default), EXIR, 30m IR, Outdoor EXIR Bullet,\nICR, 0.01 Lux/F1.2, 12 VDC, Smart IR, DNR, Built-in Mic,Audio up Coaxial(Only\nLens,\nTVI),OSD Menu(Up the Coax), IP67,2.8/3.6/6mm\nSupport TVI/AHD/CVI/CVBS\nvideo signal output",
-        "image": "/src/assets/products/Surv/DS-2CE16H0T-ITFS(2.8mm)(O-STD).png"
-      },
-      {
-        "id": 47,
-        "title": "Hikvision DS-2CE76H0T-ITMFS(2.8mm)(O-STD)",
-        "brand": "Hikvision",
-        "description": "5MP@20fps, 4MP@25fps(P)/30fps(N)(Default), EXIR, 30m IR, Outdoor EXIR Bullet,\nICR, 0.01 Lux/F1.2, 12 VDC, Smart IR, DNR, Built-in Mic,Audio up Coaxial(Only\nLens,\nTVI),OSD Menu(Up the Coax), IP67,2.8/3.6/6mm\nSupport TVI/AHD/CVI/CVBS\nvideo signal output",
-        "image": "/src/assets/products/Surv/DS-2CE76H0T-ITMFS(2.8mm)(O-STD).png"
-      },
-      {
-        "id": 48,
-        "title": "Hikvision DS-2CD1023G0E-I(4mm)(C)(O-STD)",
-        "brand": "Hikvision",
-        "description": "2MP,1/2.8\" Progressive CMOS, ICR, 1920x1080:25fps(P)/30fps(N),\nH.265+/H.264+&H.264, IP67, DWDR, 3D DNR, BLC, IR range: up to 30m, DC12V &\nPoE,Support mobile monitoring via Hik-Connect *power supply no included",
-        "image": "/src/assets/products/Surv/DS-2CD1023G0E-I(4mm)(C)(O-STD).png"
-      },
-      {
-        "id": 49,
-        "title": "Hikvision DS-2CD1123G0E-I(2.8mm)(C)(O-STD)",
-        "brand": "Hikvision",
-        "description": "2MP,1/2.8\" Progressive CMOS, ICR, 1920x1080:25fps(P)/30fps(N),\nH.265+/H.264+&H.264, IP67,DWDR, 3D DNR, BLC, IR range: up to 30m, DC12V &\nPoE,Support mobile monitoring via Hik-Connect *power supply no included",
-        "image": "/src/assets/products/Surv/DS-2CD1123G0E-I(2.8mm)(C)(O-STD).png"
-      },
-      {
-        "id": 458003,
-        "title": "Honorable",
-        "brand": "Zooveo",
-        "description": "\"Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.  Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\"",
-        "image": "https://gofit-eg.com/wp-content/uploads/2023/03/WhatsApp-Image-2023-10-04-at-4.37.23-PM-1.jpeg"
-      }
-    ],
-    "Fingerprints": [
-      {
-        "id": 50,
-        "title": "Zero Tech ZTF-10",
-        "brand": "Zero Tech",
-        "description": "Capacity:\nFingerprint: 3000\nLcd: Record: 100,000\n2.8'inch TFT; With access control\nMode: Verify fingerprint, Pin, Card\nMode: B\nConnect: USB, RS485, TCP/IP, U-disk\nCurrent: 1A\nWorking Voltage: 9V/1A",
-        "image": "/src/assets/products/Fingerprints/ZTF-10.png"
-      },
-      {
-        "id": 51,
-        "title": "Zero Tech ZTF-40FB",
-        "brand": "Zero Tech",
-        "description": "Capacity:\nFace: 1000\nFingerprint Capacity: 5000\nCard Capacity: 5000\nRecord: 300,000\nWith access control\nDisplay: 2.8inch TFT\nCamera: Double HD Infrared camera\nMode Verify: Face, fingerprint, password, ID card\nCommunication: USB, U-disk, TCP/IP\nCurrent: 1A\nVoltage: DC9V~12V",
-        "image": "/src/assets/products/Fingerprints/ZTF--40FB.png"
-      },
-      {
-        "id": 52,
-        "title": "ZKTeco K14 Pro",
-        "brand": "ZKTeco",
-        "description": "Fingerprint Capacity: 3000\nID Card Capacity: 3,000\nRecord Capacity: 200,000\nDisplay: 2.8 inch TFT screen\nCommunication: TCP/IP, USB host",
-        "image": "/src/assets/products/Fingerprints/K14-Pro.png"
-      },
-      {
-        "id": 53,
-        "title": "ZKTeco K40 Pro",
-        "brand": "ZKTeco",
-        "description": "Fingerprint Capacity: 3000\nID Card Capacity: 3,000\nRecord Capacity: 200,000\nDisplay: 2.8 inch TFT screen\nCommunication: TCP/IP, USB Host\nOther Functions: Built-in battery",
-        "image": "/src/assets/products/Fingerprints/K40-Pro.png"
-      },
-      {
-        "id": 54,
-        "title": "ZKTeco MB20",
-        "brand": "ZKTeco",
-        "description": "Face Capacity: 200\nFingerprint Capacity: 500\nID Card Capacity: 1000\nRecord Capacity: 50,000\nCommunication: TCP/IP, USB host",
-        "image": "/src/assets/products/Fingerprints/MB20.png"
-      }
-    ],
-    "GPS-Tracking": []
-  }
+  "IT-solution": [
+    {
+      "id": 1,
+      "title": "Zero Tech ZTDX-EG4CH",
+      "brand": "Zero Tech",
+      "description": "• 4 CH 1080P lite Standard H.265 high profile\n          compression\n          • 4 CH simultaneously playback\n          • The resolution of CH 1 and CH 2 must be the same.\n          So do CH 3 and CH 4\n          • HDMI × 1 : 1920 × 1080 VGA × 1 : 1920 × 1080\n          • 1080P lite : 25 fps\n          • 1ch audio in - 1 ch audio out\n          • SATA × 1, max 6T\n          • Search: time slice, time, event, tag search, smart\n          search\n          • Smart Search Highlighted color to display the\n          camera record in a certain period of time, different\n          colors refers to different record events\n          • Support NAT function and QRCode scanning by\n          mobile phone and IPAD",
+      "image": "/src/assets/products/IT Solution/ZTDX-EG4CH.png"
+    },
+    {
+      "id": 2,
+      "title": "Zero Tech ZTDX-EG4CH5M",
+      "brand": "Zero Tech",
+      "description": "• 4 CH DVR supports TVI / AHD/CVI\n          5MP/4MP/1080P/720P/WD1 video input\n          • 4 CH DVR supports 2 CH 5MP / 4MP / 3MP /1080P\n          / 960P /720P IP\n          • video input by default\n          • 4CH DVR: 4CH analog video input can be switched\n          to 4CH IP video input\n          • Adopt standard H.265 high profile compression\n          format to get high-quality\n          • video at much lower bit rate\n          • Intuitive and user-friendly Graphics User Interface (\n          GUI ) window style\n          • operation by mouse\n          • Multi-mode recording: manual / timed / sensor /\n          motion / AI recording\n          • Playback : 4 CH simultaneously playback\n          • Search: time slice time event tag search\n          • Express and flexible backup via USB network and\n          so on\n          • Pentaplex: preview, record playback backup and\n          remote access\n          • DHCP DDNS PoE network protocol\n          • Remote control via Web or CMS : preview,\n          playback backup PTZ and\n          • configuration\n          • Authorization management log review and device\n          status review\n          • Support 1080P output true high resolution display\n          • Support PTZ preset and auto cruise, up to 255\n          presets and 8 cruises\n          • Support NAT function and QRCode scanning by\n          mobile phones\n          • Powerful mobile surveillance by smart phones with\n          iOS and Andriod OS",
+      "image": "/src/assets/products/IT Solution/ZTDX-EG4CH5M.png"
+    },
+    {
+      "id": 3,
+      "title": "Zero Tech ZTDX-EG16CH5M",
+      "brand": "Zero Tech",
+      "description": "• Supports 16 CH TVI / AHD /CVI 5MP / 4MP / 1080P\n          / 720P / WD1 video input\n          • Supports 8 CH 5MP / 4MP / 3MP / 1080P / 960P /\n          720P IP video input\n          • 8CH analog video input can be switched to 8CH IP\n          video input\n          • Adopt standard H.265 high profile compression\n          format to get high-quality\n          • Intuitive and user-friendly Graphics User Interface\n          ( GUI ), window style\n          • operation by mouse\n          • Multi-mode recording: manual / timed / sensor\n          /motion / AI recording\n          • Playback : 16 CH simultaneously playback\n          • Search: time slice, time, event, tag search\n          • Express and flexible backup via USB, network and\n          so on\n          • Pentaplex: preview, record, playback, backup and\n          remote access\n          • DHCP, DDNS, PPPoE network protocol\n          • Remote control via Web or CMS : preview,\n          playback, backup, PTZ and\n          • configuration\n          • Authorization management, log review and device\n          status review\n          • Support 1080P output, true high resolution display\n          • Support PTZ preset and auto cruise, up to 255\n          presets and 8 cruises\n          • Support NAT function and QRCode scanning by\n          mobile phones\n          • Powerful mobile surveillance by smart phones\n          with iOS and Andriod OS",
+      "image": "/src/assets/products/IT Solution/ZTDX-16CH5M.png"
+    },
+    {
+      "id": 4,
+      "title": "Zero Tech ZTNX-EG4CH5M",
+      "brand": "Zero Tech",
+      "description": "Villa18 EL-Khalifa Al wasek St. IN Front Of EL Hadiqah Aldawlya From Abbas ELakkad Nasr-City, Cairo, Egypt.\n          Hotline: 16105\n          Mobile: 002-01025001940 – 002-01025001941 -002-01025001942\n          X NVR\n          ZTNX-EG4CH5M\n          • Support 4CH 8MP/6MP/5MP/4MP/3MP/1080P/\n          960P/720P/ 960H/DI/CIF IP video input\n          • Adopt standard H.265 and H.264 high profile\n          compression format to get high-quality video at\n          much lower bit rate\n          • Multi-mode recording: manual / timed / motion\n          / sensor / POS / AI recording\n          • Playback : 4 CH simultaneous playback\n          • Search : time slice, time, event, tag, smart search\n          • Support multiple VCA (Video Content Analytics)\n          events, such as object abandoned/missing,\n          region intrusion, tripwire, video exception, etc.\n          • Support POS information overlay on live view\n          and playback\n          • DHCP, DDNS, PPPoE network protocol\n          • Remote control via Web or CMS : preview,\n          playback, backup, PTZ and configuration\n          • 4/8 PoE network ports; IPC can be directly\n          connected to NVR; PoE power supply supported\n          • 4K output, true high resolution display",
+      "image": "/src/assets/products/IT Solution/ZTNX-EG8CH5M.png"
+    },
+    {
+      "id": 5,
+      "title": "Zero Tech ZTNX-EG8CH5M",
+      "brand": "Zero Tech",
+      "description": "• 8 CH IPC input\n          • Adopt standard H.265 and H.264 high profile\n          compression format to get high-quality video at\n          much lower bit rate\n          • Playback : 8 CH simultaneous playback\n          • Search : time slice, time, event ( manual, sensor,\n          motion ), tag search\n          • 1080P HD output, true high resolution display\n          • SATA × 1, up to 8TB per HDD\n          • Support PTZ preset and auto cruise, up to 255\n          presets and 8 cruises\n          • Authorization management, log view and device\n          status vie",
+      "image": "/src/assets/products/IT Solution/ZTNX-EG8CH5M.png"
+    },
+    {
+      "id": 6,
+      "title": "Hikvision DS-7104HGHI-K1(STD)(C)(S",
+      "brand": "Hikvision",
+      "description": "4 Turbo HD/AHD/Analog interface input, 4-ch video&1-ch audio input, 1-ch IP video\n          input, 1 SATA interface, H.265, HD1080P Lite: 25(P)/30(N) fps/ch, mini 1U case\n          ,Plastic",
+      "image": "/src/assets/products/IT Solution/Hikvision-DS-7104HGHI-K1(S)-FHD-DVR-4CH.png"
+    },
+    {
+      "id": 7,
+      "title": "Hikvision DS-7108HGHI-K1(STD)(C)(S",
+      "brand": "Hikvision",
+      "description": "8 Turbo HD/AHD/Analog interface input, 8-ch video&1-ch audio input, 2-ch IP video\n          input, HDMI & VGA Output, 1 SATA interface, H.264, HD1080P Lite: : 25(P)/30(N)\n          fps/ch, mini 1U case ,Plastic",
+      "image": "/src/assets/products/IT Solution/Hikvision-DS-7104HGHI-K1(S)-FHD-DVR-4CH.png"
+    },
+    {
+      "id": 8,
+      "title": "Hikvision DS-7604NI-Q1",
+      "brand": "Hikvision",
+      "description": "4-ch 1080P, or 1-ch 4K,40Mbps Bit Rate Input Max (up to 4-ch IP video), 1 SATA\n          interface, standalone 1U case",
+      "image": "/src/assets/products/IT Solution/Hikvision-DS-7604NI-Q1-4K-NVR-4CH.png"
+    }
+  ],
+  "Surveillance-systems": [
+    {
+      "id": 9,
+      "title": "Zero Tech ZTX-EG105-V2",
+      "brand": "Zero Tech",
+      "description": "1080P real-time image, high resolution, true color, Support COC AHD / TVI / CVI /CVBS standard and lossless video output CMOS progressive scan, perfectly capture the moving object Support OSD menu High speed, long distance and real-time transmission digital WDR Auto color to B / W at low illumination Support ICR switch, true day / night Support noise reduction function 20m IR night view distance",
+      "image": "/src/assets/products/Surv/ZTX-EG105-V2.png"
+    },
+    {
+      "id": 10,
+      "title": "Zero Tech ZTX-EG2002-V2",
+      "brand": "Zero Tech",
+      "description": "1080P real-time image, high resolution, true color AHD / TVI / CVI /CVBS standard and lossless video output CMOS progressive scan, perfectly capture the moving object Support OSD menu, digital WDR High speed, long distance and real-time transmission Auto color to B / W at low illumination Support ICR switch, true day / night Support noise reduction function 20m IR night view distance IP66 ingress protection Support COC",
+      "image": "/src/assets/products/Surv/ZTX-EG2002-V2.png"
+    },
+    {
+      "id": 11,
+      "title": "Zero Tech ZTD-EG2MFC",
+      "brand": "Zero Tech",
+      "description": "1080P real-time image, high resolution, true color , IP67 , Lens 2.8mm AHD / TVI / CVI lossless HD video output Support 960H CVBS output Up to 1000 TVL resolution CMOS progressive scan, perfectly capturing the moving object Support OSD menu High speed, long distance and real-time transmission , Support COC 24/7 full color imaging LED can be turned on or off automatically Support noise reduction function 10 ~ 20m LED distance",
+      "image": "/src/assets/products/Surv/ZTD-EG2MFC.png"
+    },
+    {
+      "id": 12,
+      "title": "Zero Tech ZTB-EG2MFC",
+      "brand": "Zero Tech",
+      "description": "1080P real-time image, high resolution, true color , IP67 , Lens 2.8mm AHD / TVI / CVI lossless HD video output Support 960H CVBS output Up to 1000 TVL resolution CMOS progressive scan, perfectly capturing the moving object Support OSD menu High speed, long distance and real-time transmission , Support COC 24/7 full color imaging LED can be turned on or off automatically Support noise reduction function 10 ~ 20m LED distance",
+      "image": "/src/assets/products/Surv/ZTB-EG2MFC.png"
+    },
+    {
+      "id": 13,
+      "title": "Zero Tech ZTD-Z2MFC",
+      "brand": "Zero Tech",
+      "description": "2.0M 1/2.9 cmos 0.01Lux@(F1.2,AGC ON)，0LUX with IR 3D-DNR，2D-DNR , 24/7 COLOR DWDR , DC12V , BLC 1080P@25fps / 1080P@30fps lens 2.8mm , Fixed-focal AHD/TVI/CVI/CVBS warm light distance up to 30M",
+      "image": "/src/assets/products/Surv/ZTD-Z2MFC.png"
+    },
+    {
+      "id": 14,
+      "title": "Zero Tech ZTB-Z2MFC",
+      "brand": "Zero Tech",
+      "description": "2.0M 1/2.9 cmos 0.01Lux@(F1.2,AGC ON)，0LUX with IR 3D-DNR，2D-DNR DWDR , DC12V , BLC AHD/TVI/CVI/CVBS lens 3.6mm , Fixed-focal 24/7 COLOR warm light distance up to 30M 1080P@25fps / 1080P@30fps",
+      "image": "/src/assets/products/Surv/ZTB-Z2MFC.png"
+    },
+    {
+      "id": 15,
+      "title": "Zero Tech ZTD-EG2M-AU",
+      "brand": "Zero Tech",
+      "description": "1080P real-time image, high resolution, true color AHD / TVI / CVI lossless HD video output Support 960H CVBS output Up to 1000 TVL resolution CMOS progressive scan, perfectly capturing the moving object Support OSD menu High speed, long distance and real-time transmission Auto color to B / W at low illumination Support ICR switch, true day / night Support noise reduction function 10 ~20m IR night view distance IP67 Support coaxial audio transmission Support COC",
+      "image": "/src/assets/products/Surv/ZTD-EG2M-AU.png"
+    },
+    {
+      "id": 16,
+      "title": "Zero Tech ZTD-EG2MFC-AU",
+      "brand": "Zero Tech",
+      "description": "1080P real-time image, high resolution, true color , IP67 AHD / TVI / CVI lossless HD video output Support 960H CVBS output Up to 1000 TVL resolution CMOS progressive scan, perfectly capturing the moving object Support OSD menu High speed, long distance and real-time transmission 24/",
+      "image": "/src/assets/products/Surv/ZTD-EG2MFC-AU.png"
+    },
+    {
+      "id": 17,
+      "title": "Zero Tech ZTEG-D5M",
+      "brand": "Zero Tech",
+      "description": "1/2.7 inch CMOS sensor 5MP 2.8mm f@1.2 Long transmission distance, coaxial transmission up to 500 meters; support OSD menu ICR filter with auto switch IR night view distance up to 30 m 18 pcs IP66 ingress protection NTSC & PAL 2 in 1, easy to switch through back-end; High-definition quality products with competitive price",
+      "image": "/src/assets/products/Surv/ZTEG-D5M.png"
+    },
+    {
+      "id": 18,
+      "title": "Zero Tech ZTEG-B5M",
+      "brand": "Zero Tech",
+      "description": "1/2.7 inch CMOS sensor 5MP 3.6mm f@1.2 Long transmission distance, coaxial transmission up to 500 meters; support OSD menu ICR filter with auto switch IR night view distance up to 30 m 18 pcs IP66 ingress protection NTSC & PAL 2 in 1, easy to switch through back-end; High-definition quality products with competitive price",
+      "image": "/src/assets/products/Surv/ZTEG-B5M.png"
+    },
+    {
+      "id": 19,
+      "title": "Zero Tech ZTB-L5ML",
+      "brand": "Zero Tech",
+      "description": "Video Output Mode AHD/TVI: 5M@20fps/12.5fps, 4M@30fps/25fps/15fps, 2M@30fps/25fps; CVI: 4M@30fps/25fps, 2M@30fps/25fps Image Sensor 1/3\" CMOS Sensor Image Resolution 5M:2592*1944 4M:2560*1440 2M:1920*1080 Minimun Illumination Color : 0.03 lux@F2.0, AGC ON; B/W : 0 lux with IR Focus Length Fixed 3.6mm OSD , DWDR Infrared LED 42μ x 2PCS Light Distance up to 25m Housing Plastic, IP66 Operation Temperature -10℃ ~ +60℃ RH95% Max Storage Temperature -20℃ ~ +60℃ RH95% Max Power Source DC12V±10%, 450mA",
+      "image": "/src/assets/products/Surv/ZTB-L5ML.png"
+    },
+    {
+      "id": 20,
+      "title": "Zero Tech ZTD-L5ML",
+      "brand": "Zero Tech",
+      "description": "Video Output Mode AHD/TVI: 5M@20fps/12.5fps, 4M@30fps/25fps/15fps, 2M@30fps/25fps; CVI: 4M@30fps/25fps, 2M@30fps/25fps Image Sensor 1/3\" CMOS Sensor Image Resolution 5M:2592*1944 4M:2560*1440 2M:1920*1080 Minimun Illumination Color : 0.03 lux@F2.0, AGC ON; B/W : 0 lux with IR Focus Length Fixed 2.8mm Infrared LED 42μ x 1PCS Infrared Distance 20M OSD , DWDR , UTC , DNR Operation Temperature -10℃~ +60℃ RH95% Max Storage Temperature -20℃ ~ +60℃ RH95% Max Power Source DC12V±10%, 500mA",
+      "image": "/src/assets/products/Surv/ZTD-L5ML.png"
+    },
+    {
+      "id": 21,
+      "title": "Zero Tech ZTD-EG5MFC",
+      "brand": "Zero Tech",
+      "description": "5MP @20fps/4MP real-time image, high resolution, true color AHD / TVI / CVI lossless high-defintion video output, Up to 1500 TVL resolution, IP67 CMOS progressive scan, perfectly capture the moving object , Lens 2.8mm Support OSD menu , Support COC High speed, long distance and real time transmission Auto color to B / W at low illumination Support ICR switch, true day / night 20 ~ 30m view distance 24/7 full color imaging",
+      "image": "/src/assets/products/Surv/ZTD-EG5MFC.png"
+    },
+    {
+      "id": 22,
+      "title": "Zero Tech ZTD-EG5MFC",
+      "brand": "Zero Tech",
+      "description": "5MP @20fps/4MP real-time image, high resolution, true color AHD / TVI / CVI lossless high-defintion video output, Up to 1500 TVL resolution, IP67 CMOS progressive scan, perfectly capture the moving object , Lens 2.8mm Support OSD menu , Support COC High speed, long distance and real time transmission Auto color to B / W at low illumination Support ICR switch, true day / night 20 ~ 30m view distance 24/7 full color imaging",
+      "image": "/src/assets/products/Surv/ZTD-EG5MFC.png"
+    },
+    {
+      "id": 23,
+      "title": "Zero Tech ZTB-EG5MFC",
+      "brand": "Zero Tech",
+      "description": "5MP@20fps/4MP real time image, high resolution, true color AHD / TVI / CVI standard and lossless video output , Up to 1500 TVL resolution CMOS progressive scan, perfectly capture the moving object , Lens 3.6mm Support OSD menu , Support COC High speed, long distance and real time transmission Auto color to B / W at low illumination Support ICR switch, true day / night 20 ~ 30m view distance IP67 ingress protection 24/7 full color imaging Support coaxial audio transmission",
+      "image": "/src/assets/products/Surv/ZTB-EG5MFC.png"
+    },
+    {
+      "id": 24,
+      "title": "Zero Tech ZTD-Z8M",
+      "brand": "Zero Tech",
+      "description": "4K 1/2.8 sony 0.01Lux@(F1.2,AGC ON 2DNR 3DNR , BLC , WDR fixed lens 2.8mm AHD/TVI/CVI/CVBS DC12V , IR led UP To 30M 5MP@20fps/ 4K @12.5fps",
+      "image": "/src/assets/products/Surv/ZTD-Z8M.png"
+    },
+    {
+      "id": 25,
+      "title": "Zero Tech ZTB-Z8M",
+      "brand": "Zero Tech",
+      "description": "4K 1/2.8 sony 0.01Lux@(F1.2,AGC ON 2DNR 3DNR, WDR , BLC fixed lens 3.6mm AHD/TVI/CVI/CVBS 5MP@20fps/ 4K @12.5fps DC12V , IR led UP To 30M",
+      "image": "/src/assets/products/Surv/ZTB-Z8M.png"
+    },
+    {
+      "id": 26,
+      "title": "Zero Tech ZTD-Z8MFC",
+      "brand": "Zero Tech",
+      "description": "4K 1/2.8 sony 0.01Lux@(F1.2,AGC ON) 2DNR , DWDR , fixed lens 2.8mm AHD/TVI/CVI/CVBS 8MP PAL:12.5fps / NTSC:15fps DC12V , BLC , 12V DC warm light distance UP To 30M 24/7 COLOR",
+      "image": "/src/assets/products/Surv/ZTD-Z8M.png"
+    },
+    {
+      "id": 28,
+      "title": "Zero Tech ZTIPD-L2M",
+      "brand": "Zero Tech",
+      "description": "Image Sensor 1/2.9\" Progressive Scan CMOS Sensor\nResolution 2MP 1080P\nEffective Pixels 1920(H)*1080(V)\nCompression H.264/H.264+/H.265/H.265+/JPEG/AVI\nMinimum Illumination 0.01Lux\nS/N Ratio 60dB\nFixed focal lens 2.8\nInfrared LED 14µ x 18PCS\nInfrared Distance 20M\nDWDR: 50dB, Defog, ROI, BLC\nOperation Temperature -20°C ~ +60°C\nRH95% Max",
+      "image": "/src/assets/products/Surv/ZTIPD-L2M.png"
+    },
+    {
+      "id": 29,
+      "title": "Zero Tech ZTIPB-L2M",
+      "brand": "Zero Tech",
+      "description": "Image Sensor 1/2.9\" Progressive Scan CMOS Sensor\nResolution 2MP 1080P\nEffective Pixels 1920(H)*1080(V)\nCompression H.264/H.265/JPEG/AVI/MJPEG\nMinimum Illumination Color: 0.008 Lux @ (F1.6, AGC ON), B/W: 0 Lux with IR\nS/N Ratio 60dB\nFixed focal lens 3.6\nInfrared LED 42μ x 2PCS\nInfrared Distance 25M\nWDR 120dB, Defog Mode, ROI N/A, BLC, IP66\nDC12V±10%, 700mA",
+      "image": "/src/assets/products/Surv/ZTIPB-L2M.png"
+    },
+    {
+      "id": 30,
+      "title": "Zero Tech ZTIPB-L2MFC",
+      "brand": "Zero Tech",
+      "description": "Image Sensor 1/2.9\" Progressive Scan CMOS Sensor\nResolution 2MP 1080P\nEffective Pixels 1920(H)*1080(V)\nCompression H.264/H.264+/H.265/H.265+/JPEG/AVI/MJPEG\nMinimum Illumination Color: 0.008 Lux @ (F1.6, AGC ON), B/W: 0 Lux with IR\nS/N Ratio 60dB\nFixed focal lens 3.6\nSupport Warm light LED 4000K, up to 25m\nSupport ONVIF 19.12(Profile S/T/G)\nDWDR, BLC, defog, IP66, DC12V±10%, 700Ma",
+      "image": "/src/assets/products/Surv/ZTIPB-L2MFC.png"
+    },
+    {
+      "id": 31,
+      "title": "Zero Tech ZTIPB-L2M-AF",
+      "brand": "Zero Tech",
+      "description": "1/2.9\" Progressive Scan CMOS Sensor\nResolution 2MP 1080P\nEffective Pixels 1920(H)*1080(V)\nCompression H.264/H.264+/H.265/H.265+/JPEG/AVI/MJPEG\nMinimum Illumination Color: 0.008 Lux @ (F1.6, AGC ON), B/W: 0 Lux with IR\nS/N Ratio 60dB\nFocal Length & FOV 2.7-13.5mm Motor Zoom, horizontal FOV 103°—29°, vertical FOV 54°—17°, diagonal FOV 124°—34°\nInfrared LED 42μ x 4PCS\nInfrared Distance 40M\nRJ-45 (10/100Base-T)\nPOE Internal, Support IEEE 802.3af\nSupport ONVIF 19.12(Profile S/T/G)\nDWDR, BLC, defog, ROI, DC12V±10%, 950mA\nSD Card Slot Optional Internal, Support Max 512GB",
+      "image": "/src/assets/products/Surv/ZTIPB-L2M-AF.png"
+    },
+    {
+      "id": 32,
+      "title": "Zero Tech ZTIPD-L4M",
+      "brand": "Zero Tech",
+      "description": "Image Sensor 1/3\" Progressive Scan CMOS Sensor\nResolution 4MP\nEffective Pixels 2560(H)*1440(V)\nCompression H.264/H.264+/H.265/H.265+/JPEG/AVI/MJPEG\nS/N Ratio 60dB\nMinimum Illumination Color: 0.03 Lux @ (F1.6, AGC ON), B/W: 0 Lux with IR\nFixed focal lens 2.8\nInfrared LED 14μ x 18PCS\nInfrared Distance 20M\nEthernet RJ-45 (10/100Base-T)\nPOE Optional External, Support IEEE 802.3af\nDWDR, BLC, defog, ROI",
+      "image": "/src/assets/products/Surv/ZTIPD-L2M.png"
+    },
+    {
+      "id": 33,
+      "title": "Zero Tech ZTIPB-L4M",
+      "brand": "Zero Tech",
+      "description": "Image Sensor 1/3\" Progressive Scan CMOS Sensor\nResolution 4MP\nEffective Pixels 2560(H)*1440(V)\nCompression H.264/H.264+/H.265/H.265+/JPEG/AVI/MJPEG\nMinimum Illumination Color: 0.03 Lux @ (F1.6, AGC ON), B/W: 0 Lux with IR\nS/N Ratio 60dB\nFixed focal lens 3.6\nInfrared LED 42μ x 2PCS\nInfrared Distance 25M\nEthernet RJ-45 (10/100Base-T)\nSupport ONVIF 19.12(Profile S/T/G)\nDWDR, BLC, defog, ROI, IP66\nDC12V±10%, 700mA",
+      "image": "/src/assets/products/Surv/ZTIPB-L2M.png"
+    },
+    {
+      "id": 34,
+      "title": "Zero Tech ZTIPD-Z5M",
+      "brand": "Zero Tech",
+      "description": "5.0 MP 1/3 cmos sensor\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\nFixed-focal 2.8mm\nH.265/H.264\nMain Steam: 2592*1944, 5-20FPS/S 2560*1440、2304*1296、1920*1080、1280*720，5-25 FPS/S\nsub stream: 704*576、640*480、640*360、352*288，5-25FPS/S\nVideo Coding Compression 128Kbps-8192bps continuous adjustable\nDC12V /POE , 12V DC\nIR led UP To 30M",
+      "image": "/src/assets/products/Surv/ZTD-Z8M.png"
+    },
+    {
+      "id": 35,
+      "title": "Zero Tech ZTIPB-Z5M",
+      "brand": "Zero Tech",
+      "description": "5.0 MP 1/3 cmos sensor\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\n128Kbps-8192bps continuous adjustable\nFixed-focal 3.6mm\nH.265/H.264\nDC12V /POE , 12V DC\nIR led UP To 30M\nMain Steam: 2592*1944, 5-20FPS/S 2560*1440、2304*1296、1920*1080、1280*720，5-25 FPS/S\nsub stream: 704*576、640*480、640*360、352*288，5-25FPS/S",
+      "image": "/src/assets/products/Surv/ZTB-Z8M.png"
+    },
+    {
+      "id": 36,
+      "title": "Zero Tech ZTIPD-Z5MFC",
+      "brand": "Zero Tech",
+      "description": "5.0 MP 1/3 cmos sensor\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\nFixed-focal 2.8mm\nH.265/H.264\nMain Steam: 2592*1944, 5-20FPS/S 2560*1440、2304*1296、1920*1080、1280*720，5-25 FPS/S\nsub stream: 704*576、640*480、640*360、352*288，5-25FPS/S\n128Kbps-8192bps continuous adjustable\nDC12V /POE , 12V DC\nwarm light distance UP To 30M\n24/7 COLOR",
+      "image": "/src/assets/products/Surv/ZTD-Z8M.png"
+    },
+    {
+      "id": 37,
+      "title": "Zero Tech ZTIPB-Z5MFC",
+      "brand": "Zero Tech",
+      "description": "5.0 MP 1/3 cmos sensor\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db , Fixed-focal 3.6mm\nH.265/H.264\nMain Steam: 2592*1944, 5-20FPS/S 2560*1440、2304*1296、1920*1080、1280*720，5-25 FPS/S\nsub stream: 704*576、640*480、640*360、352*288，5-25FPS/S\n128Kbps-8192bps continuous adjustable\nDC12V /POE , BLC , 12V DC\nwarm light distance UP To 30M\n24/7 COLOR",
+      "image": "/src/assets/products/Surv/ZTB-Z8M.png"
+    },
+    {
+      "id": 38,
+      "title": "Zero Tech ZTIPB-L5MS",
+      "brand": "Zero Tech",
+      "description": "Image Sensor 1/2.8\" SONY Starvis Back-illuminated CMOS sensor\nResolution 5MP\nEffective Pixels 2616 (H)*1964 (V)\nCompression H.264/H.265/JPEG/AVI\nMinimum Illumination Color: 0.006 Lux @ (F1.6, AGC ON),B/W: 0 Lux with IR\nS/N Ratio ≥52dB\nFocus Length Fixed 3.6mm\nInfrared LED 42μ x 4PCS\nInfrared Distance 40M\nEthernet RJ-45 (10/100Base-T)\nONVIF Support ONVIF 19.12(Profile S/T/G)\nPOE External, Support IEEE 802.3af\nWDR 120dB , BLC , ROI",
+      "image": "/src/assets/products/Surv/ZTIPB-L5MS.png"
+    },
+    {
+      "id": 39,
+      "title": "Zero Tech ZTIPB-L5M-AF",
+      "brand": "Zero Tech",
+      "description": "1/2.8\" SONY Starvis Back-illuminated CMOS sensor\nResolution 5MP\nEffective Pixels 2616 (H)*1964 (V)\nCompression H.264/H.265/JPEG/AVI\nColor: 0.006 Lux @ (F1.6, AGC ON),B/W: 0 Lux with IR\nS/N Ratio 60dB\n2.7-13.5mm Motor Zoom, horizontal FOV 103°—29°, vertical FOV 54°—16°, diagonal FOV 124°—33°\nInfrared LED 42μ x 4PCS\nInfrared Distance 40M\nEthernet RJ-45 (10/100Base-T)\nSupport ONVIF 19.12(Profile S/T/G)\nPOE Internal Support IEEE 802.3af\nWDR , BLC , ROI , Power Source DC12V±10%, 950mA",
+      "image": "/src/assets/products/Surv/ZTIPB-L5M-AF.png"
+    },
+    {
+      "id": 40,
+      "title": "Zero Tech ZTIPD-Z8M",
+      "brand": "Zero Tech",
+      "description": "4K 1/2.8\" sony\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\nFixed-focal 2.8mm\nDC12V /POE , 12V DC\nIR led UP To 30M\nH.265/H.264\nmain :3840*2160 , 1-15FPS/S 2880*1664、2560*1440、2304*1296、1920*1080、1280*720，1-15FPS/S\nsub : 704*576、800*448、640*480、640*360、352*288，1-15FPS/S",
+      "image": "/src/assets/products/Surv/ZTD-Z8M.png"
+    },
+    {
+      "id": 41,
+      "title": "Zero Tech ZTIPB-Z8M",
+      "brand": "Zero Tech",
+      "description": "4K 1/2.8\" sony\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\nFixed-focal 3.6mm\nH.265/H.264\nmain :3840*2160 , 1-15FPS/S 2880*1664、2560*1440、2304*1296、1920*1080、1280*720，1-15FPS/S\nsub : 704*576、800*448、640*480、640*360、352*288，1-15FPS/S\n128Kbps-8192bps continuous adjustable\nDC12V /POE , 12V DC\nIR led UP To 30M",
+      "image": "/src/assets/products/Surv/ZTB-Z8M.png"
+    },
+    {
+      "id": 42,
+      "title": "Zero Tech ZTIPD-Z8MFC",
+      "brand": "Zero Tech",
+      "description": "4K 1/2.8\" sony\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\nFixed-focal 2.8mm\nH.265/H.264\nmain :3840*2160 , 1-15FPS/S 2880*1664、2560*1440、2304*1296、1920*1080、1280*720，1-15FPS/S\nsub : 704*576、800*448、640*480、640*360、352*288，1-15FPS/S\n128Kbps-8192bps continuous adjustable\nDC12V /POE, 12V DC\nwarm light distance UP To 30M\n24/7 COLOR",
+      "image": "/src/assets/products/Surv/ZTD-Z8M.png"
+    },
+    {
+      "id": 43,
+      "title": "Zero Tech ZTIPB-Z8MFC",
+      "brand": "Zero Tech",
+      "description": "4K 1/2.8\" sony\nCOLOR 0.05Lux@F1.2; B/W 0.005Lux@F1.2;\n≥50db(AGC OFF)\nDWDR; ＞80db\nFixed-focal 3.6mm\nH.265/H.264\nmain :3840*2160 , 1-15FPS/S 2880*1664、2560*1440、2304*1296、1920*1080、1280*720，1-15FPS/S\nsub : 704*576、800*448、640*480、640*360、352*288，1-15FPS/S\n128Kbps-8192bps continuous adjustable\nDC12V /POE , 12V DC\nwarm light distance UP To 30M\n24/7 COLOR",
+      "image": "/src/assets/products/Surv/ZTB-Z8M.png"
+    },
+    {
+      "id": 44,
+      "title": "Hikvision DS-2CE76D0T-EXIPF(2.8mm)(O-STD)",
+      "brand": "Hikvision",
+      "description": "2MP CMOS Sensor, EXIR 20m IR, Outdoor EXIR Turret, ICR, 0.02 Lux/F1.2, 12 VDC,\nLens\nSmart IR, DNR, OSD Menu(Up the Coax), 2.8/3.6mm\nSupport\nTVI/AHD/CVI/CVBS video signal output, Plastic",
+      "image": "/src/assets/products/Surv/DS-2CE76D0T-EXIPF(2.8mm)(O-STD).png"
+    },
+    {
+      "id": 45,
+      "title": "Hikvision DS-2CE16D0T-EXIPF(3.6mm)(O-STD)",
+      "brand": "Hikvision",
+      "description": "2MP CMOS Sensor, EXIR 25m IR, Outdoor EXIR Bullet, ICR, 0.02 Lux/F1.2, 12VDC,\nLens,\nSmart IR,OSD Menu(Up the Coax), IP67,2.8/3.6/6mm\nSupport\nTVI/AHD/CVI/CVBS video signal output, Plastic",
+      "image": "/src/assets/products/Surv/DS-2CE16D0T-EXIPF(3.6mm)(O-STD).png"
+    },
+    {
+      "id": 46,
+      "title": "Hikvision DS-2CE16H0T-ITFS(2.8mm)(O-STD)",
+      "brand": "Hikvision",
+      "description": "5MP@20fps, 4MP@25fps(P)/30fps(N)(Default), EXIR, 30m IR, Outdoor EXIR Bullet,\nICR, 0.01 Lux/F1.2, 12 VDC, Smart IR, DNR, Built-in Mic,Audio up Coaxial(Only\nLens,\nTVI),OSD Menu(Up the Coax), IP67,2.8/3.6/6mm\nSupport TVI/AHD/CVI/CVBS\nvideo signal output",
+      "image": "/src/assets/products/Surv/DS-2CE16H0T-ITFS(2.8mm)(O-STD).png"
+    },
+    {
+      "id": 47,
+      "title": "Hikvision DS-2CE76H0T-ITMFS(2.8mm)(O-STD)",
+      "brand": "Hikvision",
+      "description": "5MP@20fps, 4MP@25fps(P)/30fps(N)(Default), EXIR, 30m IR, Outdoor EXIR Bullet,\nICR, 0.01 Lux/F1.2, 12 VDC, Smart IR, DNR, Built-in Mic,Audio up Coaxial(Only\nLens,\nTVI),OSD Menu(Up the Coax), IP67,2.8/3.6/6mm\nSupport TVI/AHD/CVI/CVBS\nvideo signal output",
+      "image": "/src/assets/products/Surv/DS-2CE76H0T-ITMFS(2.8mm)(O-STD).png"
+    },
+    {
+      "id": 48,
+      "title": "Hikvision DS-2CD1023G0E-I(4mm)(C)(O-STD)",
+      "brand": "Hikvision",
+      "description": "2MP,1/2.8\" Progressive CMOS, ICR, 1920x1080:25fps(P)/30fps(N),\nH.265+/H.264+&H.264, IP67, DWDR, 3D DNR, BLC, IR range: up to 30m, DC12V &\nPoE,Support mobile monitoring via Hik-Connect *power supply no included",
+      "image": "/src/assets/products/Surv/DS-2CD1023G0E-I(4mm)(C)(O-STD).png"
+    },
+    {
+      "id": 49,
+      "title": "Hikvision DS-2CD1123G0E-I(2.8mm)(C)(O-STD)",
+      "brand": "Hikvision",
+      "description": "2MP,1/2.8\" Progressive CMOS, ICR, 1920x1080:25fps(P)/30fps(N),\nH.265+/H.264+&H.264, IP67,DWDR, 3D DNR, BLC, IR range: up to 30m, DC12V &\nPoE,Support mobile monitoring via Hik-Connect *power supply no included",
+      "image": "/src/assets/products/Surv/DS-2CD1123G0E-I(2.8mm)(C)(O-STD).png"
+    }
+  ],
+  "Fingerprints": [
+    {
+      "id": 50,
+      "title": "Zero Tech ZTF-10",
+      "brand": "Zero Tech",
+      "description": "Capacity:\nFingerprint: 3000\nLcd: Record: 100,000\n2.8'inch TFT; With access control\nMode: Verify fingerprint, Pin, Card\nMode: B\nConnect: USB, RS485, TCP/IP, U-disk\nCurrent: 1A\nWorking Voltage: 9V/1A",
+      "image": "/src/assets/products/Fingerprints/ZTF-10.png"
+    },
+    {
+      "id": 51,
+      "title": "Zero Tech ZTF-40FB",
+      "brand": "Zero Tech",
+      "description": "Capacity:\nFace: 1000\nFingerprint Capacity: 5000\nCard Capacity: 5000\nRecord: 300,000\nWith access control\nDisplay: 2.8inch TFT\nCamera: Double HD Infrared camera\nMode Verify: Face, fingerprint, password, ID card\nCommunication: USB, U-disk, TCP/IP\nCurrent: 1A\nVoltage: DC9V~12V",
+      "image": "/src/assets/products/Fingerprints/ZTF--40FB.png"
+    },
+    {
+      "id": 52,
+      "title": "ZKTeco K14 Pro",
+      "brand": "ZKTeco",
+      "description": "Fingerprint Capacity: 3000\nID Card Capacity: 3,000\nRecord Capacity: 200,000\nDisplay: 2.8 inch TFT screen\nCommunication: TCP/IP, USB host",
+      "image": "/src/assets/products/Fingerprints/K14-Pro.png"
+    },
+    {
+      "id": 53,
+      "title": "ZKTeco K40 Pro",
+      "brand": "ZKTeco",
+      "description": "Fingerprint Capacity: 3000\nID Card Capacity: 3,000\nRecord Capacity: 200,000\nDisplay: 2.8 inch TFT screen\nCommunication: TCP/IP, USB Host\nOther Functions: Built-in battery",
+      "image": "/src/assets/products/Fingerprints/K40-Pro.png"
+    },
+    {
+      "id": 54,
+      "title": "ZKTeco MB20",
+      "brand": "ZKTeco",
+      "description": "Face Capacity: 200\nFingerprint Capacity: 500\nID Card Capacity: 1000\nRecord Capacity: 50,000\nCommunication: TCP/IP, USB host",
+      "image": "/src/assets/products/Fingerprints/MB20.png"
+    }
+  ],
+  "GPS-Tracking": []
 }

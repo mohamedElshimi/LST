@@ -20,8 +20,8 @@
     <div class="flex flex-wrap gap-0">
       <template v-for="(prod, index1) in products" :key="index1">
         <div
-          v-for="(prod2, index) in prod"
-          :key="index"
+          v-for="(prod2, index2) in prod"
+          :key="index2"
           class="flex flex-col rounded-2xl items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer lg:w-3/12 md:w-6/12 w-12/12"
         >
           <router-link :to="`/products/${index1}/${prod2.id}`">
@@ -63,16 +63,39 @@ export default {
   data() {
     return {
       products: [],
+      survproducts: [],
+      fingproducts: [],
+      dvrproducts: [],
       currentIndex: 0,
       searchQuery: "",
     };
   },
   created() {
     axios
-      .get("http://localhost:3000/products")
+      .get("http://localhost:3000/IT-solution")
       .then((res) => {
-        this.products = res.data;
+        this.dvrproducts = res.data;
         console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+    axios
+      .get("http://localhost:3000/Surveillance-systems")
+      .then((res) => {
+        this.survproducts = res.data;
+        console.log(res.data);
+      })
+      .catch((err) => console.log(err));
+    axios
+      .get("http://localhost:3000/Fingerprints")
+      .then((res) => {
+        this.fingproducts = res.data;
+        console.log(res.data);
+        this.products.push(
+          this.dvrproducts,
+          this.survproducts,
+          this.fingproducts
+        );
+        console.log(this.products);
       })
       .catch((err) => console.log(err));
   },
@@ -83,14 +106,11 @@ export default {
   },
   computed: {
     items() {
-      return (
-        this.products
-          // .filter((item) => item.title.toLowerCase().includes(this.searchQuery.toLowerCase()))
-          .filter((item) =>
-            item.title.toLowerCase().includes(this.searchQuery.toLowerCase())
-          )
-          .slice(0, this.currentIndex + 12)
-      );
+      return this.products.forEach((x) => {
+        x.filter((item) =>
+          item.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+        ).slice(0, this.currentIndex + 12);
+      });
     },
   },
 };
