@@ -4,17 +4,17 @@
       <!-- {{ prod2 }} -->
       <div class="w-6/12 flex justify-center overflow-hidden">
         <img
-          :src="prod2.image"
+          :src="product.image"
           class="w-6/12 object-cover hover:w-7/12 transition-width duration-300"
           alt="Brand Image"
         />
       </div>
       <div class="w-6/12 px-4 flex flex-col justify-center">
         <h2 class="text-primary text-3xl font-semibold">
-          {{ prod2.title }}
+          {{ product.title }}
         </h2>
-        <p class="my-5 text-lg">Brand : {{ prod2.brand }}</p>
-        <p class="text-slate-700">{{ prod2.description }}</p>
+        <p class="my-5 text-lg">Brand : {{ product.brand }}</p>
+        <p class="text-slate-700">{{ product.description }}</p>
       </div>
     </div>
     <div class="flex w-11/12 mx-auto">
@@ -40,14 +40,39 @@ export default {
     this.id = this.$route.params.id;
     this.type = this.$route.params.type;
     axios
-      .get(`http://localhost:3000/products`)
+      .get(`http://localhost:3000/IT-solution/${this.id}`)
       .then((res) => {
-        this.product = res.data[this.type];
-        console.log(this.id);
-        this.prod2 = this.product.find((obj) => {
-          return obj.id == this.id;
-        });
-        console.log(this.prod2);
+        // this.product = res.data[this.type];
+        // console.log(this.id);
+        // this.prod2 = this.product.find((obj) => {
+        //   return obj.id == this.id;
+        // });
+        this.product=res.data
+        // console.log(this.prod2);
+      })
+      .catch((err) => console.log(err));
+    axios
+      .get(`http://localhost:3000/Surveillance-systems/${this.id}`)
+      .then((res) => {
+        // this.product = res.data[this.type];
+        // console.log(this.id);
+        // this.prod2 = this.product.find((obj) => {
+        //   return obj.id == this.id;
+        // });
+        this.product=res.data
+        // console.log(this.prod2);
+      })
+      .catch((err) => console.log(err));
+    axios
+      .get(`http://localhost:3000/Fingerprints/${this.id}`)
+      .then((res) => {
+        // this.product = res.data[this.type];
+        // console.log(this.id);
+        // this.prod2 = this.product.find((obj) => {
+        //   return obj.id == this.id;
+        // });
+        this.product=res.data
+        // console.log(this.prod2);
       })
       .catch((err) => console.log(err));
   },

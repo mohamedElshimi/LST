@@ -73,9 +73,9 @@ export default {
   },
   created() {
     axios
-      .get("http://localhost:3000/products")
+      .get("http://localhost:3000/IT-solution")
       .then((res) => {
-        this.products = res.data["IT-solution"];
+        this.products = res.data;
         console.log(res.data);
       })
       .catch((err) => console.log(err));
