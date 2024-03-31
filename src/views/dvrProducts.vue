@@ -29,7 +29,7 @@
               <img
                 :src="prod.image"
                 class="w-8/12 h-full object-cover hover:scale-110 transition duration-300 ease-in-out"
-                alt=""
+                alt="DVR Image"
               />
             </div>
             <div class="font-bold text-sm text-primary">{{ prod.title }}</div>

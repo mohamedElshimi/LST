@@ -7,7 +7,7 @@
         <img
           src="../assets/Images/LST.png"
           class="h-[150px] me-5 mb-5"
-          alt=""
+          alt="LST Logo"
         />
       </div>
       <h2 class="sm:text-5xl font-bold text-primary ms-5 md:mt-0 mt-5 text-3xl">

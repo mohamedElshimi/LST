@@ -1,13 +1,16 @@
 <template>
   <section class="">
-    <h2 class="text-3xl font-bold text-primary container hover:cursor-pointer">
-      <span class="border-b-4 border-secondry">We Worked With</span>
-    </h2>
+    <div class="container flex">
+      <div>
+        <div class="text-4xl font-bold text-primary">We Worked With</div>
+        <div class="bg-secondry h-2 rounded-md mb-10"></div>
+      </div>
+    </div>
     <div>
       <img
         src="../assets/Images/Partners.png"
         class="h-[300px] w-full"
-        alt=""
+        alt="Partners"
       />
     </div>
     <div class="flex flex-wrap container my-5">
@@ -18,7 +21,7 @@
           <img
             src="../assets/Images/Alemad.png"
             class="w-3/4 transition duration-100"
-            alt=""
+            alt="Alemad"
           />
         </div>
       </div>
@@ -29,7 +32,7 @@
           <img
             src="../assets/Images/Family Corp.jpg"
             class="w-3/4 transition duration-100"
-            alt=""
+            alt="Family"
           />
         </div>
       </div>
@@ -40,7 +43,7 @@
           <img
             src="../assets/Images/Hawag.jpg"
             class="w-3/4 h-3/4 transition duration-100"
-            alt=""
+            alt="Hawag"
           />
         </div>
       </div>

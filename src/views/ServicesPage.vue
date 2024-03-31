@@ -1,8 +1,11 @@
 <template>
   <main class="container">
-    <h2 class="text-4xl font-bold text-primary">
-      <span span class="border-b-4 border-secondry">Services</span>
-    </h2>
+    <div class="container flex">
+      <div>
+        <div class="text-4xl font-bold text-primary">Services</div>
+        <div class="bg-secondry h-2 rounded-md mb-10"></div>
+      </div>
+    </div>
     <div class="service-card">
       <div class="flex gap-2 mb-8">
         <div
