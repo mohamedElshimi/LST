@@ -3,6 +3,15 @@
     <div class="">
       <form @submit.prevent="AddProduct">
         <div class="mt-8 relative z-0 w-full mb-6 group">
+          <label for="" class="font-bold">Category:</label>
+          <select class="ml-5" v-model="add" required>
+            <option disabled selected>Categories</option>
+            <option value="surv">Surveillance Systems</option>
+            <option value="dvr">DVR</option>
+            <option value="fing">Fingerprints</option>
+          </select>
+        </div>
+        <div class="mt-8 relative z-0 w-full mb-6 group">
           <input
             v-model="AddedProduct.image"
             type="text"
@@ -86,26 +95,73 @@ export default {
         image: "",
       },
       survproducts: [],
+      add: "",
     };
   },
-  created() {
-    axios
-      .get("http://localhost:3000/Surveillance-systems")
-      .then((res) => {
-        this.survproducts = res.data;
-      })
-      .catch((err) => console.log(err));
-  },
+
+  created() {},
   methods: {
     AddProduct() {
-      // this.survproducts.push(this.AddedProduct);
-      axios
-        .post("http://localhost:3000/Surveillance-systems", this.AddedProduct)
-        .then((res) => {
-          console.log(res.data);
-          alert("your product has been added successfully :)");
-        })
-        .catch((err) => console.log(err));
+      let url = "";
+      switch (this.add) {
+        case "surv":
+          url = "http://localhost:3000/Surveillance-systems";
+          console.log(this.add);
+          axios
+            .post(url, this.AddedProduct)
+            .then((res) => {
+              console.log(res.data);
+              alert("Your product has been added successfully :)");
+              this.$router.push('/dashboard/products/');
+              window.location.reload()
+            })
+            .catch((err) => {
+              alert(
+                "please check the chosen category is compatible with the product"
+              );
+              console.log(err);
+            });
+          break;
+        case "dvr":
+          url = "http://localhost:3000/IT-solution";
+          console.log(this.add);
+          axios
+            .post(url, this.AddedProduct)
+            .then((res) => {
+              console.log(res.data);
+              alert("Your product has been added successfully :)");
+              this.$router.push('/dashboard/products/');
+              window.location.reload()
+            })
+            .catch((err) => {
+              alert(
+                "please check the chosen category is compatible with the product"
+              );
+              console.log(err);
+            });
+          break;
+        case "fing":
+          url = "http://localhost:3000/Fingerprints";
+          console.log(this.add);
+          axios
+            .post(url, this.AddedProduct)
+            .then((res) => {
+              console.log(res.data);
+              alert("Your product has been added successfully :)");
+              this.$router.push('/dashboard/products/');
+              window.location.reload()
+            })
+            .catch((err) => {
+              alert(
+                "please check the chosen category is compatible with the product"
+              );
+              console.log(err);
+            });
+          break;
+        default:
+          // default URL
+          break;
+      }
     },
     generateUniqueId() {
       // Generate a random unique ID

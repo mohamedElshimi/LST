@@ -1,6 +1,26 @@
+<script setup>
+async function signOut() {
+  const { error } = await supabase.auth.signOut();
+  console.log(error);
+  router.push("/dashboard/Admin")
+}
+
+async function seeCurrent() {
+const localuser =await supabase.auth.getSession();
+console.log(localuser);
+console.log(localuser.data.session);
+if(!localuser.data.session){
+  router.push("/dashboard/Admin")
+}
+}
+
+seeCurrent();
+</script>
+
 <template>
   <div class="container">
-    <ProductsNavDashVue></ProductsNavDashVue>
+    <p @click="signOut" class="cursor-pointer hover:text-red-600">Logout</p>
+    <ProductsNavDashVue @send-data="receiveDataFromChild"></ProductsNavDashVue>
     <div class="flex justify-end mt-10">
       <div
         v-if="showadd === ''"
@@ -61,7 +81,7 @@
             <td class="px-6 py-4">
               <div>
                 <router-link
-                  :to="`/dashboard/surveillance-systems/edit/${prod.id}`"
+                  :to="`/dashboard/products/edit/${prod.id}`"
                   class="flex justify-center my-4"
                 >
                   <Icon
@@ -93,14 +113,18 @@
 <script>
 import axios from "axios";
 import AddProduct from "../dashboard/ProductsDashboardAdd.vue";
-import ProductsNavDashVue from '@/utilities/ProductsNavDash.vue'
+import ProductsNavDashVue from "@/utilities/ProductsNavDash.vue";
 import { Icon } from "@iconify/vue";
+import { supabase } from "@/lib/supabaseClient";
+import router from "@/router";
 export default {
   name: "ProductsDashboard",
   components: {
     AddProduct,
-    Icon,ProductsNavDashVue
+    Icon,
+    ProductsNavDashVue,
   },
+
   data() {
     return {
       products: [],
@@ -108,8 +132,11 @@ export default {
       nxt: 50,
       pre: 0,
       showadd: "",
+      receivedData: "",
+      added: "",
     };
   },
+
   created() {
     axios
       .get("http://localhost:3000/Surveillance-systems")
@@ -120,16 +147,82 @@ export default {
   },
   methods: {
     deleteRow(id) {
+      let url = "";
       let conf = confirm("Are you sure you want to delete this item ?");
       if (conf == true) {
+        switch (this.receivedData) {
+          case "surv":
+            url = "http://localhost:3000/Surveillance-systems";
+            console.log(this.receivedData);
+            axios
+              .delete(`${url}/${id}`)
+              .then((res) => {
+                console.log(res);
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+            break;
+          case "dvr":
+            url = "http://localhost:3000/IT-solution";
+            console.log(this.receivedData);
+            axios
+              .delete(`${url}/${id}`)
+              .then((res) => {
+                console.log(res);
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+            break;
+          case "fing":
+            url = "http://localhost:3000/Fingerprints";
+            console.log(this.receivedData);
+            axios
+              .delete(`${url}/${id}`)
+              .then((res) => {
+                console.log(res);
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+            break;
+          default:
+            // default URL
+            break;
+        }
+      }
+    },
+    receiveDataFromChild(data) {
+      this.receivedData = data;
+      console.log(this.receivedData);
+      this.fetching();
+    },
+    fetching() {
+      if (this.receivedData == "surv") {
         axios
-          .delete(`http://localhost:3000/Surveillance-systems/${id}`)
+          .get("http://localhost:3000/Surveillance-systems")
           .then((res) => {
-            console.log(res);
+            this.products = res.data;
+            this.added = "surv";
           })
-          .catch((err) => {
-            console.log(err);
-          });
+          .catch((err) => console.log(err));
+      } else if (this.receivedData == "dvr") {
+        axios
+          .get("http://localhost:3000/IT-solution")
+          .then((res) => {
+            this.products = res.data;
+            this.added = "dvr";
+          })
+          .catch((err) => console.log(err));
+      } else if (this.receivedData == "fing") {
+        axios
+          .get("http://localhost:3000/Fingerprints")
+          .then((res) => {
+            this.products = res.data;
+            this.added = "fing";
+          })
+          .catch((err) => console.log(err));
       }
     },
   },
