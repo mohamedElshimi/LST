@@ -1,8 +1,11 @@
 <template>
   <Section class="container">
-    <h2 class="text-3xl font-bold text-primary">
-      <span span class="border-b-4 border-secondry">Contact US</span>
-    </h2>
+    <div class="container flex">
+      <div>
+        <div class="text-4xl font-bold text-primary">Contact US</div>
+        <div class="bg-secondry h-2 rounded-md mb-10"></div>
+      </div>
+    </div>
     <div class="flex flex-wrap my-5">
       <div class="lg:w-6/12 w-full lg:mb-0 mb-5 px-3">
         <div class="flex flex-wrap">
@@ -73,5 +76,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

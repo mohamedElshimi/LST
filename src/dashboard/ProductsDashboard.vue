@@ -34,7 +34,7 @@
                             class="px-6 py-4 font-medium text-dark whitespace-nowrap">
                           {{ Indx }}</th>
                           <td class="px-6 py-4">
-                            <img :src="prod.image" alt="">
+                            <img :src="prod.image" alt="Product">
                           </td>
                           <th
                             scope="row"

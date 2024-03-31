@@ -26,7 +26,7 @@
               <img
                 :src="prod2.image"
                 class="w-6/12 self-center hover:w-7/12 transition-width duration-300"
-                alt=""
+                alt="Product"
               />
             </div>
             <div class="font-bold text-sm text-primary">{{ prod2.title }}</div>
