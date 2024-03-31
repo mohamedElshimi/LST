@@ -39,25 +39,34 @@
         </div>
         <div class="flex gap-5 lg:justify-start justify-center pt-2">
           <a
-            href="https://www.facebook.com/profile.php?id=61554643216879"
+            href="https://www.facebook.com/LuciditySolutionTrade"
             target="_blank"
             class="text-white hover:text-secondry transition duration-200 cursor-pointer"
           >
             <Icon icon="uil:facebook" class="text-3xl" />
           </a>
           <a
-            href="https://www.instagram.com/tag.sis/"
+            href="https://www.instagram.com/luciditysolution/"
             target="_blank"
             class="hover:text-secondry text-white transition duration-200 cursor-pointer"
           >
             <Icon icon="ri:instagram-fill" class="text-3xl" />
           </a>
           <a
-            href="https://www.linkedin.com/in/tag-sis-889b0b2a6/"
+            href="https://www.youtube.com/channel/UCP2flavzhzVIf-N-zW8WAxA"
             target="_blank"
             class="hover:text-secondry text-white transition duration-200 cursor-pointer"
           >
-            <Icon icon="bi:linkedin" class="text-3xl" />
+            <!-- <Icon icon="bi:linkedin" class="text-3xl" /> -->
+            <Icon icon="ri:youtube-fill" class="text-3xl" />
+          </a>
+          <a
+            href="https://www.tiktok.com/@luciditysolution?is_from_webapp=1&sender_device=pc"
+            target="_blank"
+            class="hover:text-secondry text-white transition duration-200 cursor-pointer"
+          >
+            <!-- <Icon icon="line-md:tiktok"  /> -->
+            <Icon icon="ic:round-tiktok" class="text-3xl" />
           </a>
         </div>
       </div>
