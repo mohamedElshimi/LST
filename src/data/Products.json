@@ -5,7 +5,7 @@
       "title": "Zero Tech ZTDX-EG4CH",
       "brand": "Zero Tech",
       "description": "• 4 CH 1080P lite Standard H.265 high profile\n          compression\n          • 4 CH simultaneously playback\n          • The resolution of CH 1 and CH 2 must be the same.\n          So do CH 3 and CH 4\n          • HDMI × 1 : 1920 × 1080 VGA × 1 : 1920 × 1080\n          • 1080P lite : 25 fps\n          • 1ch audio in - 1 ch audio out\n          • SATA × 1, max 6T\n          • Search: time slice, time, event, tag search, smart\n          search\n          • Smart Search Highlighted color to display the\n          camera record in a certain period of time, different\n          colors refers to different record events\n          • Support NAT function and QRCode scanning by\n          mobile phone and IPAD",
-      "image": "/src/assets/products/IT Solution/ZTDX-EG4CH.png"
+      "image": "@/assets/products/IT Solution/ZTDX-EG4CH.png"
     },
     {
       "id": 2,

@@ -58,20 +58,24 @@
 import { Icon } from "@iconify/vue";
 import axios from "axios";
 import ProductsNav from "../utilities/ProductsNav.vue";
+import database from "@/data/Products.json"
 export default {
   name: "dvr",
   components: {
     Icon,
     ProductsNav,
+    database
   },
   data() {
     return {
+      database,
       products: [],
       currentIndex: 0,
       searchQuery: "",
     };
   },
   created() {
+    
     axios
       .get("http://localhost:3000/IT-solution")
       .then((res) => {

@@ -4,6 +4,7 @@
 </template>
 <script>
 import NavBar from "../src/utilities/NavBar.vue";
+
 export default {
   name: "App",
   components: {
