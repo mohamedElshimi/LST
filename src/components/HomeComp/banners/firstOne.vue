@@ -60,7 +60,7 @@ export default {};
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
 }
 .bg-first-bannner {
-  background: url("./src/assets/Banner/IT-Solution.png") no-repeat 100%/100%;
+  background: url("../assets/Banner/IT-Solution.png") no-repeat 100%/100%;
   background-size: cover;
 }
 </style>
