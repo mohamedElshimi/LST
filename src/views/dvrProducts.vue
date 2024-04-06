@@ -19,7 +19,7 @@
     </div>
     <div class="flex flex-wrap gap-0">
       <div
-        v-for="(prod, index) in items"
+        v-for="(prod, index) in products"
         :key="index"
         class="flex flex-col rounded-2xl items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer lg:w-3/12 md:w-6/12 w-12/12"
       >
@@ -79,7 +79,7 @@ export default {
     axios
       .get("../../Products.json")
       .then((res) => {
-        this.products = res.data;
+        this.products = res.data["IT-solution"];
         console.log(res.data);
       })
       .catch((err) => console.log(err));
