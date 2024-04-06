@@ -57,12 +57,14 @@
 <script>
 import { Icon } from "@iconify/vue";
 import axios from "axios";
-import ProductsNav from "../utilities/ProductsNav.vue"
+import ProductsNav from "../utilities/ProductsNav.vue";
+import database from "../../Products.json"
 export default {
   name: "fingerprints",
   components: {
     Icon,
-    ProductsNav
+    ProductsNav,
+    database
   },
   data() {
     return {
@@ -73,9 +75,9 @@ export default {
   },
   created() {
     axios
-      .get("http://localhost:3000/Fingerprints")
+      .get("../../Products.json")
       .then((res) => {
-        this.products = res.data;
+        this.products = res.data["Fingerprints"];
         console.log(res.data);
       })
       .catch((err) => console.log(err));

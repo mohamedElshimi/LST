@@ -19,7 +19,7 @@
     </div>
     <div class="flex flex-wrap gap-0">
       <div
-        v-for="(prod, index) in products"
+        v-for="(prod, index) in items"
         :key="index"
         class="flex flex-col rounded-2xl items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer lg:w-3/12 md:w-6/12 w-12/12"
       >
