@@ -3,7 +3,7 @@
   <div class="lg:w-6/12 flex justify-center overflow-hidden">
     <img
       :src="product.image"
-      class="w-6/12 lg:w-full object-cover hover:w-7/12 transition-width duration-300"
+      class="w-6/12 lg:w-6/12 object-cover hover:w-7/12 transition-width duration-300"
       alt="Brand Image"
     />
   </div>
