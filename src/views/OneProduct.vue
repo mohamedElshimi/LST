@@ -1,28 +1,26 @@
 <template>
-  <div>
-    <div class="mt-20 flex w-11/12">
-      <!-- {{ prod2 }} -->
-      <div class="w-6/12 flex justify-center overflow-hidden">
-        <img
-          :src="product.image"
-          class="w-6/12 object-cover hover:w-7/12 transition-width duration-300"
-          alt="Brand Image"
-        />
-      </div>
-      <div class="w-6/12 px-4 flex flex-col justify-center">
-        <h2 class="text-primary text-3xl font-semibold">
-          {{ product.title }}
-        </h2>
-        <p class="my-5 text-lg">Brand : {{ product.brand }}</p>
-        <p class="text-slate-700">{{ product.description }}</p>
-      </div>
-    </div>
-    <div class="flex w-11/12 mx-auto">
-      <router-link to="/products" class="primary-btn block ms-auto"
-        >Back To Products</router-link
-      >
-    </div>
+  <div class="mt-24 flex flex-col lg:flex-row w-full lg:w-11/12 mx-auto">
+  <div class="lg:w-6/12 flex justify-center overflow-hidden">
+    <img
+      :src="product.image"
+      class="w-6/12 lg:w-full object-cover hover:w-7/12 transition-width duration-300"
+      alt="Brand Image"
+    />
   </div>
+  <div class="lg:w-6/12 lg:px-4 flex flex-col justify-center mt-5 lg:mt-0">
+    <h2 class="text-primary text-3xl font-semibold text-center lg:text-left">
+      {{ product.title }}
+    </h2>
+    <p class="my-5 text-lg text-center lg:text-left">Brand : {{ product.brand }}</p>
+    <p class="text-slate-700 text-center lg:text-left">{{ product.description }}</p>
+  </div>
+</div>
+<div class="flex w-11/12 mx-auto">
+  <button @click="goBack" class="primary-btn block mx-auto lg:mx-6 lg:ms-auto mt-5 lg:mt-0">
+    Back To Products
+  </button>
+</div>
+
 </template>
 
 <script>
@@ -40,7 +38,7 @@ export default {
   },
   created() {
     this.id = this.$route.params.id;
-    console.log(this.id);
+    // console.log(this.id);
     this.type = this.$route.params.type;
     let url = this.$route.fullPath;
    // Extracting the product category from the URL
@@ -55,7 +53,7 @@ switch (category) {
     axios.get("../../Products.json")
       .then((res) => {
         this.product = res.data["IT-solution"][this.id - 1];
-        console.log(this.product);
+        // console.log(this.product);
       })
       .catch((err) => console.log(err));
     break;
@@ -63,7 +61,7 @@ switch (category) {
     axios.get("../../Products.json")
       .then((res) => {
         this.product = res.data["Surveillance-systems"][this.id-1];
-        console.log(this.product);
+        // console.log(this.product);
       })
       .catch((err) => console.log(err));
     break;
@@ -71,7 +69,7 @@ switch (category) {
     axios.get("../../Products.json")
       .then((res) => {
         this.product = res.data["Fingerprints"][this.id - 1];
-        console.log(this.product);
+        // console.log(this.product);
       })
       .catch((err) => console.log(err));
     break;
@@ -83,6 +81,11 @@ switch (category) {
    
    
   },
+  methods:{
+    goBack() {
+      this.$router.go(-1);
+    }
+  }
 };
 </script>
 

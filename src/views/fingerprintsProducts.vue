@@ -78,7 +78,7 @@ export default {
       .get("../../Products.json")
       .then((res) => {
         this.products = res.data["Fingerprints"];
-        console.log(res.data);
+        // console.log(res.data);
       })
       .catch((err) => console.log(err));
   },

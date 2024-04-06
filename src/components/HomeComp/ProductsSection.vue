@@ -82,7 +82,7 @@ export default {
       .get("../../../Products.json")
       .then((res) => {
         this.products = res.data["Surveillance-systems"];
-        console.log(this.products);
+        // console.log(this.products);
       })
       .catch((err) => console.log(err));
    

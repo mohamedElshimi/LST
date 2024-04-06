@@ -80,7 +80,7 @@ export default {
       .get("../../Products.json")
       .then((res) => {
         this.products = res.data["IT-solution"];
-        console.log(res.data);
+        // console.log(res.data);
       })
       .catch((err) => console.log(err));
   },
