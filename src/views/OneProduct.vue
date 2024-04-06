@@ -39,42 +39,54 @@ export default {
   created() {
     this.id = this.$route.params.id;
     this.type = this.$route.params.type;
-    axios
-      .get(`../../Products.json/IT-solution/${this.id}`)
+    let url = this.$route.fullPath;
+    if (url.includes("IT-solution")) {
+      axios
+      .get(`../../Products.json`)
       .then((res) => {
         // this.product = res.data[this.type];
         // console.log(this.id);
         // this.prod2 = this.product.find((obj) => {
         //   return obj.id == this.id;
         // });
-        this.product=res.data
+        this.product=res.data["IT-solution"][this.id-1]
+        console.log(this.product);
         // console.log(this.prod2);
       })
       .catch((err) => console.log(err));
-    axios
-      .get(`../../Products.json/Surveillance-systems/${this.id}`)
+    }
+    else if (url.includes("Surveillance-systems")) {
+      axios
+      .get(`../../Products.json`)
       .then((res) => {
         // this.product = res.data[this.type];
         // console.log(this.id);
         // this.prod2 = this.product.find((obj) => {
         //   return obj.id == this.id;
         // });
-        this.product=res.data
+        this.product=res.data["Surveillance-systems"][this.id-1]
+        console.log(this.product);
         // console.log(this.prod2);
       })
       .catch((err) => console.log(err));
-    axios
-      .get(`../../Products.json/Fingerprints/${this.id}`)
+    }
+    else if (url.includes("Fingerprints")) {
+      axios
+      .get(`../../Products.json`)
       .then((res) => {
         // this.product = res.data[this.type];
         // console.log(this.id);
         // this.prod2 = this.product.find((obj) => {
         //   return obj.id == this.id;
         // });
-        this.product=res.data
+        this.product=res.data["Fingerprints"][this.id-1]
+        console.log(this.product);
         // console.log(this.prod2);
       })
       .catch((err) => console.log(err));
+    }
+   
+   
   },
 };
 </script>
