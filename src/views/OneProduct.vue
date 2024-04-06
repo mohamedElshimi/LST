@@ -33,58 +33,53 @@ export default {
       product: {},
       prod2: {},
       id: "",
+      id2: "",
+      id3: "",
       type: "",
     };
   },
   created() {
     this.id = this.$route.params.id;
+    console.log(this.id);
     this.type = this.$route.params.type;
     let url = this.$route.fullPath;
-    if (url.includes("IT-solution")) {
-      axios
-      .get(`../../Products.json`)
+   // Extracting the product category from the URL
+const category = url.includes("IT-solution") ? "IT-solution" :
+                url.includes("Surveillance-systems") ? "Surveillance-systems" :
+                url.includes("Fingerprints") ? "Fingerprints" :
+                null;
+
+// Switch case based on the product category
+switch (category) {
+  case "IT-solution":
+    axios.get("../../Products.json")
       .then((res) => {
-        // this.product = res.data[this.type];
-        // console.log(this.id);
-        // this.prod2 = this.product.find((obj) => {
-        //   return obj.id == this.id;
-        // });
-        this.product=res.data["IT-solution"][this.id-1]
+        this.product = res.data["IT-solution"][this.id - 1];
         console.log(this.product);
-        // console.log(this.prod2);
       })
       .catch((err) => console.log(err));
-    }
-    else if (url.includes("Surveillance-systems")) {
-      axios
-      .get(`../../Products.json`)
+    break;
+  case "Surveillance-systems":
+    axios.get("../../Products.json")
       .then((res) => {
-        // this.product = res.data[this.type];
-        // console.log(this.id);
-        // this.prod2 = this.product.find((obj) => {
-        //   return obj.id == this.id;
-        // });
-        this.product=res.data["Surveillance-systems"][this.id-1]
+        this.product = res.data["Surveillance-systems"][this.id-1];
         console.log(this.product);
-        // console.log(this.prod2);
       })
       .catch((err) => console.log(err));
-    }
-    else if (url.includes("Fingerprints")) {
-      axios
-      .get(`../../Products.json`)
+    break;
+  case "Fingerprints":
+    axios.get("../../Products.json")
       .then((res) => {
-        // this.product = res.data[this.type];
-        // console.log(this.id);
-        // this.prod2 = this.product.find((obj) => {
-        //   return obj.id == this.id;
-        // });
-        this.product=res.data["Fingerprints"][this.id-1]
+        this.product = res.data["Fingerprints"][this.id - 1];
         console.log(this.product);
-        // console.log(this.prod2);
       })
       .catch((err) => console.log(err));
-    }
+    break;
+  default:
+    console.log("Invalid URL or category");
+    break;
+}
+
    
    
   },

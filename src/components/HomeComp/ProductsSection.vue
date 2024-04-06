@@ -16,7 +16,7 @@
         :modules="modules"
         @slideChange="onSlideChange"
         :breakpoints="{
-      '640': {
+      '300': {
         slidesPerView: 1.5,
         spaceBetween: 20,
       },
@@ -30,12 +30,11 @@
       },
     }"
       >
-        <template v-for="(prod, index1) in products" :key="index1">
+        <template v-for="(prod2, index) in products"
+            :key="index">
           <swiper-slide
-            v-for="(prod2, index) in prod"
-            :key="index"
             class="flex flex-col items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer w-3/12 h-52"
-            ><router-link :to="`/products/${index1}/${prod2.id}`">
+            ><router-link :to="`/products/Surveillance-systems/${prod2.id}`">
               <div class="flex justify-center relative overflow-hidden">
                 <img
                   :src="prod2.image"
@@ -82,30 +81,11 @@ export default {
     axios
       .get("../../../Products.json")
       .then((res) => {
-        this.dvrproducts = res.data["IT-solution"];
-        console.log(res.data);
-      })
-      .catch((err) => console.log(err));
-    axios
-      .get("../../../Products.json")
-      .then((res) => {
-        this.survproducts = res.data["Surveillance-systems"];
-        console.log(res.data);
-      })
-      .catch((err) => console.log(err));
-    axios
-      .get("../../../Products.json")
-      .then((res) => {
-        this.fingproducts = res.data["Fingerprints"];
-        console.log(res.data);
-        this.products.push(
-          this.dvrproducts,
-          this.survproducts,
-          this.fingproducts
-        );
+        this.products = res.data["Surveillance-systems"];
         console.log(this.products);
       })
       .catch((err) => console.log(err));
+   
   },
   setup() {
     const onSwiper = (swiper) => {

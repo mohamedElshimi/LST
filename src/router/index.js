@@ -3,7 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import dvr from "../views/dvrProducts.vue";
 import fingerprints from "../views/fingerprintsProducts.vue";
 import surv from "../views/survProducts.vue";
-import ProductsView from "@/views/ProductsView.vue";
+import gps from "../views/gpsProducts.vue"
 import survProduct from "../views/OneProduct.vue";
 import editsurvProduct from "../dashboard/ProductsDashboardEdit.vue";
 
@@ -19,11 +19,7 @@ const router = createRouter({
       name: "home",
       component: HomeView,
     },
-    {
-      path: "/products",
-      name: "products",
-      component: ProductsView,
-    },
+
     {
       path: "/products/dvr",
       name: "dvr",
@@ -43,6 +39,11 @@ const router = createRouter({
       path: "/products/fingerprints",
       name: "fingerprints",
       component: fingerprints,
+    },
+    {
+      path: "/products/gps",
+      name: "gps",
+      component: gps,
     },
 
     {

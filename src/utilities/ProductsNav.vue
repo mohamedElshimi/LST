@@ -41,13 +41,14 @@
         </div>
       </router-link>
       <router-link
-        to=""
+        to="/products/gps"
         class="lg:w-2/12 md:w-6/12 w-12/12 p-8 cursor-pointer rounded-3xl shadow-lg flex flex-col items-center font-semibold hover:shadow-2xl transition duration-300"
       >
         <div class="flex flex-col items-center">
           <Icon
             icon="mdi:cellphone-gps"
             class="text-primary hover:text-secondry transition duration-300 text-9xl active:text-secondry focus:text-secondry"
+            :class="{ active: isActive('/products/gps') }"
           />
           <p class="text-primary">GPS Tracking</p>
         </div>
