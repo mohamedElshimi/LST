@@ -58,7 +58,7 @@
 import { Icon } from "@iconify/vue";
 import axios from "axios";
 import ProductsNav from "../utilities/ProductsNav.vue";
-import database from "@/data/Products.json"
+import database from "../../Products.json"
 export default {
   name: "dvr",
   components: {
@@ -68,7 +68,7 @@ export default {
   },
   data() {
     return {
-      database,
+      
       products: [],
       currentIndex: 0,
       searchQuery: "",
@@ -77,7 +77,7 @@ export default {
   created() {
     
     axios
-      .get("http://localhost:3000/IT-solution")
+      .get("../../Products.json")
       .then((res) => {
         this.products = res.data;
         console.log(res.data);
