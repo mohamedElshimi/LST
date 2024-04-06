@@ -40,7 +40,7 @@ export default {
     this.id = this.$route.params.id;
     this.type = this.$route.params.type;
     axios
-      .get(`http://localhost:3000/IT-solution/${this.id}`)
+      .get(`../../Products.json/IT-solution/${this.id}`)
       .then((res) => {
         // this.product = res.data[this.type];
         // console.log(this.id);
@@ -52,7 +52,7 @@ export default {
       })
       .catch((err) => console.log(err));
     axios
-      .get(`http://localhost:3000/Surveillance-systems/${this.id}`)
+      .get(`../../Products.json/Surveillance-systems/${this.id}`)
       .then((res) => {
         // this.product = res.data[this.type];
         // console.log(this.id);
@@ -64,7 +64,7 @@ export default {
       })
       .catch((err) => console.log(err));
     axios
-      .get(`http://localhost:3000/Fingerprints/${this.id}`)
+      .get(`../../Products.json/Fingerprints/${this.id}`)
       .then((res) => {
         // this.product = res.data[this.type];
         // console.log(this.id);
