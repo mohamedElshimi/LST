@@ -58,11 +58,13 @@
 import { Icon } from "@iconify/vue";
 import axios from "axios";
 import ProductsNav from "../utilities/ProductsNav.vue";
+import database from "../../Products.json"
 export default {
   name: "surv",
   components: {
     Icon,
     ProductsNav,
+    database
   },
   data() {
     return {
@@ -73,9 +75,9 @@ export default {
   },
   created() {
     axios
-      .get("http://localhost:3000/Surveillance-systems")
+      .get("../../Products.json")
       .then((res) => {
-        this.products = res.data;
+        this.products = res.data["Surveillance-systems"];
         console.log(res.data);
       })
       .catch((err) => console.log(err));

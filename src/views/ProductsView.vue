@@ -54,6 +54,7 @@
 import { Icon } from "@iconify/vue";
 import axios from "axios";
 import ProductsNav from "../utilities/ProductsNav.vue";
+
 export default {
   name: "Products",
   components: {
@@ -72,23 +73,23 @@ export default {
   },
   created() {
     axios
-      .get("http://localhost:3000/IT-solution")
+      .get("../../Products.json")
       .then((res) => {
-        this.dvrproducts = res.data;
+        this.dvrproducts = res.data["IT-solution"];
         console.log(res.data);
       })
       .catch((err) => console.log(err));
     axios
-      .get("http://localhost:3000/Surveillance-systems")
+      .get("../../Products.json")
       .then((res) => {
-        this.survproducts = res.data;
+        this.survproducts = res.data["Surveillance-systems"];
         console.log(res.data);
       })
       .catch((err) => console.log(err));
     axios
-      .get("http://localhost:3000/Fingerprints")
+      .get("../../Products.json")
       .then((res) => {
-        this.fingproducts = res.data;
+        this.fingproducts = res.data["Fingerprints"];
         console.log(res.data);
         this.products.push(
           this.dvrproducts,
