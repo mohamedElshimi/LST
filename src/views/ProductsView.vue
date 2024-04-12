@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <div class="container mt-24">
     <div class="text-4xl font-bold text-primary">Products</div>
-    <div class="bg-secondry w-2/12 h-2 rounded-md mb-10"></div>
+    <div class="bg-secondry h-2 rounded-md"></div>
     <ProductsNav></ProductsNav>
     <div class="flex">
       <input

@@ -102,13 +102,11 @@ export default {
   created() {},
   methods: {
     AddProduct() {
-      let url = "";
       switch (this.add) {
         case "surv":
-          url = "http://localhost:3000/Surveillance-systems";
           console.log(this.add);
           axios
-            .post(url, this.AddedProduct)
+            .post("../../Products.json", this.AddedProduct)
             .then((res) => {
               console.log(res.data);
               alert("Your product has been added successfully :)");

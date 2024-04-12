@@ -2,16 +2,16 @@
 async function signOut() {
   const { error } = await supabase.auth.signOut();
   console.log(error);
-  router.push("/dashboard/Admin")
+  router.push("/dashboard/Admin");
 }
 
 async function seeCurrent() {
-const localuser =await supabase.auth.getSession();
-console.log(localuser);
-console.log(localuser.data.session);
-if(!localuser.data.session){
-  router.push("/dashboard/Admin")
-}
+  const localuser = await supabase.auth.getSession();
+  console.log(localuser);
+  console.log(localuser.data.session);
+  if (!localuser.data.session) {
+    router.push("/dashboard/Admin");
+  }
 }
 
 seeCurrent();
@@ -132,16 +132,17 @@ export default {
       nxt: 50,
       pre: 0,
       showadd: "",
-      receivedData: "",
+      receivedData: "surv",
       added: "",
     };
   },
 
   created() {
     axios
-      .get("http://localhost:3000/Surveillance-systems")
+      .get("../../Products.json")
       .then((res) => {
-        this.products = res.data;
+        this.products = res.data["Surveillance-systems"];
+        console.log(this.products);
       })
       .catch((err) => console.log(err));
   },
@@ -199,30 +200,36 @@ export default {
       this.fetching();
     },
     fetching() {
-      if (this.receivedData == "surv") {
-        axios
-          .get("http://localhost:3000/Surveillance-systems")
-          .then((res) => {
-            this.products = res.data;
-            this.added = "surv";
-          })
-          .catch((err) => console.log(err));
-      } else if (this.receivedData == "dvr") {
-        axios
-          .get("http://localhost:3000/IT-solution")
-          .then((res) => {
-            this.products = res.data;
-            this.added = "dvr";
-          })
-          .catch((err) => console.log(err));
-      } else if (this.receivedData == "fing") {
-        axios
-          .get("http://localhost:3000/Fingerprints")
-          .then((res) => {
-            this.products = res.data;
-            this.added = "fing";
-          })
-          .catch((err) => console.log(err));
+      switch (this.receivedData) {
+        case "surv":
+          axios
+            .get("../../Products.json")
+            .then((res) => {
+              this.products = res.data["Surveillance-systems"];
+              console.log(this.products);
+            })
+            .catch((err) => console.log(err));
+          break;
+        case "dvr":
+          axios
+            .get("../../Products.json")
+            .then((res) => {
+              this.products = res.data["IT-solution"];
+              console.log(this.products);
+            })
+            .catch((err) => console.log(err));
+          break;
+        case "fing":
+          axios
+            .get("../../Products.json")
+            .then((res) => {
+              this.products = res.data["Fingerprints"];
+              console.log(this.products);
+            })
+            .catch((err) => console.log(err));
+        default:
+          // default URL
+          break;
       }
     },
   },

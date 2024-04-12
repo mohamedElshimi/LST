@@ -1,12 +1,12 @@
 <template>
-  <main class="container">
+  <main class="container mt-24">
     <div class="container flex">
       <div>
         <div class="text-4xl font-bold text-primary">Services</div>
-        <div class="bg-secondry h-2 rounded-md mb-10"></div>
+        <div class="bg-secondry h-2 rounded-md"></div>
       </div>
     </div>
-    <div class="service-card">
+    <div class="service-card  border-solid border-2">
       <div class="flex gap-2 mb-8">
         <div
           class="bg-secondry w-5 transition-width duration-300 service-child"
@@ -41,7 +41,7 @@
         >
       </div>
     </div>
-    <div class="service-card">
+    <div class="service-card border-solid border-2">
       <!-- <Icon icon="fluent:camera-dome-24-filled" width="192" height="192"  style="color: #004A54" /> -->
       <div class="flex gap-2 mb-8">
         <div
@@ -85,7 +85,7 @@
         >
       </div>
     </div>
-    <div class="service-card">
+    <div class="service-card border-solid border-2">
       <div class="flex gap-2 mb-8">
         <div
           class="bg-secondry w-5 transition-width duration-300 service-child"
@@ -119,7 +119,7 @@
         >
       </div>
     </div>
-    <div class="service-card">
+    <div class="service-card border-solid border-2">
       <div class="flex gap-2 mb-8">
         <div
           class="bg-secondry w-5 transition-width duration-300 service-child"
