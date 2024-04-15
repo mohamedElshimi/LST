@@ -1,3 +1,43 @@
+<script setup>
+import { supabase } from "@/lib/supabaseClient";
+import { ref,onMounted } from 'vue';
+const prodd = ref([]);
+const fetchproducts = async ()=> {
+  try {
+let { data: Surveillance, error } = await supabase
+  .from('Surveillance')
+  .select('*')
+  prodd.value = Surveillance;
+  console.table(Surveillance);
+  }
+   catch (error) {
+    console.log(error);
+  }
+}
+fetchproducts();
+let currentIndx = ref(0);
+let searchQ = ref('');
+const items = ()=> {
+      return (
+        prodd.value
+          // .filter((item) => item.title.toLowerCase().includes(this.searchQuery.toLowerCase()))
+          .filter((item) =>
+            item.title.toLowerCase().includes(searchQ.value.toLowerCase())
+          )
+          .slice(0, currentIndx.value + 10)
+      );
+    }
+    items();
+    const loadMore = ()=> {
+      currentIndx.value +=10;
+    }
+    
+    // loadMore() {
+//       this.currentIndex += 12;
+//     },
+    console.log(items());
+</script>
+
 <template>
   <div class="container mt-24">
     <div class="text-4xl font-bold text-primary">Products</div>
@@ -5,7 +45,7 @@
     <ProductsNav></ProductsNav>
     <div class="flex">
       <input
-        v-model="searchQuery"
+        v-model="searchQ"
         type="search"
         class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-primary focus:border-primary outline-primary"
         placeholder="Search by products name ..."
@@ -19,7 +59,7 @@
     </div>
     <div class="flex flex-wrap gap-0">
       <div
-        v-for="(prod, index) in items"
+        v-for="(prod, index) in items()"
         :key="index"
         class="flex flex-col rounded-2xl items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer lg:w-3/12 md:w-6/12 w-12/12"
       >
@@ -45,7 +85,7 @@
     </div>
     <div class="text-center">
       <button
-        @click="loadMore"
+        @click="loadMore()"
         class="primary-btn w-40 h-12 justify-center m-5"
       >
         More To Explore
@@ -66,39 +106,10 @@ export default {
     ProductsNav,
     database
   },
-  data() {
-    return {
-      products: [],
-      currentIndex: 0,
-      searchQuery: "",
-    };
-  },
-  created() {
-    axios
-      .get("../../Products.json")
-      .then((res) => {
-        this.products = res.data["Surveillance-systems"];
-        // console.log(this.products);
-      })
-      .catch((err) => console.log(err));
-  },
-  methods: {
-    loadMore() {
-      this.currentIndex += 12;
-    },
-  },
-  computed: {
-    items() {
-      return (
-        this.products
-          // .filter((item) => item.title.toLowerCase().includes(this.searchQuery.toLowerCase()))
-          .filter((item) =>
-            item.title.toLowerCase().includes(this.searchQuery.toLowerCase())
-          )
-          .slice(0, this.currentIndex + 12)
-      );
-    },
-  },
+ 
+  
+ 
+ 
 };
 </script>
 

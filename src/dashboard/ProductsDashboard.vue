@@ -59,7 +59,7 @@ seeCurrent();
       </thead>
       <tbody>
         <tr class="border-b" v-for="(prod, Indx) in products" :key="Indx">
-          <template v-if="Indx > pre && Indx <= nxt">
+          <template v-if="Indx >= pre && Indx <= nxt">
             <th
               scope="row"
               class="px-6 py-4 font-medium text-dark whitespace-nowrap"

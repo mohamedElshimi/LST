@@ -375,6 +375,5 @@
       "description": "Face Capacity: 200\nFingerprint Capacity: 500\nID Card Capacity: 1000\nRecord Capacity: 50,000\nCommunication: TCP/IP, USB host",
       "image": "/assets/MB20.png"
     }
-  ],
-  "GPS-Tracking": []
+  ]
 }

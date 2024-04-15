@@ -1,0 +1,60 @@
+{
+    "IT-solution": [
+        {
+          "id": 1,
+          "title": "Zero Tech ZTDX-EG4CH",
+          "brand": "Zero Tech",
+          "description": "• 4 CH 1080P lite Standard H.265 high profile\n          compression\n          • 4 CH simultaneously playback\n          • The resolution of CH 1 and CH 2 must be the same.\n          So do CH 3 and CH 4\n          • HDMI × 1 : 1920 × 1080 VGA × 1 : 1920 × 1080\n          • 1080P lite : 25 fps\n          • 1ch audio in - 1 ch audio out\n          • SATA × 1, max 6T\n          • Search: time slice, time, event, tag search, smart\n          search\n          • Smart Search Highlighted color to display the\n          camera record in a certain period of time, different\n          colors refers to different record events\n          • Support NAT function and QRCode scanning by\n          mobile phone and IPAD",
+          "image": "/assets/ZTDX-EG4CH.png"
+        },
+        {
+          "id": 2,
+          "title": "Zero Tech ZTDX-EG4CH5M",
+          "brand": "Zero Tech",
+          "description": "• 4 CH DVR supports TVI / AHD/CVI\n          5MP/4MP/1080P/720P/WD1 video input\n          • 4 CH DVR supports 2 CH 5MP / 4MP / 3MP /1080P\n          / 960P /720P IP\n          • video input by default\n          • 4CH DVR: 4CH analog video input can be switched\n          to 4CH IP video input\n          • Adopt standard H.265 high profile compression\n          format to get high-quality\n          • video at much lower bit rate\n          • Intuitive and user-friendly Graphics User Interface (\n          GUI ) window style\n          • operation by mouse\n          • Multi-mode recording: manual / timed / sensor /\n          motion / AI recording\n          • Playback : 4 CH simultaneously playback\n          • Search: time slice time event tag search\n          • Express and flexible backup via USB network and\n          so on\n          • Pentaplex: preview, record playback backup and\n          remote access\n          • DHCP DDNS PoE network protocol\n          • Remote control via Web or CMS : preview,\n          playback backup PTZ and\n          • configuration\n          • Authorization management log review and device\n          status review\n          • Support 1080P output true high resolution display\n          • Support PTZ preset and auto cruise, up to 255\n          presets and 8 cruises\n          • Support NAT function and QRCode scanning by\n          mobile phones\n          • Powerful mobile surveillance by smart phones with\n          iOS and Andriod OS",
+          "image": "/assets/ZTDX-EG4CH5M.png"
+        },
+        {
+          "id": 3,
+          "title": "Zero Tech ZTDX-EG16CH5M",
+          "brand": "Zero Tech",
+          "description": "• Supports 16 CH TVI / AHD /CVI 5MP / 4MP / 1080P\n          / 720P / WD1 video input\n          • Supports 8 CH 5MP / 4MP / 3MP / 1080P / 960P /\n          720P IP video input\n          • 8CH analog video input can be switched to 8CH IP\n          video input\n          • Adopt standard H.265 high profile compression\n          format to get high-quality\n          • Intuitive and user-friendly Graphics User Interface\n          ( GUI ), window style\n          • operation by mouse\n          • Multi-mode recording: manual / timed / sensor\n          /motion / AI recording\n          • Playback : 16 CH simultaneously playback\n          • Search: time slice, time, event, tag search\n          • Express and flexible backup via USB, network and\n          so on\n          • Pentaplex: preview, record, playback, backup and\n          remote access\n          • DHCP, DDNS, PPPoE network protocol\n          • Remote control via Web or CMS : preview,\n          playback, backup, PTZ and\n          • configuration\n          • Authorization management, log review and device\n          status review\n          • Support 1080P output, true high resolution display\n          • Support PTZ preset and auto cruise, up to 255\n          presets and 8 cruises\n          • Support NAT function and QRCode scanning by\n          mobile phones\n          • Powerful mobile surveillance by smart phones\n          with iOS and Andriod OS",
+          "image": "/assets/ZTDX-16CH5M.png"
+        },
+        {
+          "id": 4,
+          "title": "Zero Tech ZTNX-EG4CH5M",
+          "brand": "Zero Tech",
+          "description": "X NVR\n          ZTNX-EG4CH5M\n          • Support 4CH 8MP/6MP/5MP/4MP/3MP/1080P/\n          960P/720P/ 960H/DI/CIF IP video input\n          • Adopt standard H.265 and H.264 high profile\n          compression format to get high-quality video at\n          much lower bit rate\n          • Multi-mode recording: manual / timed / motion\n          / sensor / POS / AI recording\n          • Playback : 4 CH simultaneous playback\n          • Search : time slice, time, event, tag, smart search\n          • Support multiple VCA (Video Content Analytics)\n          events, such as object abandoned/missing,\n          region intrusion, tripwire, video exception, etc.\n          • Support POS information overlay on live view\n          and playback\n          • DHCP, DDNS, PPPoE network protocol\n          • Remote control via Web or CMS : preview,\n          playback, backup, PTZ and configuration\n          • 4/8 PoE network ports; IPC can be directly\n          connected to NVR; PoE power supply supported\n          • 4K output, true high resolution display",
+          "image": "/assets/ZTNX-EG8CH5M.png"
+        },
+        {
+          "id": 5,
+          "title": "Zero Tech ZTNX-EG8CH5M",
+          "brand": "Zero Tech",
+          "description": "• 8 CH IPC input\n          • Adopt standard H.265 and H.264 high profile\n          compression format to get high-quality video at\n          much lower bit rate\n          • Playback : 8 CH simultaneous playback\n          • Search : time slice, time, event ( manual, sensor,\n          motion ), tag search\n          • 1080P HD output, true high resolution display\n          • SATA × 1, up to 8TB per HDD\n          • Support PTZ preset and auto cruise, up to 255\n          presets and 8 cruises\n          • Authorization management, log view and device\n          status vie",
+          "image": "/assets/ZTNX-EG8CH5M.png"
+        },
+        {
+          "id": 6,
+          "title": "Hikvision DS-7104HGHI-K1(STD)(C)(S",
+          "brand": "Hikvision",
+          "description": "4 Turbo HD/AHD/Analog interface input, 4-ch video&1-ch audio input, 1-ch IP video\n          input, 1 SATA interface, H.265, HD1080P Lite: 25(P)/30(N) fps/ch, mini 1U case\n          ,Plastic",
+          "image": "/assets/Hikvision-DS-7104HGHI-K1(S)-FHD-DVR-4CH.png"
+        },
+        {
+          "id": 7,
+          "title": "Hikvision DS-7108HGHI-K1(STD)(C)(S",
+          "brand": "Hikvision",
+          "description": "8 Turbo HD/AHD/Analog interface input, 8-ch video&1-ch audio input, 2-ch IP video\n          input, HDMI & VGA Output, 1 SATA interface, H.264, HD1080P Lite: : 25(P)/30(N)\n          fps/ch, mini 1U case ,Plastic",
+          "image": "/assets/Hikvision-DS-7104HGHI-K1(S)-FHD-DVR-4CH.png"
+        },
+        {
+          "id": 8,
+          "title": "Hikvision DS-7604NI-Q1",
+          "brand": "Hikvision",
+          "description": "4-ch 1080P, or 1-ch 4K,40Mbps Bit Rate Input Max (up to 4-ch IP video), 1 SATA\n          interface, standalone 1U case",
+          "image": "/assets/Hikvision-DS-7604NI-Q1-4K-NVR-4CH.png"
+        }
+      ]
+}

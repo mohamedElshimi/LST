@@ -83,6 +83,7 @@
 
 <script>
 import axios from "axios";
+import database from "../../Products.json"
 export default {
   name: "AddProduct",
   data() {
@@ -99,68 +100,29 @@ export default {
     };
   },
 
-  created() {},
+  created() {
+    console.log(database);
+  },
   methods: {
     AddProduct() {
-      switch (this.add) {
-        case "surv":
-          console.log(this.add);
-          axios
-            .post("../../Products.json", this.AddedProduct)
-            .then((res) => {
-              console.log(res.data);
-              alert("Your product has been added successfully :)");
-              this.$router.push('/dashboard/products/');
-              window.location.reload()
-            })
-            .catch((err) => {
-              alert(
-                "please check the chosen category is compatible with the product"
-              );
-              console.log(err);
-            });
-          break;
-        case "dvr":
-          url = "http://localhost:3000/IT-solution";
-          console.log(this.add);
-          axios
-            .post(url, this.AddedProduct)
-            .then((res) => {
-              console.log(res.data);
-              alert("Your product has been added successfully :)");
-              this.$router.push('/dashboard/products/');
-              window.location.reload()
-            })
-            .catch((err) => {
-              alert(
-                "please check the chosen category is compatible with the product"
-              );
-              console.log(err);
-            });
-          break;
-        case "fing":
-          url = "http://localhost:3000/Fingerprints";
-          console.log(this.add);
-          axios
-            .post(url, this.AddedProduct)
-            .then((res) => {
-              console.log(res.data);
-              alert("Your product has been added successfully :)");
-              this.$router.push('/dashboard/products/');
-              window.location.reload()
-            })
-            .catch((err) => {
-              alert(
-                "please check the chosen category is compatible with the product"
-              );
-              console.log(err);
-            });
-          break;
-        default:
-          // default URL
-          break;
-      }
-    },
+  switch (this.add) {
+    case "surv":
+      database['Surveillance-systems'] = [...database['Surveillance-systems'], this.AddedProduct];
+      break;
+    case "dvr":
+      database['IT-solution'] = [...database['IT-solution'], this.AddedProduct];
+      break;
+    case "fing":
+      database['Fingerprints'] = [...database['Fingerprints'], this.AddedProduct];
+      break;
+    default:
+      // default case
+      break;
+  }
+  alert("Your product has been added successfully :)");
+  this.$router.push('/dashboard/products/');
+  window.location.reload();
+},
     generateUniqueId() {
       // Generate a random unique ID
       return Math.floor(Math.random() * 1000000);

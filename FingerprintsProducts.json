@@ -1,0 +1,39 @@
+{
+    "Fingerprints": [
+        {
+          "id": 1,
+          "title": "Zero Tech ZTF-10",
+          "brand": "Zero Tech",
+          "description": "Capacity:\nFingerprint: 3000\nLcd: Record: 100,000\n2.8'inch TFT; With access control\nMode: Verify fingerprint, Pin, Card\nMode: B\nConnect: USB, RS485, TCP/IP, U-disk\nCurrent: 1A\nWorking Voltage: 9V/1A",
+          "image": "/assets/ZTF-10.png"
+        },
+        {
+          "id": 2,
+          "title": "Zero Tech ZTF-40FB",
+          "brand": "Zero Tech",
+          "description": "Capacity:\nFace: 1000\nFingerprint Capacity: 5000\nCard Capacity: 5000\nRecord: 300,000\nWith access control\nDisplay: 2.8inch TFT\nCamera: Double HD Infrared camera\nMode Verify: Face, fingerprint, password, ID card\nCommunication: USB, U-disk, TCP/IP\nCurrent: 1A\nVoltage: DC9V~12V",
+          "image": "/assets/ZTF--40FB.png"
+        },
+        {
+          "id": 3,
+          "title": "ZKTeco K14 Pro",
+          "brand": "ZKTeco",
+          "description": "Fingerprint Capacity: 3000\nID Card Capacity: 3,000\nRecord Capacity: 200,000\nDisplay: 2.8 inch TFT screen\nCommunication: TCP/IP, USB host",
+          "image": "/assets/K14-Pro.png"
+        },
+        {
+          "id": 4,
+          "title": "ZKTeco K40 Pro",
+          "brand": "ZKTeco",
+          "description": "Fingerprint Capacity: 3000\nID Card Capacity: 3,000\nRecord Capacity: 200,000\nDisplay: 2.8 inch TFT screen\nCommunication: TCP/IP, USB Host\nOther Functions: Built-in battery",
+          "image": "/assets/K40-Pro.png"
+        },
+        {
+          "id": 5,
+          "title": "ZKTeco MB20",
+          "brand": "ZKTeco",
+          "description": "Face Capacity: 200\nFingerprint Capacity: 500\nID Card Capacity: 1000\nRecord Capacity: 50,000\nCommunication: TCP/IP, USB host",
+          "image": "/assets/MB20.png"
+        }
+      ]
+}

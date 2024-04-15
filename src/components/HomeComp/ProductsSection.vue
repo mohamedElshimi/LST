@@ -1,3 +1,42 @@
+<script setup>
+import { supabase } from "@/lib/supabaseClient";
+import { ref } from 'vue';
+
+let Products = ref([]);
+const fetchproducts = async ()=> {
+  try {
+let { data: Fingerprints,  } = await supabase
+  .from('Fingerprints')
+  .select('*')
+  Products.value.push(Fingerprints);
+  console.table(Fingerprints);
+  }
+   catch (error) {
+    console.log(error);
+  }
+}
+const fetchdvrproducts = async ()=> {
+let { data: DVR,  } = await supabase
+  .from('DVR')
+  .select('*')
+  Products.value.push(DVR);
+  console.table(DVR);
+}
+const fetchsurvproducts = async ()=> {
+  let { data: Surveillance,  } = await supabase
+  .from('Surveillance')
+  .select('*')
+  Products.value.push(Surveillance);
+  console.table(Surveillance);
+  console.log(Products.value);
+}
+
+fetchsurvproducts();
+fetchdvrproducts();
+fetchproducts();
+
+</script>
+
 <template>
   <div class="container">
     <div class="text-4xl font-bold text-primary">Products</div>
@@ -30,23 +69,23 @@
       },
     }"
       >
-        <template v-for="(prod2, index) in products"
+        <template v-for="(prod2, index) in Products"
             :key="index">
-          <swiper-slide
+          <swiper-slide v-for="(prod,index2) in prod2" :key="index2"
             class="flex flex-col items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer w-3/12 h-52"
-            ><router-link :to="`/products/Surveillance-systems/${prod2.id}`">
+            ><router-link :to="`/products/Surveillance-systems/${prod.id}`">
               <div class="flex justify-center relative overflow-hidden">
                 <img
-                  :src="prod2.image"
+                  :src="prod.image"
                   class="w-6/12 self-center object-cover hover:scale-150 transition duration-300"
                   alt=""
                 />
               </div>
               <div class="font-bold text-sm text-primary">
-                {{ prod2.title }}
+                {{ prod.title }}
               </div>
               <div class="text-sm line-clamp-3">
-                {{ prod2.description }}
+                {{ prod.description }}
               </div>
               <div class="flex justify-end">
                 <div class="primary-btn mt-2 justify-center flex">See More</div>
@@ -78,13 +117,13 @@ export default {
     };
   },
   created() {
-    axios
-      .get("../../../Products.json")
-      .then((res) => {
-        this.products = res.data["Surveillance-systems"];
-        // console.log(this.products);
-      })
-      .catch((err) => console.log(err));
+    // axios
+    //   .get("../../../Products.json")
+    //   .then((res) => {
+    //     this.products = res.data["Surveillance-systems"];
+    //     // console.log(this.products);
+    //   })
+    //   .catch((err) => console.log(err));
    
   },
   setup() {
