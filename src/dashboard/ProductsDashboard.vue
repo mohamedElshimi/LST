@@ -1,4 +1,45 @@
 <script setup>
+import { supabase } from "@/lib/supabaseClient";
+import { ref, onMounted } from "vue";
+const prodd = ref([]);
+let showadd = ref(""),
+  receivedData = "surv",
+  added = "",
+  nxt = 50,
+  pre = 0;
+
+const fetchproducts = async () => {
+  switch (receivedData) {
+    case "dvr":
+      let { data: DVR } = await supabase.from("DVR").select("*");
+      prodd.value = DVR;
+      console.table(DVR);
+      break;
+    case "surv":
+      let { data: Surveillance } = await supabase
+        .from("Surveillance")
+        .select("*");
+      prodd.value = Surveillance;
+      console.table(Surveillance);
+      break;
+    case "fing":
+      let { data: Fingerprints } = await supabase
+        .from("Fingerprints")
+        .select("*");
+      prodd.value = Fingerprints;
+      console.table(Fingerprints);
+      break;
+    default:
+      console.log("Invalid URL or category");
+      break;
+  }
+  console.log(receivedData);
+};
+const receiveDataFromChild = (data) => {
+  receivedData = data;
+  console.log(receivedData);
+  fetchproducts();
+};
 async function signOut() {
   const { error } = await supabase.auth.signOut();
   console.log(error);
@@ -13,7 +54,7 @@ async function seeCurrent() {
     router.push("/dashboard/Admin");
   }
 }
-
+fetchproducts();
 seeCurrent();
 </script>
 
@@ -58,7 +99,7 @@ seeCurrent();
         </tr>
       </thead>
       <tbody>
-        <tr class="border-b" v-for="(prod, Indx) in products" :key="Indx">
+        <tr class="border-b" v-for="(prod, Indx) in prodd" :key="Indx">
           <template v-if="Indx >= pre && Indx <= nxt">
             <th
               scope="row"
@@ -125,26 +166,26 @@ export default {
     ProductsNavDashVue,
   },
 
-  data() {
-    return {
-      products: [],
-      id: "",
-      nxt: 50,
-      pre: 0,
-      showadd: "",
-      receivedData: "surv",
-      added: "",
-    };
-  },
+  // data() {
+  //   return {
+  //     products: [],
+  //     id: "",
+  //     nxt: 50,
+  //     pre: 0,
+  //     showadd: "",
+  //     receivedData: "surv",
+  //     added: "",
+  //   };
+  // },
 
   created() {
-    axios
-      .get("../../Products.json")
-      .then((res) => {
-        this.products = res.data["Surveillance-systems"];
-        console.log(this.products);
-      })
-      .catch((err) => console.log(err));
+    // axios
+    //   .get("../../Products.json")
+    //   .then((res) => {
+    //     this.products = res.data["Surveillance-systems"];
+    //     console.log(this.products);
+    //   })
+    //   .catch((err) => console.log(err));
   },
   methods: {
     deleteRow(id) {
@@ -194,44 +235,44 @@ export default {
         }
       }
     },
-    receiveDataFromChild(data) {
-      this.receivedData = data;
-      console.log(this.receivedData);
-      this.fetching();
-    },
-    fetching() {
-      switch (this.receivedData) {
-        case "surv":
-          axios
-            .get("../../Products.json")
-            .then((res) => {
-              this.products = res.data["Surveillance-systems"];
-              console.log(this.products);
-            })
-            .catch((err) => console.log(err));
-          break;
-        case "dvr":
-          axios
-            .get("../../Products.json")
-            .then((res) => {
-              this.products = res.data["IT-solution"];
-              console.log(this.products);
-            })
-            .catch((err) => console.log(err));
-          break;
-        case "fing":
-          axios
-            .get("../../Products.json")
-            .then((res) => {
-              this.products = res.data["Fingerprints"];
-              console.log(this.products);
-            })
-            .catch((err) => console.log(err));
-        default:
-          // default URL
-          break;
-      }
-    },
+    // receiveDataFromChild(data) {
+    //   this.receivedData = data;
+    //   console.log(this.receivedData);
+    //   this.fetching();
+    // },
+    // fetching() {
+    //   switch (this.receivedData) {
+    //     case "surv":
+    //       axios
+    //         .get("../../Products.json")
+    //         .then((res) => {
+    //           this.products = res.data["Surveillance-systems"];
+    //           console.log(this.products);
+    //         })
+    //         .catch((err) => console.log(err));
+    //       break;
+    //     case "dvr":
+    //       axios
+    //         .get("../../Products.json")
+    //         .then((res) => {
+    //           this.products = res.data["IT-solution"];
+    //           console.log(this.products);
+    //         })
+    //         .catch((err) => console.log(err));
+    //       break;
+    //     case "fing":
+    //       axios
+    //         .get("../../Products.json")
+    //         .then((res) => {
+    //           this.products = res.data["Fingerprints"];
+    //           console.log(this.products);
+    //         })
+    //         .catch((err) => console.log(err));
+    //     default:
+    //       // default URL
+    //       break;
+    //   }
+    // },
   },
 };
 </script>
