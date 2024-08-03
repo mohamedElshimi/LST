@@ -1,12 +1,18 @@
 <template>
-  <div class="container mt-20 p-10">
+  <div class="container mt-24">
+    <div class=" flex">
+      <div>
+        <div class="text-4xl font-bold text-primary">About</div>
+        <div class="bg-secondry h-2 rounded-md mb-10"></div>
+      </div>
+    </div>
     <div
       class="border-4 border-secondry border-dashed rounded-3xl mb-5 relative"
     >
       <div
         class="w-[200px] h-[100px] bg-white absolute bottom-5 right-10 rotate-45 border-4 border-secondry border-dashed z-10"
       ></div>
-      <p class="relative p-5 rounded-3xl z-20 bg-white">
+      <p class="relative p-5 rounded-3xl z-20 bg-white lg:text-lg text-sm">
         At our core, we are driven by a mission to deliver unparalleled IT
         solutions of the highest quality, fostering the growth and expansion of
         businesses within their respective markets. We are committed to our
@@ -26,7 +32,7 @@
       </p>
     </div>
     <div
-      class="p-14 shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 cursor-pointer mb-10"
+      class="service-card border-solid border-2"
     >
       <div class="flex gap-2 mb-8">
         <div
@@ -34,14 +40,15 @@
         ></div>
         <div class="font-bold text-primary text-4xl w-3/12">Our Mission</div>
       </div>
-      <div class="flex justify-center items-center">
-        <div class="w-4/12 justify-center flex">
+      <div class="flex justify-center items-center md:flex-row flex-col">
+        <div class="lg:w-4/12 w-12/12 justify-center flex ">
           <Icon
             icon="game-icons:achievement"
-            class="text-primary hover:text-secondry transition duration-300 text-[18rem]"
+            width="200"
+            class="text-primary hover:text-secondry transition duration-300 mx-10 md:mb-0 mb-5"
           />
         </div>
-        <div class="text-primary w-10/12 font-medium text-lg">
+        <div class="text-primary lg:w-10/12 w-12/12 font-medium lg:text-lg text-sm">
           Our mission is to provide the best possible IT solutions with highest
           quality, helping companies grow and expand within their market; we
           want their success to be our success.<br /><br />
@@ -55,7 +62,7 @@
       </div>
     </div>
     <div
-      class="p-14 shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 cursor-pointer"
+      class="service-card border-solid border-2"
     >
       <div class="flex gap-2 mb-8">
         <div
@@ -63,14 +70,15 @@
         ></div>
         <div class="font-bold text-primary text-4xl w-3/12">Our Vision</div>
       </div>
-      <div class="flex justify-center items-center">
-        <div class="w-4/12 justify-center flex">
+      <div class="flex justify-center items-center md:flex-row flex-col">
+        <div class="lg:w-4/12 w-12/12 justify-center flex">
           <Icon
             icon="octicon:goal-24"
-            class="text-primary hover:text-secondry transition duration-300 text-[15rem]"
+            width="200"
+            class="text-primary hover:text-secondry transition duration-300 mx-10 md:mb-0 mb-5"
           />
         </div>
-        <div class="text-primary w-10/12 font-medium text-lg">
+        <div class="text-primary lg:w-10/12 w-12/12 font-medium lg:text-lg text-sm">
           Our goal is to provide our customers with the best service at the best
           possible market price without compromising quality.<br /><br />
           We see our company and the people who are the foundation of our

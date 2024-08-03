@@ -58,7 +58,7 @@ export default {};
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
 }
 .bg-last-bannner {
-  background: url("./src/assets/Banner/GPS.png") no-repeat 100%/100%;
+  background: url("./../../../assets/Banner/GPS.png") no-repeat 100%/100%;
   background-size: cover;
 }
 </style>

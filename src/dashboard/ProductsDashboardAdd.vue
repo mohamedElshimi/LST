@@ -1,7 +1,49 @@
+<script setup>
+import { supabase } from "@/lib/supabaseClient";
+import { ref, reactive } from "vue";
+let add = "";
+console.log(add);
+let AddedProduct = reactive({
+  title: "",
+  brand: "",
+  description: "",
+  image: "",
+});
+console.log(AddedProduct);
+const AddProduct = async () => {
+  switch (add) {
+    case "surv":
+      const { data: Surveillance } = await supabase
+        .from("Surveillance")
+        .insert(AddedProduct)
+        .select();
+      alert("your product has successfully added to Surv");
+      break;
+    case "dvr":
+      const { data: DVR } = await supabase
+        .from("DVR")
+        .insert(AddedProduct)
+        .select();
+      alert("your product has successfully added to Dvr");
+      break;
+    case "fing":
+      const { data: Fingerprints } = await supabase
+        .from("Fingerprints")
+        .insert(AddedProduct)
+        .select();
+      alert("your product has successfully added to Fingerprints");
+      break;
+    default:
+      // default case
+      break;
+  }
+};
+</script>
+
 <template>
   <div class="container">
     <div class="">
-      <form @submit.prevent="AddProduct">
+      <form @submit.prevent="AddProduct()">
         <div class="mt-8 relative z-0 w-full mb-6 group">
           <label for="" class="font-bold">Category:</label>
           <select class="ml-5" v-model="add" required>
@@ -83,91 +125,51 @@
 
 <script>
 import axios from "axios";
+import database from "../../Products.json";
 export default {
   name: "AddProduct",
-  data() {
-    return {
-      AddedProduct: {
-        id: this.generateUniqueId(),
-        title: "",
-        brand: "",
-        description: "",
-        image: "",
-      },
-      survproducts: [],
-      add: "",
-    };
-  },
+  // data() {
+  //   return {
+  //     AddedProduct: {
+  //       id: this.generateUniqueId(),
+  //       title: "",
+  //       brand: "",
+  //       description: "",
+  //       image: "",
+  //     },
+  //     survproducts: [],
+  //     add: "",
+  //   };
+  // },
 
-  created() {},
-  methods: {
-    AddProduct() {
-      let url = "";
-      switch (this.add) {
-        case "surv":
-          url = "http://localhost:3000/Surveillance-systems";
-          console.log(this.add);
-          axios
-            .post(url, this.AddedProduct)
-            .then((res) => {
-              console.log(res.data);
-              alert("Your product has been added successfully :)");
-              this.$router.push('/dashboard/products/');
-              window.location.reload()
-            })
-            .catch((err) => {
-              alert(
-                "please check the chosen category is compatible with the product"
-              );
-              console.log(err);
-            });
-          break;
-        case "dvr":
-          url = "http://localhost:3000/IT-solution";
-          console.log(this.add);
-          axios
-            .post(url, this.AddedProduct)
-            .then((res) => {
-              console.log(res.data);
-              alert("Your product has been added successfully :)");
-              this.$router.push('/dashboard/products/');
-              window.location.reload()
-            })
-            .catch((err) => {
-              alert(
-                "please check the chosen category is compatible with the product"
-              );
-              console.log(err);
-            });
-          break;
-        case "fing":
-          url = "http://localhost:3000/Fingerprints";
-          console.log(this.add);
-          axios
-            .post(url, this.AddedProduct)
-            .then((res) => {
-              console.log(res.data);
-              alert("Your product has been added successfully :)");
-              this.$router.push('/dashboard/products/');
-              window.location.reload()
-            })
-            .catch((err) => {
-              alert(
-                "please check the chosen category is compatible with the product"
-              );
-              console.log(err);
-            });
-          break;
-        default:
-          // default URL
-          break;
-      }
-    },
-    generateUniqueId() {
-      // Generate a random unique ID
-      return Math.floor(Math.random() * 1000000);
-    },
-  },
+  // created() {
+  //   console.log(database);
+  // },
+  //   methods: {
+  //     AddProduct() {
+  //   switch (this.add) {
+  //     case "surv":
+  //       database['Surveillance-systems'] = [...database['Surveillance-systems'], this.AddedProduct];
+  //       break;
+  //     case "dvr":
+  //       database['IT-solution'] = [...database['IT-solution'], this.AddedProduct];
+  //       break;
+  //     case "fing":
+  //       database['Fingerprints'] = [...database['Fingerprints'], this.AddedProduct];
+  //       break;
+  //     default:
+  //       // default case
+  //       break;
+  //   }
+  //   alert("Your product has been added successfully :)");
+  //   this.$router.push('/dashboard/products/');
+  //   window.location.reload();
+  // },
+  //     generateUniqueId() {
+  //       // Generate a random unique ID
+  //       return Math.floor(Math.random() * 1000000);
+  //     },
+  //   },
 };
 </script>
 

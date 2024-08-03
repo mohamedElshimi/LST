@@ -1,16 +1,16 @@
 <template>
-  <main class="container">
+  <main class="container mt-24">
     <div class="container flex">
       <div>
         <div class="text-4xl font-bold text-primary">Contact US</div>
-        <div class="bg-secondry h-2 rounded-md mb-10"></div>
+        <div class="bg-secondry h-2 rounded-md"></div>
       </div>
     </div>
     <section class="mt-5">
       <div class="flex items-center">
         <Icon icon="mdi:location" width="40" style="color: #f9c02c" />
         <p class="text-primary">
-          16 Abo El Ataheia, Emtedad Abbas El Akad, Nasr City
+          Sara Tower - 23 El-Batrawy St - Abbas El Aaad - Madina Nasr ,Cairo
         </p>
       </div>
       <iframe

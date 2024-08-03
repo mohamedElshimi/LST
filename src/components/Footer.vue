@@ -1,39 +1,40 @@
 <template>
   <footer class="bg-baseC border-t-primary border-t-2">
-    <section class="flex lg:flex-row flex-col lg:gap-24 gap-10 lg:p-8 p-6">
-      <div class="lg:w-4/12 md:w-4/12 sm:w-12/12 flex justify-center">
+    <section class="flex lg:flex-row flex-col gap-10 p-6">
+      <div class="lg:w-2/12 md:w-4/12 sm:w-full flex justify-center mb-6 md:mb-0">
         <a href="#" target="_top" class="lg:w-12/12 w-6/12">
-          <img src="../assets/Images/LST-White.png" alt=""
-        /></a>
+          <img src="../assets/Images/LST-White.png" alt="" />
+        </a>
       </div>
-      <div class="lg:w-8/12 flex flex-col items-center">
-        <div class="text-secondry lg:text-lg text-md">
+      <div class="lg:w-10/12 flex flex-col items-center">
+        <div class="text-secondry lg:text-md text-md mb-6 md:mb-4">
           We can give you a hand. Please get in contact to see what we can do
           for you.
         </div>
         <div class="flex lg:flex-row flex-col">
-          <div class="flex hover:text-secondry text-white gap-4">
+          <div class="flex hover:text-secondry text-white gap-4 mb-2">
             <Icon icon="ic:baseline-email" class="text-3xl" /><a
               href="mailto:info@tag-sis.com"
               class="hover:text-secondry"
-              >Info@lucidity-eg.com</a
+              >Info@lucidity-eg.com -</a
             >
           </div>
-          <div class="flex gap-3 hover:text-secondry text-white">
+          <div class="flex gap-3 hover:text-secondry text-white mb-2">
             <Icon icon="ic:baseline-phone" class="text-3xl" />
             <a href="tel:01277785843" class="hover:text-secondry"
-              >01277785843</a
+              >01277785843 -</a
             >
           </div>
-          <div class="flex text-white">
+          <div class="flex text-white mb-2">
             <Icon icon="mdi:location" class="text-3xl me-2" />
             <div>
-              Sara Tower - 23 El-Batrawy St - Appas El Aaad - Madina Nasr ,Cairo
+              Sara Tower - 23 El-Batrawy St - Abbas El Aaad - Madina Nasr
+              ,Cairo
             </div>
           </div>
         </div>
       </div>
-      <div class="lg:w-3/12 flex flex-col justify-center gap-y-3">
+      <div class="lg:w-2/12 flex flex-col justify-center gap-y-3">
         <div class="text-lg text-white lg:text-start text-center">
           Follow us :
         </div>

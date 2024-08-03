@@ -73,10 +73,10 @@
         </div>
         <!-- End of Services with Dropdown -->
 
-        <router-link to="/products">
+        <router-link to="/products/dvr">
           <div
             class="text-primary transition duration-200 font-semibold hover:border-b-2 hover:border-secondry"
-            :class="{ active: isActive('/products') }"
+            :class="{ active: isActive('/products/dvr') }"
           >
             Products
           </div>
@@ -162,9 +162,9 @@
             <!-- s -->
           </div>
           <!-- End of Services with Dropdown in Mobile -->
-          <router-link to="/products">
+          <router-link to="/products/dvr">
             <div
-              class="hover:text-primary transition duration-200 font-semibold" :class="{ active2: isActive('/products') }"
+              class="hover:text-primary transition duration-200 font-semibold" :class="{ active2: isActive('/products/dvr') }"
             >
               Products
             </div>

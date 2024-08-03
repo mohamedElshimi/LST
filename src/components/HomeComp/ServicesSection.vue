@@ -31,13 +31,13 @@
         </router-link>
       </div>
       <div class="lg:w-3/12 md:w-6/12 w-12/12 p-10 cursor-pointer rounded-3xl shadow-lg flex flex-col items-center font-semibold hover:shadow-2xl transition duration-300 -rotate-45">
-        <div class="rotate-45 flex flex-col items-center">
+        <router-link to="/products/gps" class="rotate-45 flex flex-col items-center">
           <Icon
             icon="mdi:cellphone-gps"
             class="text-primary hover:text-secondry transition duration-300 text-9xl"
           />
           <p class="text-primary">GPS Tracking</p>
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
