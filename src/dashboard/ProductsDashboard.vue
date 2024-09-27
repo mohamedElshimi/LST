@@ -1,63 +1,3 @@
-<script setup>
-import { supabase } from "@/lib/supabaseClient";
-import { ref, onMounted } from "vue";
-const prodd = ref([]);
-let showadd = ref(""),
-  receivedData = "surv",
-  added = "",
-  nxt = 50,
-  pre = 0;
-
-const fetchproducts = async () => {
-  switch (receivedData) {
-    case "dvr":
-      let { data: DVR } = await supabase.from("DVR").select("*");
-      prodd.value = DVR;
-      console.table(DVR);
-      break;
-    case "surv":
-      let { data: Surveillance } = await supabase
-        .from("Surveillance")
-        .select("*");
-      prodd.value = Surveillance;
-      console.table(Surveillance);
-      break;
-    case "fing":
-      let { data: Fingerprints } = await supabase
-        .from("Fingerprints")
-        .select("*");
-      prodd.value = Fingerprints;
-      console.table(Fingerprints);
-      break;
-    default:
-      console.log("Invalid URL or category");
-      break;
-  }
-  console.log(receivedData);
-};
-const receiveDataFromChild = (data) => {
-  receivedData = data;
-  console.log(receivedData);
-  fetchproducts();
-};
-async function signOut() {
-  const { error } = await supabase.auth.signOut();
-  console.log(error);
-  router.push("/dashboard/Admin");
-}
-
-async function seeCurrent() {
-  const localuser = await supabase.auth.getSession();
-  console.log(localuser);
-  console.log(localuser.data.session);
-  if (!localuser.data.session) {
-    router.push("/dashboard/Admin");
-  }
-}
-fetchproducts();
-seeCurrent();
-</script>
-
 <template>
   <div class="container">
     <p @click="signOut" class="cursor-pointer hover:text-red-600">Logout</p>
@@ -79,6 +19,7 @@ seeCurrent();
     </div>
 
     <AddProduct v-if="showadd === 'show'"></AddProduct>
+
     <table
       class="w-full text-center text-dark bg-white shadow-lg rounded-2xl mb-9"
       v-if="showadd === ''"
@@ -122,7 +63,7 @@ seeCurrent();
             <td class="px-6 py-4">
               <div>
                 <router-link
-                  :to="`/dashboard/products/edit/${prod.id}`"
+                  :to="`/dashboard/products/edit/${receivedData}/${prod.id}`"
                   class="flex justify-center my-4"
                 >
                   <Icon
@@ -134,7 +75,7 @@ seeCurrent();
               </div>
               <div
                 class="flex justify-center my-4 cursor-pointer"
-                @click="deleteRow(prod.id)"
+                @click="confirmDelete(prod.id)"
               >
                 <Icon
                   icon="uiw:delete"
@@ -151,6 +92,127 @@ seeCurrent();
   </div>
 </template>
 
+<script setup>
+import { supabase } from "@/lib/supabaseClient";
+import { ref, onMounted } from "vue";
+import Swal from "sweetalert2";
+const prodd = ref([]);
+let showadd = ref(""),
+  receivedData = "surv",
+  added = "",
+  nxt = 50,
+  pre = 0;
+
+// get all products
+const fetchproducts = async () => {
+  switch (receivedData) {
+    case "dvr":
+      let { data: DVR } = await supabase.from("new_DVR").select("*");
+      prodd.value = DVR;
+      break;
+    case "surv":
+      let { data: Surveillance } = await supabase
+        .from("new_Surveillance")
+        .select("*");
+      prodd.value = Surveillance;
+      break;
+    case "fing":
+      let { data: Fingerprints } = await supabase
+        .from("new_Fingerprints")
+        .select("*");
+      prodd.value = Fingerprints;
+      break;
+    default:
+      console.log("Invalid URL or category");
+      break;
+  }
+};
+
+// delete product
+const deleteProduct = async (productId) => {
+  try {
+    let response = null;
+    switch (receivedData) {
+      case "surv":
+        response = await supabase
+          .from("new_Surveillance")
+          .delete()
+          .eq("id", productId);
+        break;
+
+      case "dvr":
+        response = await supabase.from("new_DVR").delete().eq("id", productId);
+        break;
+
+      case "fing":
+        response = await supabase
+          .from("new_Fingerprints")
+          .delete()
+          .eq("id", productId);
+        break;
+
+      default:
+        console.log("Invalid category");
+        return;
+    }
+
+    // Check if response is not null or undefined
+    if (response && response.error) {
+      console.error("Error deleting product:", response.error);
+    } else {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your product has been deleted successfully",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      await fetchproducts(); // Refresh the list after deletion
+    }
+  } catch (err) {
+    console.error("Error during deletion:", err);
+  }
+};
+
+// confirm delete
+const confirmDelete = (productId) => {
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, delete it!",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(deleteProduct(productId));
+    }
+  });
+};
+
+const receiveDataFromChild = (data) => {
+  receivedData = data;
+  fetchproducts();
+};
+
+async function signOut() {
+  const { error } = await supabase.auth.signOut();
+  console.log(error);
+  router.push("/dashboard/Admin");
+}
+
+async function seeCurrent() {
+  const localuser = await supabase.auth.getSession();
+  if (!localuser.data.session) {
+    router.push("/dashboard/Admin");
+  }
+}
+
+fetchproducts();
+seeCurrent();
+</script>
+
 <script>
 import axios from "axios";
 import AddProduct from "../dashboard/ProductsDashboardAdd.vue";
@@ -158,6 +220,7 @@ import ProductsNavDashVue from "@/utilities/ProductsNavDash.vue";
 import { Icon } from "@iconify/vue";
 import { supabase } from "@/lib/supabaseClient";
 import router from "@/router";
+
 export default {
   name: "ProductsDashboard",
   components: {
@@ -235,6 +298,7 @@ export default {
         }
       }
     },
+
     // receiveDataFromChild(data) {
     //   this.receivedData = data;
     //   console.log(this.receivedData);

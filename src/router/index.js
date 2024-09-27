@@ -3,7 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import dvr from "../views/dvrProducts.vue";
 import fingerprints from "../views/fingerprintsProducts.vue";
 import surv from "../views/survProducts.vue";
-import gps from "../views/gpsProducts.vue"
+import gps from "../views/gpsProducts.vue";
 import survProduct from "../views/OneProduct.vue";
 import editsurvProduct from "../dashboard/ProductsDashboardEdit.vue";
 
@@ -70,15 +70,15 @@ const router = createRouter({
       component: dashboard,
       meta: {
         hideNavbar: true,
-       }
+      },
     },
     {
-      path: "/dashboard/products/edit/:id",
+      path: "/dashboard/products/edit//:category/:id",
       name: "editsurvProduct",
       component: editsurvProduct,
       meta: {
         hideNavbar: true,
-       }
+      },
     },
     {
       path: "/dashboard/Admin",
@@ -86,7 +86,7 @@ const router = createRouter({
       component: Admin,
       meta: {
         hideNavbar: true,
-       }
+      },
     },
     // {
     //   path: "/dashboard/fingerprints",

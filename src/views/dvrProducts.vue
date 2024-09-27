@@ -1,39 +1,35 @@
 <script setup>
 import { supabase } from "@/lib/supabaseClient";
-import { ref,onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 const prodd = ref([]);
-const fetchproducts = async ()=> {
+const fetchproducts = async () => {
   try {
-    let { data: DVR, error } = await supabase
-  .from('DVR')
-  .select('*')
-  prodd.value = DVR;
-  console.table(DVR);
-  }
-   catch (error) {
+    let { data: DVR, error } = await supabase.from("new_DVR").select("*");
+    prodd.value = DVR;
+  } catch (error) {
     console.log(error);
   }
-}
+};
 fetchproducts();
 let currentIndx = 0;
-let searchQ = ref('');
-const items = ()=> {
-      return (
-        prodd.value
-          // .filter((item) => item.title.toLowerCase().includes(this.searchQuery.toLowerCase()))
-          .filter((item) =>
-            item.title.toLowerCase().includes(searchQ.value.toLowerCase())
-          )
-          .slice(0, currentIndx + 12)
-      );
-    }
-    items();
-    console.log(items());
+let searchQ = ref("");
+const items = () => {
+  return (
+    prodd.value
+      // .filter((item) => item.title.toLowerCase().includes(this.searchQuery.toLowerCase()))
+      .filter((item) =>
+        item.title.toLowerCase().includes(searchQ.value.toLowerCase())
+      )
+      .slice(0, currentIndx + 12)
+  );
+};
+items();
+console.log(items());
 </script>
 <template>
   <div class="container mt-24">
     <div class="text-4xl font-bold text-primary">Products</div>
-    <div class="bg-secondry lg:w-2/12 w-6/12  h-2 rounded-md"></div>
+    <div class="bg-secondry lg:w-2/12 w-6/12 h-2 rounded-md"></div>
     <ProductsNav></ProductsNav>
     <div class="flex">
       <input
@@ -90,15 +86,14 @@ const items = ()=> {
 import { Icon } from "@iconify/vue";
 import axios from "axios";
 import ProductsNav from "../utilities/ProductsNav.vue";
-import database from "../../Products.json"
+import database from "../../Products.json";
 export default {
   name: "dvr",
   components: {
     Icon,
     ProductsNav,
-    database
+    database,
   },
-  
 };
 </script>
 

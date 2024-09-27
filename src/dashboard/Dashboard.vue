@@ -1,31 +1,3 @@
-<script setup>
-import { reactive } from "vue";
-import { supabase } from "@/lib/supabaseClient";
-import router from '@/router';
-
-const state = reactive({
-  loading: false,
-  disabled: false,
-  error: undefined,
-  email: "",
-  password: "",
-});
-
-async function signInWithEmail() {
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email: state.email,
-    password: state.password,
-  });
-  if (error) {
-    console.log(error);
-    alert("please enter a valid email or password")
-  }
-  else if (data) {
-    console.log(data);
-    router.push("/dashboard/products")
-  }
-}
-</script>
 <template>
   <div class="flex justify-center items-center parent bg-white w-full h-full">
     <div class="md:w-8/12 w-11/12 my-10 mx-auto">
@@ -76,13 +48,30 @@ async function signInWithEmail() {
   </div>
 </template>
 
-<script>
-export default {
-  components: {},
-  data() {
-    return {};
-  },
-};
-</script>
+<script setup>
+import { reactive } from "vue";
+import { supabase } from "@/lib/supabaseClient";
+import router from "@/router";
 
-<style scoped></style>
+const state = reactive({
+  loading: false,
+  disabled: false,
+  error: undefined,
+  email: "",
+  password: "",
+});
+
+async function signInWithEmail() {
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: state.email,
+    password: state.password,
+  });
+  if (error) {
+    console.log(error);
+    alert("please enter a valid email or password");
+  } else if (data) {
+    console.log(data);
+    router.push("/dashboard/products");
+  }
+}
+</script>

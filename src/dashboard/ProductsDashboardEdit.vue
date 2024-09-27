@@ -7,16 +7,7 @@
       </div></router-link
     >
     <div class="">
-      <form @submit.prevent="EditProduct">
-        <div class="mt-8 relative z-0 w-full mb-6 group">
-          <label for="" class="font-bold">Category:</label>
-          <select class="ml-5" v-model="edit" required>
-            <option disabled selected>Categories</option>
-            <option value="surv">Surveillance Systems</option>
-            <option value="dvr">DVR</option>
-            <option value="fing">Fingerprints</option>
-          </select>
-        </div>
+      <form @submit.prevent="EditProduct(id)">
         <div class="mt-8 relative z-0 w-full mb-6 group">
           <input
             v-model="OneProduct.image"
@@ -49,7 +40,7 @@
         </div>
         <div class="mt-8 relative z-0 w-full mb-6 group">
           <input
-            v-model="OneProduct.desc"
+            v-model="OneProduct.description"
             type="text"
             name="floating_desc"
             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-dark appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
@@ -88,6 +79,7 @@
 </template>
 
 <script>
+import { supabase } from "@/lib/supabaseClient";
 import axios from "axios";
 export default {
   name: "EditProduct",
@@ -100,81 +92,193 @@ export default {
   },
   data() {
     return {
-      OneProduct: {
-        desc: "",
-        title: "",
-        brand: "",
-        image: "",
-      },
+      OneProduct: {},
       product: {},
       prod2: {},
       id: "",
-      type: "",
-      edit:""
+      category: "",
+      edit: "",
     };
   },
+
   created() {
     this.id = this.$route.params.id;
-    this.type = this.$route.params.type;
+    this.category = this.$route.params.category;
   },
+
+  mounted() {
+    // get one product
+    this.fetchProductDetails(this.id);
+  },
+
   methods: {
-    EditProduct() {
-      let url = "";
-      switch (this.edit) {
+    // edit product
+    async EditProduct(productId) {
+      const updatedProduct = {
+        title: this.OneProduct.title,
+        description: this.OneProduct.description,
+        brand: this.OneProduct.brand,
+        image: this.OneProduct.image,
+      };
+
+      switch (this.category) {
         case "surv":
-          url = "http://localhost:3000/Surveillance-systems";
-          console.log(this.edit);
-          axios
-        .put(
-          `${url}/${this.id}`,
-          this.OneProduct
-        )
-        .then((res) => {
-          console.log(res.data);
-          alert("your product has been updated successfully :)");
-          this.$router.push('/dashboard/products/');
-        })
-        .catch((err) => {console.log(err)
-        alert("please check the chosen category is compatible with the product");});
+          const { data: updatedSurveillance, error: survError } = await supabase
+            .from("new_Surveillance")
+            .update(this.OneProduct)
+            .eq("id", productId)
+            .select();
+          if (survError) {
+            console.error("Error updating Surveillance:", survError);
+          } else {
+            console.log("Updated Surveillance:", updatedSurveillance);
+            this.$router.push("/dashboard/products");
+          }
           break;
+
         case "dvr":
-          url = "http://localhost:3000/IT-solution";
-          console.log(this.edit);
-          axios
-        .put(
-          `${url}/${this.id}`,
-          this.OneProduct
-        )
-        .then((res) => {
-          console.log(res.data);
-          alert("your product has been updated successfully :)");
-          this.$router.push('/dashboard/products/');
-        })
-        .catch((err) => {console.log(err)
-        alert("please check the chosen category is compatible with the product");});
+          const { data: updatedDVR, error: dvrError } = await supabase
+            .from("new_DVR")
+            .update(this.OneProduct)
+            .eq("id", productId)
+            .select();
+          if (dvrError) {
+            console.error("Error updating DVR:", dvrError);
+          } else {
+            console.log("Updated DVR:", updatedDVR);
+            this.$router.push("/dashboard/products");
+          }
           break;
+
         case "fing":
-          url = "http://localhost:3000/Fingerprints";
-          console.log(this.edit);
-          axios
-        .put(
-          `${url}/${this.id}`,
-          this.OneProduct
-        )
-        .then((res) => {
-          console.log(res.data);
-          alert("your product has been updated successfully :)");
-          this.$router.push('/dashboard/products/');
-        })
-        .catch((err) => {console.log(err)
-        alert("please check the chosen category is compatible with the product");});
+          const { data: updatedFingerprints, error: fingError } = await supabase
+            .from("new_Fingerprints")
+            .update(this.OneProduct)
+            .eq("id", productId)
+            .select();
+          if (fingError) {
+            console.error("Error updating Fingerprints:", fingError);
+          } else {
+            console.log("Updated Fingerprints:", updatedFingerprints);
+            this.$router.push("/dashboard/products");
+          }
           break;
+
         default:
-          // default URL
+          console.log("Invalid category");
           break;
       }
-      
     },
+
+    // get one product
+    async fetchProductDetails(productId) {
+      switch (this.category) {
+        case "surv":
+          const { data: surveillanceProduct, error: survError } = await supabase
+            .from("new_Surveillance")
+            .select("*")
+            .eq("id", productId)
+            .single();
+          if (survError) {
+            console.error("Error fetching Surveillance product:", survError);
+          } else {
+            this.OneProduct = surveillanceProduct;
+          }
+          break;
+
+        case "dvr":
+          const { data: dvrProduct, error: dvrError } = await supabase
+            .from("new_DVR")
+            .select("*")
+            .eq("id", productId)
+            .single();
+          if (dvrError) {
+            console.error("Error fetching DVR product:", dvrError);
+          } else {
+            this.OneProduct = dvrProduct;
+          }
+          break;
+
+        case "fing":
+          const { data: fingerprintsProduct, error: fingError } = await supabase
+            .from("new_Fingerprints")
+            .select("*")
+            .eq("id", productId)
+            .single();
+          if (fingError) {
+            console.error("Error fetching Fingerprints product:", fingError);
+          } else {
+            this.OneProduct = fingerprintsProduct;
+          }
+          break;
+
+        default:
+          console.log("Invalid category");
+          break;
+      }
+    },
+
+    // EditProduct() {
+    //   let url = "";
+    //   switch (this.edit) {
+    //     case "surv":
+    //       url = "http://localhost:3000/Surveillance-systems";
+    //       console.log(this.edit);
+    //       axios
+    //         .put(`${url}/${this.id}`, this.OneProduct)
+    //         .then((res) => {
+    //           console.log(res.data);
+    //           alert("your product has been updated successfully :)");
+    //           this.$router.push("/dashboard/products/");
+    //         })
+    //         .catch((err) => {
+    //           console.log(err);
+    //           alert(
+    //             "please check the chosen category is compatible with the product"
+    //           );
+    //         });
+    //       break;
+    //     case "dvr":
+    //       url = "http://localhost:3000/IT-solution";
+    //       console.log(this.edit);
+    //       axios
+    //         .put(`${url}/${this.id}`, this.OneProduct)
+    //         .then((res) => {
+    //           console.log(res.data);
+    //           alert("your product has been updated successfully :)");
+    //           this.$router.push("/dashboard/products/");
+    //         })
+    //         .catch((err) => {
+    //           console.log(err);
+    //           alert(
+    //             "please check the chosen category is compatible with the product"
+    //           );
+    //         });
+    //       break;
+    //     case "fing":
+    //       url = "http://localhost:3000/Fingerprints";
+    //       console.log(this.edit);
+    //       axios
+    //         .put(`${url}/${this.id}`, this.OneProduct)
+    //         .then((res) => {
+    //           console.log(res.data);
+    //           alert("your product has been updated successfully :)");
+    //           this.$router.push("/dashboard/products/");
+    //         })
+    //         .catch((err) => {
+    //           console.log(err);
+    //           alert(
+    //             "please check the chosen category is compatible with the product"
+    //           );
+    //         });
+    //       break;
+    //     default:
+    //       // default URL
+    //       break;
+    //   }
+    // },
+
+    // Assuming you have a productId and category (add)
   },
 };
 </script>

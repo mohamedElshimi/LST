@@ -1,40 +1,32 @@
 <script setup>
 import { supabase } from "@/lib/supabaseClient";
-import { ref } from 'vue';
+import { ref } from "vue";
 
 let Products = ref([]);
-const fetchproducts = async ()=> {
+const fetchproducts = async () => {
   try {
-let { data: Fingerprints,  } = await supabase
-  .from('Fingerprints')
-  .select('*')
-  Products.value.push(Fingerprints);
-  console.table(Fingerprints);
-  }
-   catch (error) {
+    let { data: Fingerprints } = await supabase
+      .from("new_Fingerprints")
+      .select("*");
+    Products.value.push(Fingerprints);
+  } catch (error) {
     console.log(error);
   }
-}
-const fetchdvrproducts = async ()=> {
-let { data: DVR,  } = await supabase
-  .from('DVR')
-  .select('*')
+};
+const fetchdvrproducts = async () => {
+  let { data: DVR } = await supabase.from("new_DVR").select("*");
   Products.value.push(DVR);
-  console.table(DVR);
-}
-const fetchsurvproducts = async ()=> {
-  let { data: Surveillance,  } = await supabase
-  .from('Surveillance')
-  .select('*')
+};
+const fetchsurvproducts = async () => {
+  let { data: Surveillance } = await supabase
+    .from("new_Surveillance")
+    .select("*");
   Products.value.push(Surveillance);
-  console.table(Surveillance);
-  console.log(Products.value);
-}
+};
 
 fetchsurvproducts();
 fetchdvrproducts();
 fetchproducts();
-
 </script>
 
 <template>
@@ -55,23 +47,24 @@ fetchproducts();
         :modules="modules"
         @slideChange="onSlideChange"
         :breakpoints="{
-      '300': {
-        slidesPerView: 1.5,
-        spaceBetween: 20,
-      },
-      '768': {
-        slidesPerView: 3.5,
-        spaceBetween: 40,
-      },
-      '1024': {
-        slidesPerView: 4.5,
-        spaceBetween: 10,
-      },
-    }"
+          '300': {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+          },
+          '768': {
+            slidesPerView: 3.5,
+            spaceBetween: 40,
+          },
+          '1024': {
+            slidesPerView: 4.5,
+            spaceBetween: 10,
+          },
+        }"
       >
-        <template v-for="(prod2, index) in Products"
-            :key="index">
-          <swiper-slide v-for="(prod,index2) in prod2" :key="index2"
+        <template v-for="(prod2, index) in Products" :key="index">
+          <swiper-slide
+            v-for="(prod, index2) in prod2"
+            :key="index2"
             class="flex flex-col items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer w-3/12 h-52"
             ><router-link :to="`/products/Surveillance-systems/${prod.id}`">
               <div class="flex justify-center relative overflow-hidden">
@@ -124,7 +117,6 @@ export default {
     //     // console.log(this.products);
     //   })
     //   .catch((err) => console.log(err));
-   
   },
   setup() {
     const onSwiper = (swiper) => {

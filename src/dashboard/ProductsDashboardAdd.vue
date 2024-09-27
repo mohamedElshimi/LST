@@ -1,45 +1,3 @@
-<script setup>
-import { supabase } from "@/lib/supabaseClient";
-import { ref, reactive } from "vue";
-let add = "";
-console.log(add);
-let AddedProduct = reactive({
-  title: "",
-  brand: "",
-  description: "",
-  image: "",
-});
-console.log(AddedProduct);
-const AddProduct = async () => {
-  switch (add) {
-    case "surv":
-      const { data: Surveillance } = await supabase
-        .from("Surveillance")
-        .insert(AddedProduct)
-        .select();
-      alert("your product has successfully added to Surv");
-      break;
-    case "dvr":
-      const { data: DVR } = await supabase
-        .from("DVR")
-        .insert(AddedProduct)
-        .select();
-      alert("your product has successfully added to Dvr");
-      break;
-    case "fing":
-      const { data: Fingerprints } = await supabase
-        .from("Fingerprints")
-        .insert(AddedProduct)
-        .select();
-      alert("your product has successfully added to Fingerprints");
-      break;
-    default:
-      // default case
-      break;
-  }
-};
-</script>
-
 <template>
   <div class="container">
     <div class="">
@@ -122,6 +80,48 @@ const AddProduct = async () => {
     </div>
   </div>
 </template>
+
+<script setup>
+import { supabase } from "@/lib/supabaseClient";
+import { ref, reactive } from "vue";
+let add = "";
+
+let AddedProduct = reactive({
+  title: "",
+  brand: "",
+  description: "",
+  image: "",
+});
+
+const AddProduct = async () => {
+  switch (add) {
+    case "surv":
+      const { data: Surveillance } = await supabase
+        .from("new_Surveillance")
+        .insert(AddedProduct)
+        .select();
+      window.location.reload();
+      break;
+    case "dvr":
+      const { data: DVR } = await supabase
+        .from("new_DVR")
+        .insert(AddedProduct)
+        .select();
+      window.location.reload();
+      break;
+    case "fing":
+      const { data: Fingerprints } = await supabase
+        .from("new_Fingerprints")
+        .insert(AddedProduct)
+        .select();
+      window.location.reload();
+      break;
+    default:
+      // default case
+      break;
+  }
+};
+</script>
 
 <script>
 import axios from "axios";

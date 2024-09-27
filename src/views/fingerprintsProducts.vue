@@ -1,39 +1,37 @@
 <script setup>
 import { supabase } from "@/lib/supabaseClient";
-import { ref,onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 const prodd = ref([]);
-const fetchproducts = async ()=> {
+const fetchproducts = async () => {
   try {
-let { data: Fingerprints, error } = await supabase
-  .from('Fingerprints')
-  .select('*')
-  prodd.value = Fingerprints;
-  console.table(Fingerprints);
-  }
-   catch (error) {
+    let { data: Fingerprints, error } = await supabase
+      .from("new_Fingerprints")
+      .select("*");
+    prodd.value = Fingerprints;
+  } catch (error) {
     console.log(error);
   }
-}
+};
 fetchproducts();
 let currentIndx = 0;
-let searchQ = ref('');
-const items = ()=> {
-      return (
-        prodd.value
-          // .filter((item) => item.title.toLowerCase().includes(this.searchQuery.toLowerCase()))
-          .filter((item) =>
-            item.title.toLowerCase().includes(searchQ.value.toLowerCase())
-          )
-          .slice(0, currentIndx + 12)
-      );
-    }
-    items();
-    console.log(items());
+let searchQ = ref("");
+const items = () => {
+  return (
+    prodd.value
+      // .filter((item) => item.title.toLowerCase().includes(this.searchQuery.toLowerCase()))
+      .filter((item) =>
+        item.title.toLowerCase().includes(searchQ.value.toLowerCase())
+      )
+      .slice(0, currentIndx + 12)
+  );
+};
+items();
+console.log(items());
 </script>
 <template>
-    <div class="container mt-24">
-        <div class="text-4xl font-bold text-primary">Products</div>
-    <div class="bg-secondry lg:w-2/12 w-6/12  h-2 rounded-md"></div>
+  <div class="container mt-24">
+    <div class="text-4xl font-bold text-primary">Products</div>
+    <div class="bg-secondry lg:w-2/12 w-6/12 h-2 rounded-md"></div>
     <ProductsNav></ProductsNav>
     <div class="flex">
       <input
@@ -83,7 +81,7 @@ const items = ()=> {
         More To Explore
       </button>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -98,9 +96,8 @@ export default {
   components: {
     Icon,
     ProductsNav,
-    database
+    database,
   },
- 
 };
 </script>
 
