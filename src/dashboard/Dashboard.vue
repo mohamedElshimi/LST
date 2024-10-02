@@ -66,6 +66,7 @@ async function signInWithEmail() {
     email: state.email,
     password: state.password,
   });
+
   if (error) {
     console.log(error);
     alert("please enter a valid email or password");

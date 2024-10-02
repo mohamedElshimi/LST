@@ -73,7 +73,7 @@ const router = createRouter({
       },
     },
     {
-      path: "/dashboard/products/edit//:category/:id",
+      path: "/dashboard/products/edit/:category/:id",
       name: "editsurvProduct",
       component: editsurvProduct,
       meta: {

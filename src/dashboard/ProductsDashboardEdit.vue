@@ -8,7 +8,7 @@
     >
     <div class="">
       <form @submit.prevent="EditProduct(id)">
-        <div class="mt-8 relative z-0 w-full mb-6 group">
+        <!-- <div class="mt-8 relative z-0 w-full mb-6 group">
           <input
             v-model="OneProduct.image"
             type="text"
@@ -22,6 +22,22 @@
             class="peer-focus:font-medium absolute text-sm text-dark duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >Image URL</label
           >
+        </div> -->
+
+        <div class="m relative z-0 w-full mb-6 group">
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            for="user_avatar"
+            >Upload file</label
+          >
+          <input
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50"
+            id="image"
+            type="file"
+            @change="handleFileUpload"
+            accept="image/*"
+            required
+          />
         </div>
         <div class="mt-8 relative z-0 w-full mb-6 group">
           <input
@@ -112,63 +128,193 @@ export default {
   },
 
   methods: {
-    // edit product
-    async EditProduct(productId) {
-      const updatedProduct = {
-        title: this.OneProduct.title,
-        description: this.OneProduct.description,
-        brand: this.OneProduct.brand,
-        image: this.OneProduct.image,
-      };
-
-      switch (this.category) {
-        case "surv":
-          const { data: updatedSurveillance, error: survError } = await supabase
-            .from("new_Surveillance")
-            .update(this.OneProduct)
-            .eq("id", productId)
-            .select();
-          if (survError) {
-            console.error("Error updating Surveillance:", survError);
-          } else {
-            console.log("Updated Surveillance:", updatedSurveillance);
-            this.$router.push("/dashboard/products");
-          }
-          break;
-
-        case "dvr":
-          const { data: updatedDVR, error: dvrError } = await supabase
-            .from("new_DVR")
-            .update(this.OneProduct)
-            .eq("id", productId)
-            .select();
-          if (dvrError) {
-            console.error("Error updating DVR:", dvrError);
-          } else {
-            console.log("Updated DVR:", updatedDVR);
-            this.$router.push("/dashboard/products");
-          }
-          break;
-
-        case "fing":
-          const { data: updatedFingerprints, error: fingError } = await supabase
-            .from("new_Fingerprints")
-            .update(this.OneProduct)
-            .eq("id", productId)
-            .select();
-          if (fingError) {
-            console.error("Error updating Fingerprints:", fingError);
-          } else {
-            console.log("Updated Fingerprints:", updatedFingerprints);
-            this.$router.push("/dashboard/products");
-          }
-          break;
-
-        default:
-          console.log("Invalid category");
-          break;
+    handleFileUpload(e) {
+      const file = event.target.files[0];
+      if (file) {
+        this.OneProduct.image = file;
       }
     },
+
+    // Upload image to storage and return public URL
+    async uploadImage(file, bucketName) {
+      try {
+        const fileName = `${Date.now()}essam_${file.name}`;
+        const { error } = await supabase.storage
+          .from(bucketName)
+          .upload(fileName, file);
+
+        if (error) {
+          throw error;
+        }
+
+        // Retrieve the public URL after uploading the image
+        const { data, error: urlError } = supabase.storage
+          .from(bucketName)
+          .getPublicUrl(fileName);
+
+        if (urlError) {
+          throw urlError;
+        }
+
+        return data.publicUrl; // Ensure this returns a valid URL
+      } catch (err) {
+        console.log("Error uploading image:", err);
+        return null;
+      }
+    },
+
+    // edit product
+    async EditProduct(productId) {
+      try {
+        let imageUrl = this.OneProduct.image; // Existing image URL
+
+        // If a new image is uploaded, handle the upload
+        if (this.OneProduct.image && this.OneProduct.image instanceof File) {
+          let bucketName = "";
+
+          switch (this.category) {
+            case "surv":
+              bucketName = "surv_images";
+              break;
+            case "dvr":
+              bucketName = "dvr_images";
+              break;
+            case "fing":
+              bucketName = "fing_images";
+              break;
+            default:
+              console.log("Invalid category");
+              return;
+          }
+
+          // Upload the new image and get the URL
+          imageUrl = await this.uploadImage(this.OneProduct.image, bucketName);
+          if (!imageUrl) {
+            console.error("Failed to upload new image");
+            return;
+          }
+        }
+
+        // Construct the updated product data with the new image URL or existing one
+        const updatedProduct = {
+          title: this.OneProduct.title,
+          description: this.OneProduct.description,
+          brand: this.OneProduct.brand,
+          image: imageUrl, // Set the correct image URL
+        };
+
+        // Update product based on the category
+        switch (this.category) {
+          case "surv":
+            const { data: updatedSurveillance, error: survError } =
+              await supabase
+                .from("new_Surveillance")
+                .update(updatedProduct)
+                .eq("id", productId)
+                .select();
+            if (survError) {
+              console.error("Error updating Surveillance:", survError);
+            } else {
+              console.log("Updated Surveillance:", updatedSurveillance);
+              this.$router.push("/dashboard/products");
+            }
+            break;
+
+          case "dvr":
+            const { data: updatedDVR, error: dvrError } = await supabase
+              .from("new_DVR")
+              .update(updatedProduct)
+              .eq("id", productId)
+              .select();
+            if (dvrError) {
+              console.error("Error updating DVR:", dvrError);
+            } else {
+              console.log("Updated DVR:", updatedDVR);
+              this.$router.push("/dashboard/products");
+            }
+            break;
+
+          case "fing":
+            const { data: updatedFingerprints, error: fingError } =
+              await supabase
+                .from("new_Fingerprints")
+                .update(updatedProduct)
+                .eq("id", productId)
+                .select();
+            if (fingError) {
+              console.error("Error updating Fingerprints:", fingError);
+            } else {
+              console.log("Updated Fingerprints:", updatedFingerprints);
+              this.$router.push("/dashboard/products");
+            }
+            break;
+
+          default:
+            console.log("Invalid category");
+            break;
+        }
+      } catch (err) {
+        console.error("Error editing product:", err);
+      }
+    },
+
+    // // edit product withou image uploading
+    // async EditProduct(productId) {
+    //   const updatedProduct = {
+    //     title: this.OneProduct.title,
+    //     description: this.OneProduct.description,
+    //     brand: this.OneProduct.brand,
+    //     image: this.OneProduct.image,
+    //   };
+
+    //   switch (this.category) {
+    //     case "surv":
+    //       const { data: updatedSurveillance, error: survError } = await supabase
+    //         .from("new_Surveillance")
+    //         .update(this.OneProduct)
+    //         .eq("id", productId)
+    //         .select();
+    //       if (survError) {
+    //         console.error("Error updating Surveillance:", survError);
+    //       } else {
+    //         console.log("Updated Surveillance:", updatedSurveillance);
+    //         this.$router.push("/dashboard/products");
+    //       }
+    //       break;
+
+    //     case "dvr":
+    //       const { data: updatedDVR, error: dvrError } = await supabase
+    //         .from("new_DVR")
+    //         .update(this.OneProduct)
+    //         .eq("id", productId)
+    //         .select();
+    //       if (dvrError) {
+    //         console.error("Error updating DVR:", dvrError);
+    //       } else {
+    //         console.log("Updated DVR:", updatedDVR);
+    //         this.$router.push("/dashboard/products");
+    //       }
+    //       break;
+
+    //     case "fing":
+    //       const { data: updatedFingerprints, error: fingError } = await supabase
+    //         .from("new_Fingerprints")
+    //         .update(this.OneProduct)
+    //         .eq("id", productId)
+    //         .select();
+    //       if (fingError) {
+    //         console.error("Error updating Fingerprints:", fingError);
+    //       } else {
+    //         console.log("Updated Fingerprints:", updatedFingerprints);
+    //         this.$router.push("/dashboard/products");
+    //       }
+    //       break;
+
+    //     default:
+    //       console.log("Invalid category");
+    //       break;
+    //   }
+    // },
 
     // get one product
     async fetchProductDetails(productId) {
