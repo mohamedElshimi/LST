@@ -99,8 +99,9 @@
 <script setup>
 import { supabase } from "@/lib/supabaseClient";
 import { ref, reactive } from "vue";
-let add = "";
+import { useImageUploader } from "@/composables/useImageUploader";
 
+let add = "";
 let AddedProduct = reactive({
   title: "",
   brand: "",
@@ -115,41 +116,14 @@ const handleFileUpload = (event) => {
   }
 };
 
-// Upload image to storage and return public URL
-const uploadImage = async (file, bucketName) => {
-  try {
-    const fileName = `${Date.now()}essam_${file.name}`;
-    const { error } = await supabase.storage
-      .from(bucketName)
-      .upload(fileName, file);
 
-    if (error) {
-      throw error;
-    }
-
-    // Retrieve the public URL after uploading the image
-    const { data, error: urlError } = supabase.storage
-      .from(bucketName)
-      .getPublicUrl(fileName);
-
-    if (urlError) {
-      throw urlError;
-    }
-
-
-    return data.publicUrl; // Ensure this returns a valid URL
-  } catch (err) {
-    console.log("Error uploading image:", err);
-    return null;
-  }
-};
+const { uploadImage } = useImageUploader();
 
 const AddProduct = async () => {
   try {
     let imageUrl = "";
 
     if (AddedProduct.image && AddedProduct.image instanceof File) {
-      // Select the appropriate bucket based on the category
       let bucketName = "";
       switch (add) {
         case "surv":
@@ -166,7 +140,7 @@ const AddProduct = async () => {
           return;
       }
 
-      // Upload image and get the public URL
+      // Upload image using the composable
       imageUrl = await uploadImage(AddedProduct.image, bucketName);
       if (!imageUrl) {
         console.error("Failed to upload image");
@@ -200,85 +174,93 @@ const AddProduct = async () => {
   }
 };
 
-// // add without new image upload
-// const AddProduct = async () => {
-//   switch (add) {
-//     case "surv":
-//       const { data: Surveillance } = await supabase
-//         .from("new_Surveillance")
-//         .insert(AddedProduct)
-//         .select();
-//       window.location.reload();
-//       break;
-//     case "dvr":
-//       const { data: DVR } = await supabase
-//         .from("new_DVR")
-//         .insert(AddedProduct)
-//         .select();
-//       window.location.reload();
-//       break;
-//     case "fing":
-//       const { data: Fingerprints } = await supabase
-//         .from("new_Fingerprints")
-//         .insert(AddedProduct)
-//         .select();
-//       window.location.reload();
-//       break;
-//     default:
-//       // default case
-//       break;
+
+// working ******
+// // Upload image to storage and return public URL
+// const uploadImage = async (file, bucketName) => {
+//   try {
+//     const fileName = `${Date.now()}essam_${file.name}`;
+//     const { error } = await supabase.storage
+//       .from(bucketName)
+//       .upload(fileName, file);
+
+//     if (error) {
+//       throw error;
+//     }
+
+//     // Retrieve the public URL after uploading the image
+//     const { data, error: urlError } = supabase.storage
+//       .from(bucketName)
+//       .getPublicUrl(fileName);
+
+//     if (urlError) {
+//       throw urlError;
+//     }
+
+
+//     return data.publicUrl; // Ensure this returns a valid URL
+//   } catch (err) {
+//     console.log("Error uploading image:", err);
+//     return null;
 //   }
 // };
+
+// const AddProduct = async () => {
+//   try {
+//     let imageUrl = "";
+
+//     if (AddedProduct.image && AddedProduct.image instanceof File) {
+//       // Select the appropriate bucket based on the category
+//       let bucketName = "";
+//       switch (add) {
+//         case "surv":
+//           bucketName = "surv_images";
+//           break;
+//         case "dvr":
+//           bucketName = "dvr_images";
+//           break;
+//         case "fing":
+//           bucketName = "fing_images";
+//           break;
+//         default:
+//           console.log("Invalid category");
+//           return;
+//       }
+
+//       // Upload image and get the public URL
+//       imageUrl = await uploadImage(AddedProduct.image, bucketName);
+//       if (!imageUrl) {
+//         console.error("Failed to upload image");
+//         return;
+//       }
+//       console.log("imageUrl:", imageUrl);
+//     } else {
+//       imageUrl = AddedProduct.image; // Use existing image URL if already set
+//     }
+
+//     const productData = { ...AddedProduct, image: imageUrl };
+
+//     switch (add) {
+//       case "surv":
+//         await supabase.from("new_Surveillance").insert(productData).select();
+//         break;
+//       case "dvr":
+//         await supabase.from("new_DVR").insert(productData).select();
+//         break;
+//       case "fing":
+//         await supabase.from("new_Fingerprints").insert(productData).select();
+//         break;
+//       default:
+//         console.log("Invalid category");
+//         return;
+//     }
+
+//     window.location.reload();
+//   } catch (err) {
+//     console.error("Error adding product:", err);
+//   }
+// };
+
+
 </script>
 
-<script>
-import axios from "axios";
-import database from "../../Products.json";
-export default {
-  name: "AddProduct",
-  // data() {
-  //   return {
-  //     AddedProduct: {
-  //       id: this.generateUniqueId(),
-  //       title: "",
-  //       brand: "",
-  //       description: "",
-  //       image: "",
-  //     },
-  //     survproducts: [],
-  //     add: "",
-  //   };
-  // },
-
-  // created() {
-  //   console.log(database);
-  // },
-  //   methods: {
-  //     AddProduct() {
-  //   switch (this.add) {
-  //     case "surv":
-  //       database['Surveillance-systems'] = [...database['Surveillance-systems'], this.AddedProduct];
-  //       break;
-  //     case "dvr":
-  //       database['IT-solution'] = [...database['IT-solution'], this.AddedProduct];
-  //       break;
-  //     case "fing":
-  //       database['Fingerprints'] = [...database['Fingerprints'], this.AddedProduct];
-  //       break;
-  //     default:
-  //       // default case
-  //       break;
-  //   }
-  //   alert("Your product has been added successfully :)");
-  //   this.$router.push('/dashboard/products/');
-  //   window.location.reload();
-  // },
-  //     generateUniqueId() {
-  //       // Generate a random unique ID
-  //       return Math.floor(Math.random() * 1000000);
-  //     },
-  //   },
-};
-</script>
-
-<style lang="scss" scoped></style>

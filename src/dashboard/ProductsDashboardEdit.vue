@@ -8,22 +8,6 @@
     >
     <div class="">
       <form @submit.prevent="EditProduct(id)">
-        <!-- <div class="mt-8 relative z-0 w-full mb-6 group">
-          <input
-            v-model="OneProduct.image"
-            type="text"
-            name="floating_rate"
-            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-dark appearance-none focus:outline-none focus:ring-0 focus:border-primary peer"
-            placeholder=" "
-            required
-          />
-          <label
-            for="floating_rate"
-            class="peer-focus:font-medium absolute text-sm text-dark duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >Image URL</label
-          >
-        </div> -->
-
         <div class="m relative z-0 w-full mb-6 group">
           <label
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -36,7 +20,6 @@
             type="file"
             @change="handleFileUpload"
             accept="image/*"
-            required
           />
         </div>
         <div class="mt-8 relative z-0 w-full mb-6 group">
@@ -95,8 +78,9 @@
 </template>
 
 <script>
+import { useImageUploader } from "@/composables/useImageUploader";
 import { supabase } from "@/lib/supabaseClient";
-import axios from "axios";
+
 export default {
   name: "EditProduct",
   provide() {
@@ -135,37 +119,9 @@ export default {
       }
     },
 
-    // Upload image to storage and return public URL
-    async uploadImage(file, bucketName) {
-      try {
-        const fileName = `${Date.now()}essam_${file.name}`;
-        const { error } = await supabase.storage
-          .from(bucketName)
-          .upload(fileName, file);
-
-        if (error) {
-          throw error;
-        }
-
-        // Retrieve the public URL after uploading the image
-        const { data, error: urlError } = supabase.storage
-          .from(bucketName)
-          .getPublicUrl(fileName);
-
-        if (urlError) {
-          throw urlError;
-        }
-
-        return data.publicUrl; // Ensure this returns a valid URL
-      } catch (err) {
-        console.log("Error uploading image:", err);
-        return null;
-      }
-    },
-
-    // edit product
     async EditProduct(productId) {
       try {
+        const { uploadImage } = useImageUploader(); // Use the composable
         let imageUrl = this.OneProduct.image; // Existing image URL
 
         // If a new image is uploaded, handle the upload
@@ -187,8 +143,8 @@ export default {
               return;
           }
 
-          // Upload the new image and get the URL
-          imageUrl = await this.uploadImage(this.OneProduct.image, bucketName);
+          // Upload the new image using the composable and get the URL
+          imageUrl = await uploadImage(this.OneProduct.image, bucketName);
           if (!imageUrl) {
             console.error("Failed to upload new image");
             return;
@@ -258,64 +214,6 @@ export default {
       }
     },
 
-    // // edit product withou image uploading
-    // async EditProduct(productId) {
-    //   const updatedProduct = {
-    //     title: this.OneProduct.title,
-    //     description: this.OneProduct.description,
-    //     brand: this.OneProduct.brand,
-    //     image: this.OneProduct.image,
-    //   };
-
-    //   switch (this.category) {
-    //     case "surv":
-    //       const { data: updatedSurveillance, error: survError } = await supabase
-    //         .from("new_Surveillance")
-    //         .update(this.OneProduct)
-    //         .eq("id", productId)
-    //         .select();
-    //       if (survError) {
-    //         console.error("Error updating Surveillance:", survError);
-    //       } else {
-    //         console.log("Updated Surveillance:", updatedSurveillance);
-    //         this.$router.push("/dashboard/products");
-    //       }
-    //       break;
-
-    //     case "dvr":
-    //       const { data: updatedDVR, error: dvrError } = await supabase
-    //         .from("new_DVR")
-    //         .update(this.OneProduct)
-    //         .eq("id", productId)
-    //         .select();
-    //       if (dvrError) {
-    //         console.error("Error updating DVR:", dvrError);
-    //       } else {
-    //         console.log("Updated DVR:", updatedDVR);
-    //         this.$router.push("/dashboard/products");
-    //       }
-    //       break;
-
-    //     case "fing":
-    //       const { data: updatedFingerprints, error: fingError } = await supabase
-    //         .from("new_Fingerprints")
-    //         .update(this.OneProduct)
-    //         .eq("id", productId)
-    //         .select();
-    //       if (fingError) {
-    //         console.error("Error updating Fingerprints:", fingError);
-    //       } else {
-    //         console.log("Updated Fingerprints:", updatedFingerprints);
-    //         this.$router.push("/dashboard/products");
-    //       }
-    //       break;
-
-    //     default:
-    //       console.log("Invalid category");
-    //       break;
-    //   }
-    // },
-
     // get one product
     async fetchProductDetails(productId) {
       switch (this.category) {
@@ -363,68 +261,6 @@ export default {
           break;
       }
     },
-
-    // EditProduct() {
-    //   let url = "";
-    //   switch (this.edit) {
-    //     case "surv":
-    //       url = "http://localhost:3000/Surveillance-systems";
-    //       console.log(this.edit);
-    //       axios
-    //         .put(`${url}/${this.id}`, this.OneProduct)
-    //         .then((res) => {
-    //           console.log(res.data);
-    //           alert("your product has been updated successfully :)");
-    //           this.$router.push("/dashboard/products/");
-    //         })
-    //         .catch((err) => {
-    //           console.log(err);
-    //           alert(
-    //             "please check the chosen category is compatible with the product"
-    //           );
-    //         });
-    //       break;
-    //     case "dvr":
-    //       url = "http://localhost:3000/IT-solution";
-    //       console.log(this.edit);
-    //       axios
-    //         .put(`${url}/${this.id}`, this.OneProduct)
-    //         .then((res) => {
-    //           console.log(res.data);
-    //           alert("your product has been updated successfully :)");
-    //           this.$router.push("/dashboard/products/");
-    //         })
-    //         .catch((err) => {
-    //           console.log(err);
-    //           alert(
-    //             "please check the chosen category is compatible with the product"
-    //           );
-    //         });
-    //       break;
-    //     case "fing":
-    //       url = "http://localhost:3000/Fingerprints";
-    //       console.log(this.edit);
-    //       axios
-    //         .put(`${url}/${this.id}`, this.OneProduct)
-    //         .then((res) => {
-    //           console.log(res.data);
-    //           alert("your product has been updated successfully :)");
-    //           this.$router.push("/dashboard/products/");
-    //         })
-    //         .catch((err) => {
-    //           console.log(err);
-    //           alert(
-    //             "please check the chosen category is compatible with the product"
-    //           );
-    //         });
-    //       break;
-    //     default:
-    //       // default URL
-    //       break;
-    //   }
-    // },
-
-    // Assuming you have a productId and category (add)
   },
 };
 </script>
