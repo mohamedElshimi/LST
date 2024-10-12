@@ -28,7 +28,6 @@ const fetchproducts = async () => {
         .eq("id", ID)
         .single();
       oneProd.value = new_DVR;
-      console.table(new_DVR);
       break;
     case "Surveillance-systems":
       let { data: new_Surveillance } = await supabase
@@ -37,7 +36,6 @@ const fetchproducts = async () => {
         .eq("id", ID)
         .single();
       oneProd.value = new_Surveillance;
-      console.table(new_Surveillance);
       break;
     case "Fingerprints":
       let { data: new_Fingerprints } = await supabase
@@ -46,7 +44,6 @@ const fetchproducts = async () => {
         .eq("id", ID)
         .single();
       oneProd.value = new_Fingerprints;
-      console.table(new_Fingerprints);
       break;
     default:
       console.log("Invalid URL or category");
