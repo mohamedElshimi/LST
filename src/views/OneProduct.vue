@@ -16,25 +16,25 @@ const fetchproducts = async ()=> {
 // Switch case based on the product category
 switch (category) {
   case "IT-solution":
-  let { data: DVR,  } = await supabase
-  .from('DVR')
+  let { data: new_DVR,  } = await supabase
+  .from('new_DVR')
   .select('*').eq('id', ID).single();
-  oneProd.value = DVR;
-  console.table(DVR);
+  oneProd.value = new_DVR;
+  console.table(new_DVR);
     break;
   case "Surveillance-systems":
-  let { data: Surveillance,  } = await supabase
-  .from('Surveillance')
+  let { data: new_Surveillance,  } = await supabase
+  .from('new_Surveillance')
   .select('*').eq('id', ID).single();
-  oneProd.value = Surveillance;
-  console.table(Surveillance);
+  oneProd.value = new_Surveillance;
+  console.table(new_Surveillance);
     break;
   case "Fingerprints":
-  let { data: Fingerprints,  } = await supabase
-  .from('Fingerprints')
+  let { data: new_Fingerprints,  } = await supabase
+  .from('new_Fingerprints')
   .select('*').eq('id', ID).single();
-  oneProd.value = Fingerprints;
-  console.table(Fingerprints);
+  oneProd.value = new_Fingerprints;
+  console.table(new_Fingerprints);
     break;
   default:
     console.log("Invalid URL or category");

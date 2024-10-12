@@ -5,23 +5,23 @@ import { ref } from "vue";
 let Products = ref([]);
 const fetchproducts = async () => {
   try {
-    let { data: Fingerprints } = await supabase
+    let { data: new_Fingerprints } = await supabase
       .from("new_Fingerprints")
       .select("*");
-    Products.value.push(Fingerprints);
+    Products.value.push(new_Fingerprints);
   } catch (error) {
     console.log(error);
   }
 };
 const fetchdvrproducts = async () => {
-  let { data: DVR } = await supabase.from("new_DVR").select("*");
-  Products.value.push(DVR);
+  let { data: new_DVR } = await supabase.from("new_DVR").select("*");
+  Products.value.push(new_DVR);
 };
 const fetchsurvproducts = async () => {
-  let { data: Surveillance } = await supabase
+  let { data: new_Surveillance } = await supabase
     .from("new_Surveillance")
     .select("*");
-  Products.value.push(Surveillance);
+  Products.value.push(new_Surveillance);
 };
 
 fetchsurvproducts();
