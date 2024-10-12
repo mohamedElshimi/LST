@@ -3,30 +3,40 @@ import { supabase } from "@/lib/supabaseClient";
 import { ref } from "vue";
 
 let Products = ref([]);
+
 const fetchproducts = async () => {
   try {
     let { data: new_Fingerprints } = await supabase
       .from("new_Fingerprints")
       .select("*");
+
     Products.value.push(new_Fingerprints);
   } catch (error) {
     console.log(error);
   }
 };
+
 const fetchdvrproducts = async () => {
   let { data: new_DVR } = await supabase.from("new_DVR").select("*");
+
   Products.value.push(new_DVR);
 };
+
 const fetchsurvproducts = async () => {
   let { data: new_Surveillance } = await supabase
     .from("new_Surveillance")
     .select("*");
+
   Products.value.push(new_Surveillance);
 };
 
-fetchsurvproducts();
-fetchdvrproducts();
-fetchproducts();
+const fetchAllProducts = async () => {
+  await fetchsurvproducts();
+  await fetchdvrproducts();
+  await fetchproducts();
+};
+
+fetchAllProducts();
 </script>
 
 <template>
@@ -66,7 +76,7 @@ fetchproducts();
             v-for="(prod, index2) in prod2"
             :key="index2"
             class="flex flex-col items-center justify-center shadow-lg p-6 hover:shadow-2xl transition duration-300 cursor-pointer w-3/12 h-52"
-            ><router-link :to="`/products/Surveillance-systems/${prod.id}`">
+            ><router-link :to="`/products/${prod.category}/${prod.id}`">
               <div class="flex justify-center relative overflow-hidden">
                 <img
                   :src="prod.image"

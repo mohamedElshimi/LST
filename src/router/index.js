@@ -4,11 +4,14 @@ import { createRouter, createWebHistory } from "vue-router";
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import AboutView from "../views/AboutView.vue";
 import HomeView from "../views/HomeView.vue";
+
 import dvr from "../views/dvrProducts.vue";
 import fingerprints from "../views/fingerprintsProducts.vue";
 import surv from "../views/survProducts.vue";
 import gps from "../views/gpsProducts.vue";
-import survProduct from "../views/OneProduct.vue";
+
+import OneProduct from "../views/OneProduct.vue";
+
 import ContactUs from "../views/ContactUs.vue";
 import ServicesPage from "../views/ServicesPage.vue";
 
@@ -33,7 +36,6 @@ const router = createRouter({
           name: "home",
           component: HomeView,
         },
-
         {
           path: "/products/dvr",
           name: "dvr",
@@ -45,11 +47,6 @@ const router = createRouter({
           component: surv,
         },
         {
-          path: "/products/:type/:id",
-          name: "survProduct",
-          component: survProduct,
-        },
-        {
           path: "/products/fingerprints",
           name: "fingerprints",
           component: fingerprints,
@@ -58,6 +55,12 @@ const router = createRouter({
           path: "/products/gps",
           name: "gps",
           component: gps,
+        },
+
+        {
+          path: "/products/:type/:id",
+          name: "OneProduct",
+          component: OneProduct,
         },
 
         {
@@ -85,7 +88,7 @@ const router = createRouter({
       component: DashboardLayout,
       children: [
         {
-          path: "",   
+          path: "",
           name: "Admin",
           component: Admin,
         },
@@ -101,7 +104,6 @@ const router = createRouter({
         },
       ],
     },
-
 
     // {
     //   path: "/dashboard/fingerprints",
