@@ -1,7 +1,7 @@
 <template>
-  <NavBar v-if="!$route.meta.hideNavbar"></NavBar>
+  <!-- <NavBar v-if="!$route.meta.hideNavbar"></NavBar> -->
   <RouterView class="my-20" />
-  <Footer v-if="!$route.meta.hideNavbar"></Footer>
+  <!-- <Footer v-if="!$route.meta.hideNavbar"></Footer> -->
 </template>
 
 <script>

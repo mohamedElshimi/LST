@@ -4,7 +4,7 @@ export const useImageUploader = () => {
   // Upload image to storage and return the public URL
   const uploadImage = async (file, bucketName) => {
     try {
-      const fileName = `${Date.now()}essam_${file.name}`;
+      const fileName = `${Date.now()}-${file.name}`;
       const { error } = await supabase.storage
         .from(bucketName)
         .upload(fileName, file);
@@ -22,7 +22,8 @@ export const useImageUploader = () => {
         throw urlError;
       }
 
-      return data.publicUrl; // Ensure this returns a valid URL
+      // dah hwa el public url**
+      return data.publicUrl;
     } catch (err) {
       console.log("Error uploading image:", err);
       return null;
