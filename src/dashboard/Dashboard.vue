@@ -4,7 +4,7 @@
       <div class="w-full mx-auto logo mt-3">
         <img
           src="../assets/Images/LST.png"
-          alt="Fit and Go"
+          alt="LST"
           class="image-login mx-auto md:w-[69px] w-[50px]"
         />
       </div>

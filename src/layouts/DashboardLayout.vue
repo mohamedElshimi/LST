@@ -1,11 +1,9 @@
 <template>
   <div class="flex">
-
-    <!-- sidebar examble in just dashboard -->
-    <div class="w-3/12 bg-black">
+    <!-- <div class="w-3/12">
       <sidebar />
-    </div>
-    <div class="w-9/12">
+    </div> -->
+    <div class="w-full">
       <RouterView class="my-20" />
 
     </div>

@@ -1,7 +1,7 @@
-<template>
+<template class="flex flex-col hieghtview justify-between">
   <NavBar v-if="!$route.meta.hideNavbar"></NavBar>
   <RouterView class="my-20" />
-  <Footer v-if="!$route.meta.hideNavbar"></Footer>
+  <Footer class="justify-self-end" v-if="!$route.meta.hideNavbar"></Footer>
 </template>
 
 <script>
@@ -16,3 +16,8 @@ export default {
   },
 };
 </script>
+<style>
+.hieghtview {
+  height: 100vh;
+}
+</style>

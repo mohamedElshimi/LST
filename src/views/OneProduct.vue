@@ -66,7 +66,7 @@ const goBack=()=> {
   </div>
 </div>
 <div class="flex w-11/12 mx-auto">
-  <button @click="goBack()" class="primary-btn block mx-auto lg:mx-6 lg:ms-auto mt-5 lg:mt-0">
+  <button @click="goBack()" class="primary-btn block mx-auto my-10 lg:mx-6 lg:ms-auto mt-5 lg:mt-0">
     Back To Products
   </button>
 </div>
